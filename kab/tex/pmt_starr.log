@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.17)  23 JUL 2014 10:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.17)  23 JUL 2014 10:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -303,62 +303,58 @@ File: figures/SETD2_tics.png Graphic file (type png)
 
 <use figures/SETD2_tics.png>
 Package pdftex.def Info: figures/SETD2_tics.png used on input line 17.
-(pdftex.def)             Requested size: 156.49014pt x 129.0889pt.
+(pdftex.def)             Requested size: 142.26378pt x 117.35353pt.
 
-<figures/SETD2_pdb.png, id=3, 1606.0pt x 1606.0pt>
-File: figures/SETD2_pdb.png Graphic file (type png)
- <use figures/SETD2_pdb.png>
-Package pdftex.def Info: figures/SETD2_pdb.png used on input line 20.
-(pdftex.def)             Requested size: 156.49014pt x 156.46797pt.
-
-<figures/NSD1_tics.png, id=4, 490.7133pt x 411.939pt>
+<figures/NSD1_tics.png, id=3, 490.7133pt x 411.939pt>
 File: figures/NSD1_tics.png Graphic file (type png)
 
 <use figures/NSD1_tics.png>
-Package pdftex.def Info: figures/NSD1_tics.png used on input line 24.
-(pdftex.def)             Requested size: 156.49014pt x 131.37059pt.
- <figures/NSD1_pdb.png, id=5, 1606.0pt x 1606.0pt>
-File: figures/NSD1_pdb.png Graphic file (type png)
+Package pdftex.def Info: figures/NSD1_tics.png used on input line 20.
+(pdftex.def)             Requested size: 142.26378pt x 119.42781pt.
 
-<use figures/NSD1_pdb.png>
-Package pdftex.def Info: figures/NSD1_pdb.png used on input line 27.
-(pdftex.def)             Requested size: 156.49014pt x 156.46797pt.
-
-<figures/NSD2_tics.png, id=6, 499.3857pt x 411.939pt>
+<figures/NSD2_tics.png, id=4, 499.3857pt x 411.939pt>
 File: figures/NSD2_tics.png Graphic file (type png)
 
 <use figures/NSD2_tics.png>
-Package pdftex.def Info: figures/NSD2_tics.png used on input line 31.
-(pdftex.def)             Requested size: 156.49014pt x 129.0889pt.
+Package pdftex.def Info: figures/NSD2_tics.png used on input line 23.
+(pdftex.def)             Requested size: 142.26378pt x 117.35353pt.
+ <figures/SETD2_pdb.png, id=5, 1606.0pt x 1606.0pt>
+File: figures/SETD2_pdb.png Graphic file (type png)
+
+<use figures/SETD2_pdb.png>
+Package pdftex.def Info: figures/SETD2_pdb.png used on input line 28.
+(pdftex.def)             Requested size: 142.26378pt x 142.25475pt.
+ <figures/NSD1_pdb.png, id=6, 1606.0pt x 1606.0pt>
+File: figures/NSD1_pdb.png Graphic file (type png)
+
+<use figures/NSD1_pdb.png>
+Package pdftex.def Info: figures/NSD1_pdb.png used on input line 31.
+(pdftex.def)             Requested size: 142.26378pt x 142.25475pt.
  <figures/NSD2_pdb.png, id=7, 1606.0pt x 1606.0pt>
 File: figures/NSD2_pdb.png Graphic file (type png)
 
 <use figures/NSD2_pdb.png>
 Package pdftex.def Info: figures/NSD2_pdb.png used on input line 34.
-(pdftex.def)             Requested size: 156.49014pt x 156.46797pt.
-
-
-LaTeX Warning: Float too large for page by 54.30722pt on input line 40.
-
-[1
+(pdftex.def)             Requested size: 142.26378pt x 142.25475pt.
+ [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./figures/SETD2_tics.p
-ng> <./figures/SETD2_pdb.png> <./figures/NSD1_tics.png> <./figures/NSD1_pdb.png
-> <./figures/NSD2_tics.png> <./figures/NSD2_pdb.png>] (./pmt_starr.aux) ) 
+ng> <./figures/NSD1_tics.png> <./figures/NSD2_tics.png> <./figures/SETD2_pdb.pn
+g> <./figures/NSD1_pdb.png> <./figures/NSD2_pdb.png>] (./pmt_starr.aux) ) 
 Here is how much of TeX's memory you used:
  3295 strings out of 495028
  47185 string characters out of 6181497
- 113555 words of memory out of 5000000
+ 117378 words of memory out of 5000000
  6464 multiletter control sequences out of 15000+600000
  7656 words of font info for 28 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,6n,32p,1043b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,6n,32p,1321b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on pmt_starr.pdf (2 pages, 4281451 bytes).
+Output written on pmt_starr.pdf (2 pages, 4281666 bytes).
 PDF statistics:
  40 PDF objects out of 1000 (max. 8388607)
  19 compressed objects within 1 object stream
