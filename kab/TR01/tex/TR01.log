@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.17)  12 SEP 2014 17:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.6.17)  12 SEP 2014 20:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -296,91 +296,53 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+<figures/SETD2_tics.png, id=1, 499.3857pt x 411.939pt>
+File: figures/SETD2_tics.png Graphic file (type png)
 
-LaTeX Warning: File `figures/SETD2_tics.png' not found on input line 17.
+<use figures/SETD2_tics.png>
+Package pdftex.def Info: figures/SETD2_tics.png used on input line 17.
+(pdftex.def)             Requested size: 199.16928pt x 164.29495pt.
 
+<figures/NSD2_tics.png, id=3, 500.1084pt x 411.939pt>
+File: figures/NSD2_tics.png Graphic file (type png)
 
-! Package pdftex.def Error: File `figures/SETD2_tics.png' not found.
+<use figures/NSD2_tics.png>
+Package pdftex.def Info: figures/NSD2_tics.png used on input line 20.
+(pdftex.def)             Requested size: 199.16928pt x 164.0561pt.
+ <figures/SETD2_pdb.png, id=4, 1606.0pt x 1606.0pt>
+File: figures/SETD2_pdb.png Graphic file (type png)
 
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.17 }
-      
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<use figures/SETD2_pdb.png>
+Package pdftex.def Info: figures/SETD2_pdb.png used on input line 25.
+(pdftex.def)             Requested size: 199.16928pt x 199.15665pt.
+ <figures/NSD2_pdb.png, id=5, 1606.0pt x 1606.0pt>
+File: figures/NSD2_pdb.png Graphic file (type png)
 
+<use figures/NSD2_pdb.png>
+Package pdftex.def Info: figures/NSD2_pdb.png used on input line 28.
+(pdftex.def)             Requested size: 199.16928pt x 199.15665pt.
+ [1
 
-LaTeX Warning: File `figures/NSD2_tics.png' not found on input line 20.
-
-
-! Package pdftex.def Error: File `figures/NSD2_tics.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.20 }
-      
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `figures/SETD2_pdb.png' not found on input line 25.
-
-
-! Package pdftex.def Error: File `figures/SETD2_pdb.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 }
-      
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: File `figures/NSD2_pdb.png' not found on input line 28.
-
-
-! Package pdftex.def Error: File `figures/NSD2_pdb.png' not found.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 }
-      
-Using draft setting for this image.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./TR01.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./figures/SETD2_tics.p
+ng> <./figures/NSD2_tics.png> <./figures/SETD2_pdb.png> <./figures/NSD2_pdb.png
+>] (./TR01.aux) ) 
 Here is how much of TeX's memory you used:
- 3271 strings out of 495028
- 46506 string characters out of 6181497
+ 3285 strings out of 495028
+ 46913 string characters out of 6181497
  114555 words of memory out of 5000000
- 6441 multiletter control sequences out of 15000+600000
- 7825 words of font info for 29 fonts, out of 8000000 for 9000
+ 6456 multiletter control sequences out of 15000+600000
+ 7656 words of font info for 28 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,5n,32p,1184b,259s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on TR01.pdf (2 pages, 56365 bytes).
+ 38i,6n,32p,1127b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on TR01.pdf (2 pages, 2274808 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 21 compressed objects within 1 object stream
+ 40 PDF objects out of 1000 (max. 8388607)
+ 22 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
