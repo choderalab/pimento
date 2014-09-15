@@ -9,7 +9,7 @@
 
 \section{Specific Aim 2.1}
 
-SET domain protein models of SETD2 and NSD2 were built using Modeller with PDBs 4FMU and 3OOI as inputs, respectively.  Proteins were placed in TIP3P water boxes of approximately 7 nm, with NaCl ions added to achieve neutrality.  The ff99sb-ildn force field \cite{} was used.  Systems were held at constant temperature (300K) and pressure (1 atmosphere) using a Langevin integrator and Monte Carlo barostat, as implemented in OpenMM 6.0.1 \cite{}.  For each system, a total of 50-100 $\mu s$ of simulations was analyzed using MDTraj \cite{}, MSMBuilder \cite{}, and Mixtape \cite{}.  Slow coordinates were selected using temporal independent component analysis (tICA) \cite{} with randomly selected geometric features as inputs.  Seven-state Markov state models were constructed by Gaussian mixture model clustering of the two slowest linear combinations of features.
+SET domain protein models of SETD2 and NSD2 were built using Modeller with PDBs 4FMU and 3OOI as inputs, respectively.  Proteins were placed in TIP3P water boxes of approximately 7 nm, with NaCl ions added to achieve neutrality.  The ff99sb-ildn force field \cite{lindorff2010improved} was used.  Systems were held at constant temperature (300K) and pressure (1 atmosphere) using a Langevin integrator and Monte Carlo barostat, as implemented in OpenMM 6.0.1 \cite{openmm2012}.  For each system, a total of 50-100 $\mu s$ of simulations was analyzed using MDTraj \cite{mdtraj2014}, MSMBuilder \cite{beauchamp2011msmbuilder2}, and Mixtape.  Slow coordinates were selected using temporal independent component analysis (tICA) \cite{schwantes2013improvements, perez2013identification} with randomly selected geometric features as inputs.  Seven-state Markov state models were constructed by Gaussian mixture model clustering of the two slowest linear combinations of features.
 
 \begin{figure}
 \subfigure[]{
@@ -33,5 +33,8 @@ SET domain protein models of SETD2 and NSD2 were built using Modeller with PDBs 
 \label{figure:MSM}
 \end{figure}
 
+
+\bibliographystyle{plain}
+\bibliography{TR01}
 
 \end{document}
