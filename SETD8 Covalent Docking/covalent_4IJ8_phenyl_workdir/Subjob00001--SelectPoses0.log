@@ -1,9 +1,0 @@
-Starting Time: 01-19-2015 10:58:48
-Filter criterion: ({1:r_i_sample_glide_gscore} -  {2:r_i_sample_glide_gscore}) < 2.500000
-Max output: 200
-Stage <SGS phenyl     (    0) SelectPoses0> takes 0 seconds
-Filter criterion: ({1:r_i_sample_glide_gscore} -  {2:r_i_sample_glide_gscore}) < 2.500000
-Max output: 200
-Stage <SGS phenyl     (    1) SelectPoses0> takes 0 seconds
-
-Ending Time: 01-19-2015 10:58:50
