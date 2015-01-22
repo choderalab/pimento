@@ -1,0 +1,43 @@
+[running at reduced cpu priority]
+%IMPACT-I (openwt): Request to open FORMATTED file Subjob00002--CreateGrid.out on unit   2
+ Entering IMPACT execution environment 
+ Date: Thursday, January 08 2015, at 16:08:43 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00002--CreateGrid
+ JobId:    lski1751-0-54aef1da
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1da
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00002--CreateGrid-out.zip

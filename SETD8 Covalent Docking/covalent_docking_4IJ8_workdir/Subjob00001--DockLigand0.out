@@ -1,0 +1,1920 @@
+ Entering IMPACT execution environment 
+ Date: Friday, January 09 2015, at 13:31:24 EST
+ ---------------------------------------------------------------------------
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ For hardware platform Darwin-x86_64
+ Compiled on: Fri Nov 7 13:42:06 PST 2014
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00001--DockLigand0.glidetmp1344
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+
+ This software contains material that is a copyrighted
+ work of, and that is licensed from, Rutgers,
+ the State University of New Jersey.
+
+ This software is provided under license and may be 
+ used, copied, transmitted, and stored only in accordance
+ with the terms and conditions of that license.
+ ---------------------------------------------------------------------------
+
+ Job title:        "Subjob00001--DockLigand0"
+ Main output file: Subjob00001--DockLigand0.out
+
+                             - Input command file -
+ ---------------------------------------------------------------------------
+write file -
+"Subjob00001--DockLigand0.out" -
+      title -
+"Subjob00001--DockLigand0" *
+
+PUT 0 INTO 'buildcheck'
+PUT 1 INTO 'startlig'
+PUT 0 INTO 'endlig'
+PUT -1 INTO 'strucseq'
+
+SET FFIELD OPLS_2005
+
+DOCK
+  smooth anneal 2
+  ligand multiple maxat 300 maxrot 50 -
+   ligvdwscale factor 0.800000 ccut 0.150000
+  receptor rdiel readzip -
+"Subjob00001--CreateGrid-out" -
+  constraints  loosedock 2 featurefile -
+"Subjob00001--DockLigand0.feat" -
+   consname -
+"Subjob00001--CreateGrid-out.cons"
+  screen  readscreen -
+"Subjob00001--CreateGrid-out.save" -
+   greedy readgreed -
+"Subjob00001--CreateGrid-out_greedy.save" -
+   maxkeep 5000 scorecut 100.000000
+  parameter setup save   maxconf 1000
+  final glidescore
+  report setup nreport 0   -
+   external file -
+"Subjob00001--DockLigand0_raw.maegz" -
+   norecep -
+   maxperlig 10 rmspose 0.500000 delpose 1.300000 epik
+  run
+QUIT
+
+PUT 'startlig' INTO 'strucseq'
+CREATE
+  build primary name lig type auto maxat 300 -
+   read maestro file -
+"Subjob00001--DockLigand0-in.maegz" -
+   gotostruct 'startlig' skip_recep
+IF 'buildcheck' LT 0
+QUIT
+  IF 'buildcheck' EQ -1
+    ECHO "END OF LIGAND FILE: Subjob00001--DockLigand0-in.maegz"
+  ENDIF
+  IF 'buildcheck' EQ -2
+     ECHO "ERROR READING LIGAND FILE: Subjob00001--DockLigand0-in.maegz"
+  ENDIF
+    ECHO "No ligands read; aborting."
+    GOTO ABORT
+ELSE
+  build types name lig
+QUIT
+ENDIF
+
+PUT 'startlig' INTO 'i'
+WHILE ('endlig' LT 1 OR 'i' LE 'endlig')
+
+DOCK
+  ligand name lig
+  screen
+  parameter save
+  confgen  torsion amide penal name lig -
+   ecut 12.000000
+  run
+QUIT
+
+DOCK
+  smooth anneal 2
+  ligand keep
+  screen noscore refine maxref 400
+  parameter save
+  minimize flex itmax 100 dielco 2.000000 -
+   postdock 10 ligmin pmitmax 500
+  scoring ecvdw 0.000000 hbfilt 0.000000 metalfilt 10.000000 gscorecut 100.000000
+  report collect -
+   rmspose 0.500000 delpose 1.300000
+  run
+QUIT
+IF ('i' EQ 'endlig')
+  ECHO "FINISHED REQUESTED RANGE IN LIGAND FILE: Subjob00001--DockLigand0-in.maegz"
+ECHO "Proceeding with final processing of ligands."
+  GOTO BREAK
+ENDIF
+
+PUT 'i' + 1 INTO 'strucseq'
+CREATE
+  build primary check name lig type auto maxat 300 -
+   read maestro file -
+"Subjob00001--DockLigand0-in.maegz" -
+   nextstruct
+
+IF 'buildcheck' LT 0
+QUIT
+  IF 'buildcheck' EQ -1
+    ECHO "END OF LIGAND FILE: Subjob00001--DockLigand0-in.maegz"
+  ENDIF
+  IF 'buildcheck' EQ -2
+     ECHO "ERROR READING LIGAND FILE: Subjob00001--DockLigand0-in.maegz"
+  ENDIF
+ECHO "Proceeding with final processing of ligands."
+  GOTO BREAK
+ELSE
+  build types name lig
+QUIT
+ENDIF
+
+PUT 'i' + 1 INTO 'i'
+ENDWHILE
+:BREAK
+
+DOCK
+  parameter clean final
+  report -
+   rmspose 0.500000 delpose 1.300000  write filename -
+"Subjob00001--DockLigand0"
+  run
+QUIT
+:ABORT
+
+END
+ ---------------------------------------------------------------------------
+
+                             - End of input file -
+
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ VdW radii of ligand atoms scaled by   0.800000000000000     
+ Charge cutoff for polarity   0.150000000000000     
+ Beginning DOCK subtask RECE                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask FINA                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+
+GLIDE CONSTRAINTS APPLIED
+-------------------------
+  1 out of   1 constraints used from file "grid.1363/Subjob00001--CreateGrid-out.cons"
+Labels and receptor types of constraints used are:
+pos1 (Positional)
+
+All docked poses must satisfy the specified number of
+constraints in ALL of the following  1 groups.
+Group   1: At least  1 of (pos1)
+
+
+Rough-score grid dimensions = (   25,    25,    25).
+ Set up rough-score grid with dimensions(   25,    25,    25), spacing=    1.0
+  125 acceptable sites for ligand center.
+ Finished setting up rough-score screening.
+ Getting receptor data ...
+%IMPACT-I (xdrrd): File grid.1363/Subjob00001--CreateGrid-out.grd opened for reading
+ Energy grid dimensions = (   64,    64,    64).
+%IMPACT-I (xdrrd): File grid.1363/Subjob00001--CreateGrid-out_coul2.fld opened for reading
+%IMPACT-I (xdrrd): File grid.1363/Subjob00001--CreateGrid-out_vdw.fld opened for reading
+%IMPACT-I (xdrrd): File grid.1363/Subjob00001--CreateGrid-out.gsc opened for reading
+ Finished setting up grids.
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:        0.71  system:        0.06  elapse:        0.79
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+  
+  Penalizing non-planar amide torsions 
+  
+ Number of rotatable bonds            3
+ Using templates for ring conformations.
+ Total ring / N-inversion conformations     2
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.05  system:        0.01  elapse:        0.08
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:        1.19  system:        0.11  elapse:        1.33
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+ Beginning DOCK subtask SCOR                                                    
+
+GlideScore version SP5.0 will be used
+
+  
+ Buried polar penalty      0.000
+ Coulomb vdW cutoff        0.000
+ H bond cutoff             0.000
+ Metal-ligand cutoff      10.000
+%IMPACT-I (info): At line  78
+ %IMPACT-I: Assigning GlideScore SP5.0 parameters
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+Postdocking minimization:  10 poses; CvdW cutoffs   100.0 kcal/mol for min,     0.0 kcal/mol for report.
+ 
+Pose  914 Emodel =  -53.11 original =  -56.72 E =  -41.73 GlideScore =   -5.05
+Pose 1827 Emodel =  -53.51 original =  -56.41 E =  -40.95 GlideScore =   -5.70
+Pose 2999 Emodel =  -53.84 original =  -45.09 E =  -42.23 GlideScore =   -5.12
+ 
+Constraint(s) matched for ligand        1, pose   2999
+Score =     -5.124
+Emodel =    -53.840
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        1, pose   1827
+Score =     -5.697
+Emodel =    -53.512
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        1, pose    896
+Score =     -4.540
+Emodel =    -44.121
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        1, pose   2264
+Score =     -4.017
+Emodel =    -42.946
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        1, pose   2218
+Score =     -3.746
+Emodel =    -42.609
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        1, pose   4018
+Score =     -3.695
+Emodel =    -41.938
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        1, pose   2731
+Score =     -3.700
+Emodel =    -41.364
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        1, pose    869
+Score =     -3.790
+Emodel =    -38.170
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        1, pose     47
+Score =     -3.535
+Emodel =    -37.556
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+DOCKING RESULTS FOR LIGAND        1 (SGS)
+Lowest Efinal =    -42.23 Eint=      1.32 GlideScore =     -5.12, from pose  2999, conf     9, lig        1
+Best Emodel =    -53.84 E =    -42.23 Eint =     1.32 GlideScore =     -5.12  from pose  2999, conf     9, lig        1
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:        9.35  system:        0.18  elapse:        9.59
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Using templates for ring conformations.
+ Total ring / N-inversion conformations     2
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.09  system:        0.01  elapse:        0.13
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:        9.77  system:        0.21  elapse:       10.05
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+ 
+Pose 2522 Emodel =  -53.66 original =  -55.81 E =  -41.36 GlideScore =   -5.64
+ 
+Constraint(s) matched for ligand        2, pose   2522
+Score =     -5.636
+Emodel =    -53.657
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        2, pose   2730
+Score =     -5.115
+Emodel =    -53.115
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        2, pose   4722
+Score =     -4.996
+Emodel =    -44.305
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        2, pose   3606
+Score =     -4.665
+Emodel =    -43.410
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        2, pose   4161
+Score =     -3.793
+Emodel =    -41.949
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        2, pose   2015
+Score =     -4.074
+Emodel =    -41.917
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        2, pose   4620
+Score =     -3.468
+Emodel =    -39.247
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        2, pose   1299
+Score =     -3.287
+Emodel =    -35.490
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        2, pose   4721
+Score =     -3.660
+Emodel =    -34.260
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+DOCKING RESULTS FOR LIGAND        2 (SGS)
+Lowest Efinal =    -42.16 Eint=      2.83 GlideScore =     -5.11, from pose  2730, conf    12, lig        2
+Best Emodel =    -53.66 E =    -41.36 Eint =     2.67 GlideScore =     -5.64  from pose  2522, conf     2, lig        2
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       17.43  system:        0.25  elapse:       17.76
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Using templates for ring conformations.
+ Total ring / N-inversion conformations     2
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.13  system:        0.02  elapse:        0.17
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       17.82  system:        0.29  elapse:       18.19
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+ 
+Pose 4883 Emodel =  -52.63 original =  -56.72 E =  -41.38 GlideScore =   -5.02
+Pose 1066 Emodel =  -54.10 original =  -56.43 E =  -41.27 GlideScore =   -5.73
+ 
+Constraint(s) matched for ligand        3, pose   1066
+Score =     -5.727
+Emodel =    -54.097
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        3, pose   3099
+Score =     -5.025
+Emodel =    -53.108
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        3, pose    789
+Score =     -4.497
+Emodel =    -44.430
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        3, pose   3127
+Score =     -4.177
+Emodel =    -43.877
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        3, pose   3047
+Score =     -3.798
+Emodel =    -43.344
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        3, pose   3352
+Score =     -3.666
+Emodel =    -41.126
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+DOCKING RESULTS FOR LIGAND        3 (SGS)
+Lowest Efinal =    -41.49 Eint=      0.79 GlideScore =     -5.03, from pose  3099, conf     9, lig        3
+Best Emodel =    -54.10 E =    -41.27 Eint =     1.74 GlideScore =     -5.73  from pose  1066, conf    14, lig        3
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       25.42  system:        0.34  elapse:       25.85
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Using templates for ring conformations.
+ Total ring / N-inversion conformations     2
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.17  system:        0.02  elapse:        0.22
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       25.81  system:        0.37  elapse:       26.28
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+ 
+Pose 1073 Emodel =  -52.30 original =  -56.50 E =  -41.31 GlideScore =   -4.99
+Pose  213 Emodel =  -53.92 original =  -56.44 E =  -41.25 GlideScore =   -5.71
+ 
+Constraint(s) matched for ligand        4, pose    213
+Score =     -5.711
+Emodel =    -53.919
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        4, pose    196
+Score =     -5.015
+Emodel =    -52.471
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        4, pose   3061
+Score =     -4.838
+Emodel =    -45.005
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        4, pose   1109
+Score =     -4.154
+Emodel =    -44.591
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        4, pose   3616
+Score =     -3.759
+Emodel =    -42.685
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        4, pose   2424
+Score =     -3.649
+Emodel =    -41.781
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        4, pose   2574
+Score =     -3.594
+Emodel =    -40.863
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        4, pose   1351
+Score =     -3.656
+Emodel =    -40.458
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+DOCKING RESULTS FOR LIGAND        4 (SGS)
+Lowest Efinal =    -41.60 Eint=      2.21 GlideScore =     -5.01, from pose   196, conf    14, lig        4
+Best Emodel =    -53.92 E =    -41.25 Eint =     1.94 GlideScore =     -5.71  from pose   213, conf     8, lig        4
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       33.32  system:        0.42  elapse:       33.85
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Using templates for ring conformations.
+ Total ring / N-inversion conformations     2
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.21  system:        0.02  elapse:        0.26
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       33.74  system:        0.45  elapse:       34.31
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+ 
+Pose 4038 Emodel =  -53.02 original =  -55.20 E =  -41.30 GlideScore =   -5.61
+ 
+Constraint(s) matched for ligand        5, pose   4038
+Score =     -5.608
+Emodel =    -53.016
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        5, pose   1613
+Score =     -5.111
+Emodel =    -52.458
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        5, pose   1423
+Score =     -4.858
+Emodel =    -43.860
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        5, pose    974
+Score =     -4.307
+Emodel =    -42.875
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        5, pose   3461
+Score =     -4.090
+Emodel =    -41.171
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        5, pose   4683
+Score =     -3.771
+Emodel =    -40.997
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        5, pose   1783
+Score =     -3.427
+Emodel =    -38.039
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+DOCKING RESULTS FOR LIGAND        5 (SGS)
+Lowest Efinal =    -41.89 Eint=      2.88 GlideScore =     -5.11, from pose  1613, conf    20, lig        5
+Best Emodel =    -53.02 E =    -41.30 Eint =     2.93 GlideScore =     -5.61  from pose  4038, conf     3, lig        5
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       41.24  system:        0.50  elapse:       41.86
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Using templates for ring conformations.
+ Total ring / N-inversion conformations     2
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.25  system:        0.02  elapse:        0.31
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       41.60  system:        0.54  elapse:       42.26
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+ 
+Pose  975 Emodel =  -52.77 original =  -56.39 E =  -41.50 GlideScore =   -5.04
+Pose  235 Emodel =  -53.95 original =  -55.84 E =  -41.11 GlideScore =   -5.73
+ 
+Constraint(s) matched for ligand        6, pose    235
+Score =     -5.729
+Emodel =    -53.955
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        6, pose   3319
+Score =     -5.020
+Emodel =    -52.941
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        6, pose   3100
+Score =     -4.256
+Emodel =    -43.820
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        6, pose   4561
+Score =     -3.774
+Emodel =    -42.990
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        6, pose    978
+Score =     -3.771
+Emodel =    -42.950
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        6, pose   1469
+Score =     -3.798
+Emodel =    -41.905
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        6, pose   3567
+Score =     -3.719
+Emodel =    -41.128
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        6, pose   1815
+Score =     -3.380
+Emodel =    -38.072
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+DOCKING RESULTS FOR LIGAND        6 (SGS)
+Lowest Efinal =    -41.61 Eint=      1.12 GlideScore =     -5.02, from pose  3319, conf    12, lig        6
+Best Emodel =    -53.95 E =    -41.11 Eint =     1.45 GlideScore =     -5.73  from pose   235, conf     3, lig        6
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       49.09  system:        0.57  elapse:       49.79
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Using templates for ring conformations.
+ Total ring / N-inversion conformations     2
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.29  system:        0.02  elapse:        0.35
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       49.51  system:        0.61  elapse:       50.25
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+ 
+Pose 1018 Emodel =  -54.19 original =  -56.90 E =  -41.47 GlideScore =   -5.73
+ 
+Constraint(s) matched for ligand        7, pose   1018
+Score =     -5.728
+Emodel =    -54.195
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        7, pose   1371
+Score =     -5.056
+Emodel =    -53.160
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        7, pose    276
+Score =     -4.313
+Emodel =    -44.587
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        7, pose   2164
+Score =     -4.162
+Emodel =    -43.393
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        7, pose   3921
+Score =     -3.688
+Emodel =    -41.602
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        7, pose   1062
+Score =     -3.524
+Emodel =    -39.862
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        7, pose   1877
+Score =     -3.714
+Emodel =    -36.859
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+DOCKING RESULTS FOR LIGAND        7 (SGS)
+Lowest Efinal =    -41.96 Eint=      1.72 GlideScore =     -5.06, from pose  1371, conf    19, lig        7
+Best Emodel =    -54.19 E =    -41.47 Eint =     1.87 GlideScore =     -5.73  from pose  1018, conf     1, lig        7
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       57.61  system:        0.66  elapse:       58.41
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Using templates for ring conformations.
+ Total ring / N-inversion conformations     2
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.34  system:        0.02  elapse:        0.40
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       58.02  system:        0.70  elapse:       58.86
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+ 
+Pose  719 Emodel =  -54.12 original =  -56.94 E =  -40.98 GlideScore =   -5.73
+ 
+Constraint(s) matched for ligand        8, pose    719
+Score =     -5.727
+Emodel =    -54.117
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        8, pose   4533
+Score =     -5.052
+Emodel =    -53.100
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        8, pose   1274
+Score =     -5.108
+Emodel =    -44.801
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        8, pose    938
+Score =     -4.438
+Emodel =    -44.065
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        8, pose   3911
+Score =     -4.192
+Emodel =    -43.128
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        8, pose   4361
+Score =     -3.763
+Emodel =    -42.557
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        8, pose   4080
+Score =     -3.945
+Emodel =    -42.005
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        8, pose   1088
+Score =     -3.527
+Emodel =    -39.997
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+DOCKING RESULTS FOR LIGAND        8 (SGS)
+Lowest Efinal =    -42.04 Eint=      2.23 GlideScore =     -5.06, from pose  1634, conf     6, lig        8
+Best Emodel =    -54.12 E =    -40.98 Eint =     0.92 GlideScore =     -5.73  from pose   719, conf     2, lig        8
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       65.79  system:        0.74  elapse:       66.66
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Using templates for ring conformations.
+ Total ring / N-inversion conformations     2
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.38  system:        0.02  elapse:        0.45
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       66.22  system:        0.78  elapse:       67.13
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+ 
+Pose 2049 Emodel =  -53.27 original =  -56.37 E =  -42.02 GlideScore =   -5.06
+Pose  315 Emodel =  -53.59 original =  -55.56 E =  -40.96 GlideScore =   -5.73
+ 
+Constraint(s) matched for ligand        9, pose    315
+Score =     -5.730
+Emodel =    -53.593
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        9, pose   2049
+Score =     -5.063
+Emodel =    -53.268
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        9, pose    832
+Score =     -4.512
+Emodel =    -45.306
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        9, pose   1344
+Score =     -4.154
+Emodel =    -44.282
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        9, pose   1745
+Score =     -4.199
+Emodel =    -44.164
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        9, pose   3230
+Score =     -4.536
+Emodel =    -43.973
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        9, pose   2378
+Score =     -3.750
+Emodel =    -42.656
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        9, pose   4921
+Score =     -5.015
+Emodel =    -41.256
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand        9, pose   4296
+Score =     -3.575
+Emodel =    -40.460
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+DOCKING RESULTS FOR LIGAND        9 (SGS)
+Lowest Efinal =    -42.02 Eint=      1.55 GlideScore =     -5.06, from pose  2049, conf    32, lig        9
+Best Emodel =    -53.59 E =    -40.96 Eint =     1.95 GlideScore =     -5.73  from pose   315, conf    11, lig        9
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       74.21  system:        0.81  elapse:       75.16
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Using templates for ring conformations.
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.42  system:        0.03  elapse:        0.49
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       74.48  system:        0.83  elapse:       75.46
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+ 
+Pose  113 Emodel =  -69.53 original =  -79.51 E =  -48.78 GlideScore =   -6.81
+Pose 3313 Emodel =  -70.11 original =  -70.83 E =  -49.01 GlideScore =   -6.76
+Pose 1692 Emodel =  -71.00 original =  -67.12 E =  -49.52 GlideScore =   -6.86
+ 
+Constraint(s) matched for ligand       10, pose   1692
+Score =     -6.864
+Emodel =    -71.002
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       10, pose   1538
+Score =     -6.465
+Emodel =    -68.308
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       10, pose    810
+Score =     -5.587
+Emodel =    -60.958
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       10, pose   2509
+Score =     -5.533
+Emodel =    -60.087
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       10, pose   4634
+Score =     -5.756
+Emodel =    -58.495
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       10, pose    460
+Score =     -5.470
+Emodel =    -58.056
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       10, pose   2729
+Score =     -5.548
+Emodel =    -56.073
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+DOCKING RESULTS FOR LIGAND       10 (SGS)
+Lowest Efinal =    -49.52 Eint=      1.40 GlideScore =     -6.86, from pose  1692, conf    14, lig       10
+Best Emodel =    -71.00 E =    -49.52 Eint =     1.40 GlideScore =     -6.86  from pose  1692, conf    14, lig       10
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       82.54  system:        0.88  elapse:       83.56
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Using templates for ring conformations.
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.46  system:        0.03  elapse:        0.53
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       82.80  system:        0.90  elapse:       83.84
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+ 
+Pose 1484 Emodel =  -69.57 original =  -78.58 E =  -49.01 GlideScore =   -6.90
+Pose  112 Emodel =  -70.99 original =  -60.02 E =  -49.40 GlideScore =   -6.84
+ 
+Constraint(s) matched for ligand       11, pose    112
+Score =     -6.841
+Emodel =    -70.992
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       11, pose   2562
+Score =     -6.366
+Emodel =    -69.768
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       11, pose   1573
+Score =     -5.558
+Emodel =    -57.110
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       11, pose   4607
+Score =     -5.401
+Emodel =    -55.885
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       11, pose   2743
+Score =     -5.642
+Emodel =    -54.465
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       11, pose    793
+Score =     -5.045
+Emodel =    -54.378
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       11, pose    805
+Score =     -5.282
+Emodel =    -53.264
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+DOCKING RESULTS FOR LIGAND       11 (SGS)
+Lowest Efinal =    -49.74 Eint=      0.77 GlideScore =     -6.37, from pose  2562, conf     4, lig       11
+Best Emodel =    -70.99 E =    -49.40 Eint =     0.68 GlideScore =     -6.84  from pose   112, conf     8, lig       11
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       90.74  system:        0.94  elapse:       91.81
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Using templates for ring conformations.
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.50  system:        0.03  elapse:        0.57
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       91.02  system:        0.96  elapse:       92.11
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+ 
+Pose 2802 Emodel =  -69.54 original =  -79.05 E =  -48.76 GlideScore =   -6.80
+ 
+Constraint(s) matched for ligand       12, pose   2802
+Score =     -6.801
+Emodel =    -69.544
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       12, pose   1151
+Score =     -6.203
+Emodel =    -68.094
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       12, pose   3689
+Score =     -5.775
+Emodel =    -62.137
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       12, pose   4653
+Score =     -5.776
+Emodel =    -58.096
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       12, pose   2889
+Score =     -5.401
+Emodel =    -57.973
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       12, pose    370
+Score =     -5.452
+Emodel =    -57.761
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+DOCKING RESULTS FOR LIGAND       12 (SGS)
+Lowest Efinal =    -48.91 Eint=      1.50 GlideScore =     -6.20, from pose  1151, conf    16, lig       12
+Best Emodel =    -69.54 E =    -48.76 Eint =     2.15 GlideScore =     -6.80  from pose  2802, conf     5, lig       12
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       98.99  system:        1.01  elapse:      100.14
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Using templates for ring conformations.
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.54  system:        0.03  elapse:        0.61
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       99.25  system:        1.03  elapse:      100.43
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+ 
+Pose 1698 Emodel =  -69.44 original =  -78.07 E =  -49.11 GlideScore =   -6.91
+Pose 3954 Emodel =  -70.37 original =  -56.75 E =  -49.10 GlideScore =   -6.81
+ 
+Constraint(s) matched for ligand       13, pose   3954
+Score =     -6.805
+Emodel =    -70.371
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       13, pose   1645
+Score =     -6.205
+Emodel =    -66.210
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       13, pose   3184
+Score =     -5.352
+Emodel =    -56.269
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       13, pose    742
+Score =     -5.598
+Emodel =    -56.245
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       13, pose   4056
+Score =     -5.403
+Emodel =    -55.604
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       13, pose   3568
+Score =     -5.730
+Emodel =    -54.583
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       13, pose   4004
+Score =     -4.678
+Emodel =    -48.708
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+DOCKING RESULTS FOR LIGAND       13 (SGS)
+Lowest Efinal =    -49.11 Eint=      3.48 GlideScore =     -6.91, from pose  1698, conf     2, lig       13
+Best Emodel =    -70.37 E =    -49.10 Eint =     0.95 GlideScore =     -6.81  from pose  3954, conf     6, lig       13
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      107.43  system:        1.11  elapse:      108.71
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Using templates for ring conformations.
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.58  system:        0.03  elapse:        0.65
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      107.70  system:        1.13  elapse:      109.00
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+ 
+Pose 2373 Emodel =  -69.36 original =  -78.92 E =  -48.84 GlideScore =   -6.90
+ 
+Constraint(s) matched for ligand       14, pose   2373
+Score =     -6.905
+Emodel =    -69.360
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       14, pose   3360
+Score =     -6.225
+Emodel =    -66.132
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       14, pose   2269
+Score =     -5.529
+Emodel =    -57.835
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       14, pose   1539
+Score =     -5.403
+Emodel =    -56.131
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       14, pose   4052
+Score =     -5.530
+Emodel =    -56.073
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       14, pose   3127
+Score =     -5.688
+Emodel =    -55.389
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       14, pose   2919
+Score =     -5.073
+Emodel =    -54.295
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       14, pose   1819
+Score =     -5.075
+Emodel =    -51.418
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       14, pose   1007
+Score =     -4.666
+Emodel =    -48.391
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+DOCKING RESULTS FOR LIGAND       14 (SGS)
+Lowest Efinal =    -48.84 Eint=      3.50 GlideScore =     -6.90, from pose  2373, conf     1, lig       14
+Best Emodel =    -69.36 E =    -48.84 Eint =     3.50 GlideScore =     -6.90  from pose  2373, conf     1, lig       14
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      115.28  system:        1.16  elapse:      116.61
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Using templates for ring conformations.
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.62  system:        0.03  elapse:        0.70
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      115.56  system:        1.18  elapse:      116.91
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+ 
+Pose  259 Emodel =  -71.76 original =  -81.64 E =  -49.07 GlideScore =   -7.00
+ 
+Constraint(s) matched for ligand       15, pose    259
+Score =     -7.003
+Emodel =    -71.764
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       15, pose    946
+Score =     -6.249
+Emodel =    -67.807
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       15, pose    921
+Score =     -5.821
+Emodel =    -61.617
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       15, pose   2090
+Score =     -5.554
+Emodel =    -60.789
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       15, pose   1786
+Score =     -5.667
+Emodel =    -60.690
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       15, pose   3104
+Score =     -5.503
+Emodel =    -58.545
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       15, pose    571
+Score =     -5.568
+Emodel =    -55.415
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       15, pose    572
+Score =     -4.836
+Emodel =    -51.468
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+DOCKING RESULTS FOR LIGAND       15 (SGS)
+Lowest Efinal =    -49.07 Eint=      0.92 GlideScore =     -7.00, from pose   259, conf     1, lig       15
+Best Emodel =    -71.76 E =    -49.07 Eint =     0.92 GlideScore =     -7.00  from pose   259, conf     1, lig       15
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      123.26  system:        1.21  elapse:      124.65
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Using templates for ring conformations.
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.66  system:        0.03  elapse:        0.74
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      123.57  system:        1.23  elapse:      124.98
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+ 
+Pose 3787 Emodel =  -70.20 original =  -79.70 E =  -48.78 GlideScore =   -6.97
+ 
+Constraint(s) matched for ligand       16, pose   3787
+Score =     -6.972
+Emodel =    -70.202
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       16, pose   3557
+Score =     -6.470
+Emodel =    -69.889
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       16, pose   4346
+Score =     -5.625
+Emodel =    -60.399
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       16, pose   3336
+Score =     -5.611
+Emodel =    -57.185
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       16, pose   4718
+Score =     -5.195
+Emodel =    -54.938
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       16, pose   1917
+Score =     -5.534
+Emodel =    -54.408
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       16, pose   3276
+Score =     -5.576
+Emodel =    -54.217
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+DOCKING RESULTS FOR LIGAND       16 (SGS)
+Lowest Efinal =    -50.55 Eint=      3.55 GlideScore =     -6.47, from pose  3557, conf     9, lig       16
+Best Emodel =    -70.20 E =    -48.78 Eint =     2.66 GlideScore =     -6.97  from pose  3787, conf     7, lig       16
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      131.74  system:        1.28  elapse:      133.20
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Using templates for ring conformations.
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.70  system:        0.03  elapse:        0.78
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      132.06  system:        1.30  elapse:      133.54
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+ 
+Pose  312 Emodel =  -70.34 original =  -79.66 E =  -48.55 GlideScore =   -7.01
+Pose 4523 Emodel =  -71.26 original =  -64.65 E =  -49.66 GlideScore =   -6.85
+ 
+Constraint(s) matched for ligand       17, pose   4523
+Score =     -6.855
+Emodel =    -71.264
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       17, pose   2437
+Score =     -6.180
+Emodel =    -68.298
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       17, pose   1302
+Score =     -5.536
+Emodel =    -59.426
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       17, pose   3852
+Score =     -5.768
+Emodel =    -59.243
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       17, pose   2636
+Score =     -5.402
+Emodel =    -57.840
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+Constraint(s) matched for ligand       17, pose    226
+Score =     -5.697
+Emodel =    -56.876
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+DOCKING RESULTS FOR LIGAND       17 (SGS)
+Lowest Efinal =    -49.66 Eint=      1.43 GlideScore =     -6.85, from pose  4523, conf    14, lig       17
+Best Emodel =    -71.26 E =    -49.66 Eint =     1.43 GlideScore =     -6.85  from pose  4523, conf    14, lig       17
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      140.12  system:        1.34  elapse:      141.65
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask QUIT                                                  
+ END OF LIGAND FILE: Subjob00001--DockLigand0-in.maegz
+ Proceeding with final processing of ligands.
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      140.12  system:        1.34  elapse:      141.85
+
+ ---------------------------------
+ Beginning IMPACT task: :ABO
+
+ ---------------------------------
+ Beginning IMPACT task: END 
+%IMPACT-I (memstat): Temporary storage statistics
+                     real*8:      10497644
+                     integer*4:    6690510
+                     char*4:          9683
+%IMPACT-I (memstat): Total dynamics storage was    110.78 MB
+ Exiting IMPACT execution environment 
+ Date: Friday, January 09 2015, at 13:33:46 EST
+%IMPACT-I (timit): Total CPU time =     142.13 seconds (   2.4 minutes)

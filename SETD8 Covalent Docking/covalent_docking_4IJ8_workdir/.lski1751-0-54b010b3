@@ -1,0 +1,60 @@
+JobId: lski1751-0-54b010b3
+ParentJobId: lski1751-0-54b010af
+ParentJobPort: 49380
+Name: Subjob00001--CreateGrid
+Program: Glide
+Project: /Users/albaness/Documents/Schrodinger/setD8 covalent binding.prj
+Processors: 1
+ViewName: CovalentDockingPanel
+Host: lski1751.mskcc.org
+User: albaness
+Dir: /Users/albaness/.schrodinger/tmp/covalent_docking_4IJ8/covalent_docking_4IJ8_workdir
+HostsFile: /Users/albaness/.schrodinger/tmp/covalent_docking_4IJ8/schrodinger.hosts
+HostEntry: localhost
+Commandline: /opt/schrodinger/suites2014-4/glide Subjob00001--CreateGrid.inp -WAIT
+MmshareExec: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+JobHost: lski1751.mskcc.org
+JobUser: albaness
+JobDir: :tmpdir:
+TmpDir: /Users/albaness/.schrodinger/tmp
+JobDB: /Users/albaness/.schrodinger/.jobdb2
+JobMmshareExec: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+JobPort: 49390
+JobPid: 1128
+Status: started
+LastStatus: launched
+Summary: The job directory has been created on lski1751.mskcc.org.
+Command: BASE64 Ii9vcHQvc2Nocm9kaW5nZXIvc3VpdGVzMjAxNC00L2ltcGFjdC12NjUwMTMvYmluL0Rhcndpbi14ODZfNjQvbWFpbjFtIiAibHNraTE3NTEtMC01NGIwMTBiMy5USU4uaW5wIiA+ICJTdWJqb2IwMDAwMS0tQ3JlYXRlR3JpZC5sb2ciIDI+JjE=
+Home: /Users/albaness
+Timezone: -0500
+LaunchTime: 2015-01-09-12:32:35
+StatusTime: 2015-01-09-12:32:36
+LogInterval: 60
+SaveJobDir: 0
+TmpLaunchDir: 0
+AutoCleanup: 0
+InputFiles[1]:	Subjob00001--CreateGrid.inp
+InputFiles[2]:	Subjob00001--CreateGrid-in.maegz
+InputFiles[3]:	/Users/albaness/.schrodinger/.jobdb2/files/lski1751-54b01/lski1751-0-54b010b3.TIN.inp
+OutputFiles[1]:	Subjob00001--CreateGrid.out
+LogFiles[1]:	Subjob00001--CreateGrid.log
+Transfers[1]:	'/Users/albaness/.schrodinger/tmp/covalent_docking_4IJ8/schrodinger.hosts' > 'schrodinger.hosts'
+Licenses[1]:	GLIDE_MAIN:1
+Envs[1]:	HOME_MMSHARE_EXEC=/opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Envs[2]:	IMPACT_EXEC=/opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+Envs[3]:	IMPACT_INPUT=lski1751-0-54b010b3.TIN.inp
+Envs[4]:	MMSHARE_EXEC=/opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Envs[5]:	SCHRODINGER=/opt/schrodinger/suites2014-4
+Envs[6]:	SCHRODINGER_APP_EXEC=IMPACT_EXEC
+Envs[7]:	SCHRODINGER_COMMANDLINE="/opt/schrodinger/suites2014-4/glide Subjob00001--CreateGrid.inp -WAIT"
+Envs[8]:	SCHRODINGER_FEATURE_FLAGS=0
+Envs[9]:	SCHRODINGER_HOSTS=%JOBDIR%/schrodinger.hosts
+Envs[10]:	SCHRODINGER_JOBID=lski1751-0-54b010b3
+Envs[11]:	SCHRODINGER_JOB_DEBUG=0
+Envs[12]:	SCHRODINGER_NICE=local
+Envs[13]:	SCHRODINGER_PRODUCT=impact
+Envs[14]:	SCHRODINGER_PROJECT="/Users/albaness/Documents/Schrodinger/setD8 covalent binding.prj"
+Envs[15]:	SCHRODINGER_SAVE_JOBDIR=0
+Envs[16]:	SCHRODINGER_TPP=
+Envs[17]:	SCHRODINGER_UMASK=18
+Envs[18]:	SCHRODINGER_VIEWNAME=CovalentDockingPanel

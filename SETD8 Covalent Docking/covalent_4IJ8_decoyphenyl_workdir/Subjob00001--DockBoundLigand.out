@@ -1,0 +1,1068 @@
+ Entering IMPACT execution environment 
+ Date: Monday, January 19 2015, at 14:08:06 EST
+ ---------------------------------------------------------------------------
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ For hardware platform Linux-x86_64.openmpi
+ Compiled on: Fri Nov 7 18:58:43 EST 2014
+ Host: Linux gpu-2-7.local 2.6.32-358.18.1.el6.x86_64 #1 SMP Wed Aug 28 17:19:38 UTC 2013 x86_64
+ Job Name: Subjob00001--DockBoundLigand.glidetmp14224
+ SCHRODINGER  directory: /cbio/jclab/share/schrodinger/schrodinger2014-4
+ IMPACT_EXEC  directory: /cbio/jclab/share/schrodinger/schrodinger2014-4/impact-v65013/bin/Linux-x86_64
+ MMSHARE_EXEC directory: /cbio/jclab/share/schrodinger/schrodinger2014-4/mmshare-v28013/bin/Linux-x86_64
+
+ This software contains material that is a copyrighted
+ work of, and that is licensed from, Rutgers,
+ the State University of New Jersey.
+
+ This software is provided under license and may be 
+ used, copied, transmitted, and stored only in accordance
+ with the terms and conditions of that license.
+ ---------------------------------------------------------------------------
+
+ Job title:        "Subjob00001--DockBoundLigand"
+ Main output file: Subjob00001--DockBoundLigand.out
+
+                             - Input command file -
+ ---------------------------------------------------------------------------
+write file -
+"Subjob00001--DockBoundLigand.out" -
+      title -
+"Subjob00001--DockBoundLigand" *
+
+PUT 0 INTO 'buildcheck'
+PUT 1 INTO 'startlig'
+PUT 0 INTO 'endlig'
+PUT -1 INTO 'strucseq'
+
+SET FFIELD OPLS_2005
+
+DOCK
+  smooth anneal 2
+  ligand multiple maxat 300 maxrot 50 -
+   ligvdwscale factor 0.800000 ccut 0.150000
+  receptor rdiel readzip -
+"Subjob00001--CreateGrid-out"
+  screen  readscreen -
+"Subjob00001--CreateGrid-out.save" -
+   greedy readgreed -
+"Subjob00001--CreateGrid-out_greedy.save" -
+   maxkeep 1000 scorecut 100.000000
+  parameter setup save   maxconf 1000
+  final glidescore
+  xpviz
+  report setup nreport 0   -
+   external file -
+"Subjob00001--DockBoundLigand_raw.maegz" -
+   norecep -
+   rmspose 0.500000 delpose 1.300000 epik
+  run
+QUIT
+
+PUT 'startlig' INTO 'strucseq'
+CREATE
+  build primary name lig type auto maxat 300 -
+   read maestro file -
+"Subjob00001--DockBoundLigand-in.maegz" -
+   gotostruct 'startlig' skip_recep
+IF 'buildcheck' LT 0
+QUIT
+  IF 'buildcheck' EQ -1
+    ECHO "END OF LIGAND FILE: Subjob00001--DockBoundLigand-in.maegz"
+  ENDIF
+  IF 'buildcheck' EQ -2
+     ECHO "ERROR READING LIGAND FILE: Subjob00001--DockBoundLigand-in.maegz"
+  ENDIF
+    ECHO "No ligands read; aborting."
+    GOTO ABORT
+ELSE
+  build types name lig
+QUIT
+ENDIF
+
+PUT 'startlig' INTO 'i'
+WHILE ('endlig' LT 1 OR 'i' LE 'endlig')
+
+DOCK
+  ligand name lig
+  screen
+  parameter save
+  confgen  xpref torsion amide fixed  -
+name lig -
+   ecut 12.000000
+  run
+QUIT
+
+DOCK
+  smooth anneal 2
+  ligand keep
+  screen noscore refine maxref 100
+  parameter save
+  minimize flex itmax 100 dielco 2.000000 -
+   postdock 10 ligmin pmitmax 500 pmxpdele 0.500000 -
+   highacc
+  scoring ecvdw 0.000000 hbfilt 0.000000 metalfilt 10.000000 gscorecut 100.000000
+  report collect -
+   rmspose 0.500000 delpose 1.300000
+  run
+QUIT
+IF ('i' EQ 'endlig')
+  ECHO "FINISHED REQUESTED RANGE IN LIGAND FILE: Subjob00001--DockBoundLigand-in.maegz"
+ECHO "Proceeding with final processing of ligands."
+  GOTO BREAK
+ENDIF
+
+PUT 'i' + 1 INTO 'strucseq'
+CREATE
+  build primary check name lig type auto maxat 300 -
+   read maestro file -
+"Subjob00001--DockBoundLigand-in.maegz" -
+   nextstruct
+
+IF 'buildcheck' LT 0
+QUIT
+  IF 'buildcheck' EQ -1
+    ECHO "END OF LIGAND FILE: Subjob00001--DockBoundLigand-in.maegz"
+  ENDIF
+  IF 'buildcheck' EQ -2
+     ECHO "ERROR READING LIGAND FILE: Subjob00001--DockBoundLigand-in.maegz"
+  ENDIF
+ECHO "Proceeding with final processing of ligands."
+  GOTO BREAK
+ELSE
+  build types name lig
+QUIT
+ENDIF
+
+PUT 'i' + 1 INTO 'i'
+ENDWHILE
+:BREAK
+
+DOCK
+  parameter clean final
+  report -
+   rmspose 0.500000 delpose 1.300000  write filename -
+"Subjob00001--DockBoundLigand"
+  run
+QUIT
+:ABORT
+
+END
+ ---------------------------------------------------------------------------
+
+                             - End of input file -
+
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ VdW radii of ligand atoms scaled by   0.800000000000000     
+ Charge cutoff for polarity   0.150000000000000     
+ Beginning DOCK subtask RECE                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask FINA                                                    
+ Beginning DOCK subtask XPVI                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+Rough-score grid dimensions = (   25,    25,    25).
+ Set up rough-score grid with dimensions(   25,    25,    25), spacing=    1.0
+  125 acceptable sites for ligand center.
+ Finished setting up rough-score screening.
+ Getting receptor data ...
+%IMPACT-I (xdrrd): File grid.14245/Subjob00001--CreateGrid-out.grd opened for reading
+ Energy grid dimensions = (   64,    64,    64).
+%IMPACT-I (xdrrd): File grid.14245/Subjob00001--CreateGrid-out_coul2.fld opened for reading
+%IMPACT-I (xdrrd): File grid.14245/Subjob00001--CreateGrid-out_vdw.fld opened for reading
+%IMPACT-I (xdrrd): File grid.14245/Subjob00001--CreateGrid-out.gsc opened for reading
+ Finished setting up grids.
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:        1.05  system:        0.09  elapse:        1.26
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+  
+  Amide torsions fixed at input values 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.07  system:        0.01  elapse:        0.10
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:        1.39  system:        0.13  elapse:        1.72
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+
+GlideScore version XP5.0 will be used
+
+  
+ Buried polar penalty      0.000
+ Coulomb vdW cutoff        0.000
+ H bond cutoff             0.000
+ Metal-ligand cutoff      10.000
+%IMPACT-I (info): At line  77
+ %IMPACT-I: Assigning GlideScore XP5.0 parameters
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+Full force-field refinement in receptor field for up to   10 poses
+    2 poses will be postminimized for this ligand
+REFINEMENT RESULTS FOR LIGAND        1 (decoy_phenyl)
+Best XP pose:     2;  GlideScore =     -4.80 Emodel =     -9.38 E =    -13.21 Eint =     5.76
+ xp time  user:       18.32  system:        0.03  elapse:       18.40
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       24.50  system:        0.19  elapse:       24.95
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.11  system:        0.01  elapse:        0.14
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       24.93  system:        0.19  elapse:       25.38
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+REFINEMENT RESULTS FOR LIGAND        2 (decoy_phenyl)
+  Input pose reported as docking did not improve GlideScore
+GlideScore =     -4.32 E =     -6.75
+ xp time  user:       43.69  system:        0.05  elapse:       43.85
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       55.11  system:        0.22  elapse:       55.65
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.17  system:        0.01  elapse:        0.20
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       55.52  system:        0.22  elapse:       56.06
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+REFINEMENT RESULTS FOR LIGAND        3 (decoy_phenyl)
+Best XP pose:     2;  GlideScore =     -3.53 Emodel =    -23.01 E =    -21.22 Eint =     3.78
+ xp time  user:       55.32  system:        0.06  elapse:       55.52
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       72.48  system:        0.23  elapse:       73.07
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.22  system:        0.01  elapse:        0.25
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       72.79  system:        0.23  elapse:       73.39
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+REFINEMENT RESULTS FOR LIGAND        4 (decoy_phenyl)
+  Input pose reported as docking did not improve GlideScore
+GlideScore =     -1.43 E =     32.54
+ xp time  user:       68.41  system:        0.07  elapse:       68.65
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       90.18  system:        0.24  elapse:       90.83
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.28  system:        0.01  elapse:        0.31
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       91.24  system:        0.24  elapse:       91.89
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    2 poses will be postminimized for this ligand
+REFINEMENT RESULTS FOR LIGAND        5 (decoy_phenyl)
+Best XP pose:     1;  GlideScore =     -3.06 Emodel =    -18.76 E =    -17.04 Eint =     1.64
+ xp time  user:       82.93  system:        0.08  elapse:       83.22
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      110.40  system:        0.25  elapse:      111.11
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.31  system:        0.01  elapse:        0.34
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      110.59  system:        0.25  elapse:      111.30
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    2 poses will be postminimized for this ligand
+REFINEMENT RESULTS FOR LIGAND        6 (decoy_phenyl)
+Best XP pose:    10;  GlideScore =     -3.81 Emodel =     73.78 E =    -15.33 Eint =     1.65
+ xp time  user:       98.38  system:        0.09  elapse:       98.72
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      130.24  system:        0.26  elapse:      131.01
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.37  system:        0.01  elapse:        0.39
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      131.33  system:        0.26  elapse:      132.10
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    4 poses will be postminimized for this ligand
+REFINEMENT RESULTS FOR LIGAND        7 (decoy_phenyl)
+Best XP pose:    27;  GlideScore =     -4.50 Emodel =     39.19 E =    -23.92 Eint =    15.09
+ xp time  user:      116.86  system:        0.11  elapse:      117.24
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      154.43  system:        0.28  elapse:      155.26
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.42  system:        0.01  elapse:        0.45
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      155.54  system:        0.28  elapse:      156.38
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+REFINEMENT RESULTS FOR LIGAND        8 (decoy_phenyl)
+Best XP pose:     7;  GlideScore =     -3.30 Emodel =    -18.81 E =    -18.88 Eint =     1.83
+ xp time  user:      131.38  system:        0.12  elapse:      131.80
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      174.76  system:        0.29  elapse:      175.66
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.47  system:        0.01  elapse:        0.50
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      175.20  system:        0.29  elapse:      176.10
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    2 poses will be postminimized for this ligand
+REFINEMENT RESULTS FOR LIGAND        9 (decoy_phenyl)
+Best XP pose:     9;  GlideScore =     -4.00 Emodel =     39.17 E =    -14.54 Eint =     7.23
+ xp time  user:      145.74  system:        0.14  elapse:      146.21
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      194.34  system:        0.31  elapse:      195.30
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.51  system:        0.01  elapse:        0.54
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      194.93  system:        0.31  elapse:      195.89
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    4 poses will be postminimized for this ligand
+REFINEMENT RESULTS FOR LIGAND       10 (decoy_phenyl)
+Best XP pose:    20;  GlideScore =     -5.05 Emodel =     96.85 E =    -17.79 Eint =    28.29
+ xp time  user:      163.84  system:        0.15  elapse:      164.39
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      216.71  system:        0.32  elapse:      217.76
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.57  system:        0.01  elapse:        0.59
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      217.68  system:        0.32  elapse:      218.73
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    5 poses will be postminimized for this ligand
+REFINEMENT RESULTS FOR LIGAND       11 (decoy_phenyl)
+Best XP pose:    13;  GlideScore =     -4.60 Emodel =     83.53 E =    -29.82 Eint =    26.15
+ xp time  user:      180.84  system:        0.16  elapse:      181.44
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      239.01  system:        0.33  elapse:      240.12
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.62  system:        0.01  elapse:        0.65
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      239.97  system:        0.33  elapse:      241.09
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    4 poses will be postminimized for this ligand
+REFINEMENT RESULTS FOR LIGAND       12 (decoy_phenyl)
+Best XP pose:    14;  GlideScore =     -5.47 Emodel =     64.82 E =    -19.98 Eint =    12.69
+ xp time  user:      198.53  system:        0.17  elapse:      199.18
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      261.96  system:        0.34  elapse:      263.15
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.68  system:        0.02  elapse:        0.71
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      262.49  system:        0.35  elapse:      263.67
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    2 poses will be postminimized for this ligand
+REFINEMENT RESULTS FOR LIGAND       13 (decoy_phenyl)
+Best XP pose:     7;  GlideScore =     -4.08 Emodel =    -10.95 E =    -15.44 Eint =     3.37
+ xp time  user:      212.01  system:        0.18  elapse:      212.69
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      280.70  system:        0.36  elapse:      281.93
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.72  system:        0.02  elapse:        0.75
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      281.02  system:        0.36  elapse:      282.25
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+REFINEMENT RESULTS FOR LIGAND       14 (decoy_phenyl)
+Best XP pose:     7;  GlideScore =     -4.11 Emodel =    -10.68 E =    -15.97 Eint =     2.06
+ xp time  user:      225.90  system:        0.19  elapse:      226.62
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      299.40  system:        0.37  elapse:      300.68
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.77  system:        0.02  elapse:        0.81
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      300.24  system:        0.37  elapse:      301.52
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+REFINEMENT RESULTS FOR LIGAND       15 (decoy_phenyl)
+Best XP pose:     2;  GlideScore =     -4.37 Emodel =    -26.31 E =    -26.54 Eint =     3.14
+ xp time  user:      243.44  system:        0.19  elapse:      244.22
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      322.55  system:        0.37  elapse:      323.90
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.81  system:        0.02  elapse:        0.85
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      323.21  system:        0.37  elapse:      324.57
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    2 poses will be postminimized for this ligand
+REFINEMENT RESULTS FOR LIGAND       16 (decoy_phenyl)
+Best XP pose:     6;  GlideScore =     -4.71 Emodel =      1.51 E =    -33.73 Eint =     5.63
+ xp time  user:      262.08  system:        0.19  elapse:      262.90
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      346.30  system:        0.38  elapse:      347.71
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.87  system:        0.02  elapse:        0.91
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      347.38  system:        0.38  elapse:      348.80
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+REFINEMENT RESULTS FOR LIGAND       17 (decoy_phenyl)
+Best XP pose:     5;  GlideScore =     -4.96 Emodel =    -28.23 E =    -35.20 Eint =     3.39
+ xp time  user:      276.49  system:        0.20  elapse:      277.34
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      366.54  system:        0.39  elapse:      368.01
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.93  system:        0.02  elapse:        0.97
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      367.64  system:        0.39  elapse:      369.11
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+REFINEMENT RESULTS FOR LIGAND       18 (decoy_phenyl)
+Best XP pose:     3;  GlideScore =     -4.78 Emodel =    -28.02 E =    -33.84 Eint =     3.41
+ xp time  user:      292.30  system:        0.22  elapse:      293.19
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      388.25  system:        0.41  elapse:      389.78
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask CONF                                                    
+     Energy parameters obtained from atomtyping: 
+  
+ ** Entering Conformation Generator ** 
+  
+ Number of rotatable bonds            3
+ Core rotatable bonds, max cores            3        1000
+ confgen time  user:        0.98  system:        0.02  elapse:        1.03
+ Beginning DOCK subtask RUN                                                     
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:      389.30  system:        0.41  elapse:      391.18
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask LIGA                                                    
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask MINI                                                    
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+ Beginning DOCK subtask SCOR                                                    
+ Beginning DOCK subtask REPO                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800

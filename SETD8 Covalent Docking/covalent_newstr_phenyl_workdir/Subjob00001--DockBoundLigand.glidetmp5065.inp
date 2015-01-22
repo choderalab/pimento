@@ -1,0 +1,123 @@
+write file -
+"Subjob00001--DockBoundLigand.out" -
+      title -
+"Subjob00001--DockBoundLigand" *
+
+PUT 0 INTO 'buildcheck' 
+PUT 1 INTO 'startlig' 
+PUT 0 INTO 'endlig' 
+PUT -1 INTO 'strucseq' 
+
+SET FFIELD OPLS_2005
+
+DOCK
+  smooth anneal 2
+  ligand multiple maxat 300 maxrot 50 -
+   ligvdwscale factor 0.800000 ccut 0.150000
+  receptor rdiel readzip -
+"Subjob00001--CreateGrid-out"
+  screen  readscreen -
+"Subjob00001--CreateGrid-out.save" -
+   greedy readgreed -
+"Subjob00001--CreateGrid-out_greedy.save" -
+   maxkeep 1000 scorecut 100.000000
+  parameter setup save   maxconf 1000
+  final glidescore
+  xpviz
+  report setup nreport 0   -
+   external file -
+"Subjob00001--DockBoundLigand_raw.maegz" -
+   norecep -
+   rmspose 0.500000 delpose 1.300000 epik
+  run
+QUIT
+
+PUT 'startlig' INTO 'strucseq'
+CREATE
+  build primary name lig type auto maxat 300 -
+   read maestro file -
+"Subjob00001--DockBoundLigand-in.maegz" -
+   gotostruct 'startlig' skip_recep
+IF 'buildcheck' LT 0 
+QUIT
+  IF 'buildcheck' EQ -1 
+    ECHO "END OF LIGAND FILE: Subjob00001--DockBoundLigand-in.maegz"
+  ENDIF
+  IF 'buildcheck' EQ -2 
+     ECHO "ERROR READING LIGAND FILE: Subjob00001--DockBoundLigand-in.maegz"
+  ENDIF
+    ECHO "No ligands read; aborting."
+    GOTO ABORT
+ELSE
+  build types name lig
+QUIT
+ENDIF
+
+PUT 'startlig' INTO 'i'
+WHILE ('endlig' LT 1 OR 'i' LE 'endlig')
+
+DOCK
+  ligand name lig
+  screen
+  parameter save
+  confgen  xpref torsion amide fixed  -
+name lig -
+   ecut 12.000000
+  run
+QUIT
+
+DOCK
+  smooth anneal 2
+  ligand keep
+  screen noscore refine maxref 100
+  parameter save
+  minimize flex itmax 100 dielco 2.000000 -
+   postdock 10 ligmin pmitmax 500 pmxpdele 0.500000 -
+   highacc
+  scoring ecvdw 0.000000 hbfilt 0.000000 metalfilt 10.000000 gscorecut 100.000000 
+  report collect -
+   rmspose 0.500000 delpose 1.300000
+  run
+QUIT
+IF ('i' EQ 'endlig')
+  ECHO "FINISHED REQUESTED RANGE IN LIGAND FILE: Subjob00001--DockBoundLigand-in.maegz"
+ECHO "Proceeding with final processing of ligands."
+  GOTO BREAK
+ENDIF
+
+PUT 'i' + 1 INTO 'strucseq'
+CREATE
+  build primary check name lig type auto maxat 300 -
+   read maestro file -
+"Subjob00001--DockBoundLigand-in.maegz" -
+   nextstruct
+
+IF 'buildcheck' LT 0 
+QUIT
+  IF 'buildcheck' EQ -1 
+    ECHO "END OF LIGAND FILE: Subjob00001--DockBoundLigand-in.maegz"
+  ENDIF
+  IF 'buildcheck' EQ -2 
+     ECHO "ERROR READING LIGAND FILE: Subjob00001--DockBoundLigand-in.maegz"
+  ENDIF
+ECHO "Proceeding with final processing of ligands."
+  GOTO BREAK
+ELSE
+  build types name lig
+QUIT
+ENDIF
+
+PUT 'i' + 1 INTO 'i'
+ENDWHILE
+:BREAK
+
+DOCK
+  parameter clean final
+  report -
+   rmspose 0.500000 delpose 1.300000  write filename -
+"Subjob00001--DockBoundLigand"
+  run
+QUIT
+:ABORT
+
+END

@@ -1,0 +1,479 @@
+----- Output (stdout) -----
+==============================================================================
+  Prime version 3.8 (r013) Refine Structure: Minimization
+==============================================================================
+        
+Using the following input parameters:
+   JOB_TYPE	refine
+   MINIM_NITER	5
+   SELECT	all
+   STRUCT_FILE	Subjob00001--MinimizeLigand-in.maegz
+
+Number of CPU cores to use: 1
+
+Using OPLS version 2005 for force-field parameters.
+
+Pre-processing input
+  Treating with residue ID check...
+    Complete:  0 min  0 sec
+  Treating with asl parsing...
+    Complete:  0 min  0 sec
+  Treating with naming consistency detection...
+    Complete:  0 min  0 sec
+
+ Random Number Seed Set to:    616875608
+ 
+ Contents of the control file:
+   
+   file outdir "/scratch/albaness/covalent_4IJ8_decoyphenyl/covalent_4IJ8_decoyphenyl_workdir/"
+   file datadir "/cbio/jclab/share/schrodinger/schrodinger2014-4/psp-v38013/data/pop/"
+   file vddir "/cbio/jclab/share/schrodinger/schrodinger2014-4/psp-v38013/data/pop/"
+   file tempdir "templates/"
+   file protempdir "templates/"
+   file usrtempdir "/scratch/albaness/covalent_4IJ8_decoyphenyl/covalent_4IJ8_decoyphenyl_workdir/"
+   file gluefile "params.glue"
+   file logfile stdout
+   
+   rand seed 0
+   
+   load simple Subjob00001--MinimizeLigand_0 Structure(36)  het yes ions yes wat yes mse2met no sym no   highest_occ no     opls_version 2005
+   
+   
+   
+   energy param solv vsgb2.0
+   
+   
+   
+   energy param nbcut2_nn  40.0
+   energy param nbcut2_cn  40.0
+   energy param nbcut2_cc  40.0
+   
+   energy param uselipo yes
+   
+   
+   
+   
+   
+   energy total
+   minimize residues asl "atom.i_psp_select_atom 1"  verbose yes  iter 5
+   
+   energy total
+   
+   
+   write mae SWIG_OUTPUT_STRUCTURE
+   
+--Checked out   8 PSP Plop Tokens--
+ Random seed reset to :            0
+ 
+ Parameters chosen for PDB loading:
+   All protein chains will be loaded.
+   Sequence read from ATOM lines.
+   Ions from PDB file INCLUDED.
+   PDB file assumed to be experimental data.
+   Waters from PDB file INCLUDED.
+   HETATMs from PDB file INCLUDED.
+   Hydrogens from PDB file INCLUDED.
+   NO symmetry will be used.
+   Atoms not in PDB file will NOT be optimized.
+   Atomtyping Parameters (when reading directly from mae)
+      OPLS Version 2005                
+      Planarity      1.000
+      Using Force Field Charges
+ 
+ STARTING TO WORK ON FILE Subjob00001--MinimizeLigand_0
+ Crystal symmetry data not present
+ Reading residue sequence from atoms in mae file
+ 
+ Nonbonded initialization ...
+ Time for loading nb parameters:   1.729999999952270E-002
+ Build extended structure ...
+ Generating crosslinks ...
+ Initialize 1/4 list ...
+ Initialize parent/child list ...
+ Initialize covalent pointers ...
+ Initialize resinfo list ...
+ ATTN: hetero res type UNK 
+  not recognized - rotamer conformations will not be sampled.
+ Initialize special atoms ...
+ Initialize rank list ...
+ Initialize sparse atom list ...
+ 
+ Times for various book-keeping steps:
+     build   0.007s
+     cross   0.000s
+     child   0.000s
+      iper   0.000s
+       rev   0.000s
+      info   0.000s
+     resat   0.000s
+      rank   0.000s
+     covpt   0.000s
+    sparse   0.000s
+ 
+ Times for steps in loading structure:
+           Load sequence    0.00s
+    Initialize structure    0.10s
+      Assign coordinates    0.00s
+     Initialize symmetry    0.00s
+ 
+ Preparing for first energy calculation ...
+ 
+ Time for assigning nb parameters:    0.000s
+ 
+ Number of protein chains       0
+   Number of residues           0
+       (charged)                0
+        (polar)                 0
+       (glycine)                0
+     (hydrophobic)              0
+ 
+ Number of RNA chains           0
+   Number of nucleotides        0
+ Number of DNA chains           0
+   Number of nucleotides        0
+ 
+ Number of waters               0
+ Number of ions                 0
+ Number of HET                  1
+ 
+ Number of atoms               44
+   [sparse atoms]               6
+ 
+ Number of bonds               47
+ Number of angles              82
+ Number of torsions           141
+ Number of 1/4s               112
+ 
+ Partial charges and molecular weights:
+  HET group      _:UNK_900         0.0000     349.4
+  Entire system                    0.0000     349.4
+ 
+ Time for secondary structure initialization   0.000s
+ 
+ Results of parameter assignment
+    type    tot   time
+    BOND     47   0.00
+    ANGL     82   0.00
+    TORS    141   0.00
+ 
+ Here are the parameters that will be used:
+                      Solvent model   SGB
+               Variable Dielectric:   ENABLED
+                               LYS:    3.85
+                               GLU:    2.78
+                               ASP:    2.44
+                               HIP:    2.86
+                               HIS:    1.00
+                               ARG:    2.11
+                      Penalty terms   EXCLUDED
+                Internal dielectric    1.00
+                 Solvent dielectric   80.00
+                 Ionic strength (M)    0.00
+                 Debye length (Ang)     Inf
+     Short NB cut (neutral/neutral)   10.00
+      Long NB cut (neutral/neutral)   40.00
+      Short NB cut (charge/neutral)   10.00
+       Long NB cut (charge/neutral)   40.00
+       Short NB cut (charge/charge)   15.00
+        Long NB cut (charge/charge)   40.00
+             Short NB cut (reduced)    6.00
+              Long NB cut (reduced)   36.00
+          Rotamer Frequency Scoring   OFF
+ 
+ NOW REPORTING THE ENERGY (KCAL/MOL): 
+ COVALENT ENERGIES:
+                BOND           ANGLE             TOR           TOTAL
+     COV        1.979775        2.548376        5.332161        9.860312
+     SGB       87.856694       55.799106      -60.947581       82.708219
+   TOTAL       89.836469       58.347482      -55.615420       92.568531
+    TIME        0.000s          0.000s          0.000s          0.000s   
+ 
+ NONBONDED (INTRAMOLECULAR) ENERGIES:
+                  14           SHORT            LONG           TOTAL
+      LJ       22.053765       -8.438077        0.000000       13.615688
+    LIPO        0.000000      -10.213637        0.000000      -10.213637
+      EL       45.800241      -19.437518        0.000000       26.362722
+     SGB      -60.947581       11.713963        0.000000      -49.233618
+   TOTAL        6.906425      -26.375269        0.000000      -19.468844
+    TIME        0.000s          0.000s          0.000s          0.000s   
+ 
+ OTHER:
+SGB SELF      -98.415162
+NONPOLAR        0.000000
+PROT COR        0.000000
+   HBOND        0.000000
+ PACKING        0.000000
+SelfCont        0.000000
+ 
+ SUM:
+ SGB TOT       -3.992980
+SOLV TOT       -3.992980
+LIPO TOT      -10.213637
+  TOTALE   35.63210616172    
+ [NOTE: TOTAL ENERGY = COV_TOT + NB_TOT + OTHER - SGB_14|SGB_TOR]
+ 
+ NOW REPORTING THE ENERGY (KCAL/MOL): 
+ COVALENT ENERGIES:
+                BOND           ANGLE             TOR           TOTAL
+     COV        1.979775        2.548376        5.332161        9.860312
+     SGB       87.856694       55.799106      -60.947581       82.708219
+   TOTAL       89.836469       58.347482      -55.615420       92.568531
+    TIME        0.000s          0.000s          0.000s          0.000s   
+ 
+ NONBONDED (INTRAMOLECULAR) ENERGIES:
+                  14           SHORT            LONG           TOTAL
+      LJ       22.053765       -8.438077        0.000000       13.615688
+    LIPO        0.000000      -10.213637        0.000000      -10.213637
+      EL       45.800241      -19.437518        0.000000       26.362722
+     SGB      -60.947581       11.713963        0.000000      -49.233618
+   TOTAL        6.906425      -26.375269        0.000000      -19.468844
+    TIME        0.000s          0.000s          0.000s          0.000s   
+ 
+ OTHER:
+SGB SELF      -98.415162
+NONPOLAR        0.000000
+PROT COR        0.000000
+   HBOND        0.000000
+ PACKING        0.000000
+SelfCont        0.000000
+ 
+ SUM:
+ SGB TOT       -3.992980
+SOLV TOT       -3.992980
+LIPO TOT      -10.213637
+  TOTALE   35.63210616172    
+ [NOTE: TOTAL ENERGY = COV_TOT + NB_TOT + OTHER - SGB_14|SGB_TOR]
+ 
+ Preparing for first energy calculation ...
+ 
+ 
+ NOW REPORTING THE ENERGY (KCAL/MOL): 
+ COVALENT ENERGIES:
+                BOND           ANGLE             TOR           TOTAL
+     COV        1.979775        2.548376        5.332161        9.860312
+     SGB       87.856694       55.799106      -60.947581       82.708219
+   TOTAL       89.836469       58.347482      -55.615420       92.568531
+    TIME        0.000s          0.000s          0.000s          0.000s   
+ 
+ NONBONDED (INTRAMOLECULAR) ENERGIES:
+                  14           SHORT            LONG           TOTAL
+      LJ       22.053765       -8.438077        0.000000       13.615688
+    LIPO        0.000000      -10.213637        0.000000      -10.213637
+      EL       45.800241      -19.437518        0.000000       26.362722
+     SGB      -60.947581       11.713963        0.000000      -49.233618
+   TOTAL        6.906425      -26.375269        0.000000      -19.468844
+    TIME        0.000s          0.000s          0.000s          0.000s   
+ 
+ OTHER:
+SGB SELF      -98.415162
+NONPOLAR        0.000000
+PROT COR        0.000000
+   HBOND        0.000000
+ PACKING        0.000000
+SelfCont        0.000000
+ 
+ SUM:
+ SGB TOT       -3.992980
+SOLV TOT       -3.992980
+LIPO TOT      -10.213637
+  TOTALE   35.63210616172    
+ [NOTE: TOTAL ENERGY = COV_TOT + NB_TOT + OTHER - SGB_14|SGB_TOR]
+ 
+ Options chosen for the minimization:
+   Desired final RMS gradient:  1.000000000000000E-002
+   Maximum number of iterations to achieve self-consistency:            5
+   Energy cutoff for determining self-consistency 0.100kcals/mol
+   Maximum number of TN iterations:           65
+   Iterations between NBlist/LR updates:            2
+   LR forces will be updated less frequently than SR.
+   NB list will be updated during minim.
+   SGB will be updated during minim.
+   Option for SGB update:            1
+   Born alpha will NOT be updated during minim
+   NB Clashes will be used in the preconditioning
+ 
+ STARTING TO WORK ON MINIMIZATION: 
+ Dynamic memory allocation:     0.00s
+ number of degrees of freedom:              132
+ number of sparse matrix elements:         2433
+ memory allocated for hessian ME:         22000
+ 
+  itn.     f            |g|      #cg    mode    |r|       lambda     nfg  time   rmsd
+    0      35.63211     0.72342
+    1      35.46994     0.15541     2     0     1.55032    1.00000    2   0.49s  0.031
+    2      35.40363     0.37870     8     0     0.13969    1.00000    3   0.51s  0.070
+    3      35.38251     0.01932     1     0     0.22248    1.00000    4   0.51s  0.070
+    4      35.37772     0.08482    14     0     0.00708    1.00000    5   0.52s  0.086
+    5      35.37659     0.00293     1     0     0.03365    1.00000    6   0.52s  0.086
+final      35.3765917   0.00293    26     0     0.03365    1.00000    6   0.52s
+ 
+   Total time elapsed    0.520s
+   Preliminaries         0.425s
+   PCG Hd products       0.008s
+   Long Range Forces     0.000s
+   Preconditioning       0.084s
+   Line searches         0.002s
+ 
+ MINIMIZATION COMPLETED 
+ 
+ NOW REPORTING THE ENERGY (KCAL/MOL): 
+ COVALENT ENERGIES:
+                BOND           ANGLE             TOR           TOTAL
+     COV        2.070387        2.506362        5.340490        9.917239
+     SGB       87.681366       55.695542      -60.872988       82.503920
+   TOTAL       89.751753       58.201904      -55.532498       92.421159
+    TIME        0.000s          0.000s          0.000s          0.000s   
+ 
+ NONBONDED (INTRAMOLECULAR) ENERGIES:
+                  14           SHORT            LONG           TOTAL
+      LJ       22.177956       -8.299439        0.000000       13.878518
+    LIPO        0.000000      -10.503058        0.000000      -10.503058
+      EL       45.749947      -19.720072        0.000000       26.029875
+     SGB      -60.872988       11.775123        0.000000      -49.097865
+   TOTAL        7.054915      -26.747445        0.000000      -19.692530
+    TIME        0.000s          0.000s          0.000s          0.000s   
+ 
+ OTHER:
+SGB SELF      -98.213124
+NONPOLAR        0.000000
+PROT COR        0.000000
+   HBOND        0.000000
+ PACKING        0.000000
+SelfCont        0.000000
+ 
+ SUM:
+ SGB TOT       -3.934081
+SOLV TOT       -3.934081
+LIPO TOT      -10.503058
+  TOTALE   35.38849291476    
+ [NOTE: TOTAL ENERGY = COV_TOT + NB_TOT + OTHER - SGB_14|SGB_TOR]
+ Completed Iteration            1  of            5
+Minimization not yet converged, dE (   0.256kcals/mol)  >   0.100
+ 
+ STARTING TO WORK ON MINIMIZATION: 
+ Dynamic memory allocation:     0.00s
+ number of degrees of freedom:              132
+ number of sparse matrix elements:         2433
+ memory allocated for hessian ME:         22000
+ 
+  itn.     f            |g|      #cg    mode    |r|       lambda     nfg  time   rmsd
+    0      35.38849     0.01032
+    1      35.38837     0.00163     7     0     0.01355    1.00000    2   0.00s  0.002
+final      35.3883677   0.00163     7     0     0.01355    1.00000    2   0.00s
+ 
+   Total time elapsed    0.004s
+   Preliminaries         0.001s
+   PCG Hd products       0.002s
+   Long Range Forces     0.000s
+   Preconditioning       0.000s
+   Line searches         0.000s
+ 
+ MINIMIZATION COMPLETED 
+ 
+ NOW REPORTING THE ENERGY (KCAL/MOL): 
+ COVALENT ENERGIES:
+                BOND           ANGLE             TOR           TOTAL
+     COV        2.071870        2.506768        5.336295        9.914933
+     SGB       87.703002       55.670100      -60.878560       82.494541
+   TOTAL       89.774871       58.176868      -55.542265       92.409474
+    TIME        0.000s          0.000s          0.000s          0.000s   
+ 
+ NONBONDED (INTRAMOLECULAR) ENERGIES:
+                  14           SHORT            LONG           TOTAL
+      LJ       22.178553       -8.291198        0.000000       13.887355
+    LIPO        0.000000      -10.502473        0.000000      -10.502473
+      EL       45.748959      -19.729563        0.000000       26.019396
+     SGB      -60.878560       11.791077        0.000000      -49.087483
+   TOTAL        7.048952      -26.732157        0.000000      -19.683205
+    TIME        0.000s          0.000s          0.000s          0.000s   
+ 
+ OTHER:
+SGB SELF      -98.226576
+NONPOLAR        0.000000
+PROT COR        0.000000
+   HBOND        0.000000
+ PACKING        0.000000
+SelfCont        0.000000
+ 
+ SUM:
+ SGB TOT       -3.940958
+SOLV TOT       -3.940958
+LIPO TOT      -10.502473
+  TOTALE   35.37825363950    
+ [NOTE: TOTAL ENERGY = COV_TOT + NB_TOT + OTHER - SGB_14|SGB_TOR]
+ Completed Iteration            2  of            5
+Minimization converged, dE (   0.000kcals/mol)  <   0.100
+ 
+ Preparing for first energy calculation ...
+ 
+ 
+ NOW REPORTING THE ENERGY (KCAL/MOL): 
+ COVALENT ENERGIES:
+                BOND           ANGLE             TOR           TOTAL
+     COV        2.071870        2.506768        5.336295        9.914933
+     SGB       87.703002       55.670100      -60.878560       82.494541
+   TOTAL       89.774871       58.176868      -55.542265       92.409474
+    TIME        0.000s          0.000s          0.000s          0.000s   
+ 
+ NONBONDED (INTRAMOLECULAR) ENERGIES:
+                  14           SHORT            LONG           TOTAL
+      LJ       22.178553       -8.291198        0.000000       13.887355
+    LIPO        0.000000      -10.502473        0.000000      -10.502473
+      EL       45.748959      -19.729563        0.000000       26.019396
+     SGB      -60.878560       11.791077        0.000000      -49.087483
+   TOTAL        7.048952      -26.732157        0.000000      -19.683205
+    TIME        0.000s          0.000s          0.000s          0.000s   
+ 
+ OTHER:
+SGB SELF      -98.226576
+NONPOLAR        0.000000
+PROT COR        0.000000
+   HBOND        0.000000
+ PACKING        0.000000
+SelfCont        0.000000
+ 
+ SUM:
+ SGB TOT       -3.940958
+SOLV TOT       -3.940958
+LIPO TOT      -10.502473
+  TOTALE   35.37825363950    
+ [NOTE: TOTAL ENERGY = COV_TOT + NB_TOT + OTHER - SGB_14|SGB_TOR]
+ 
+ NOW REPORTING THE ENERGY (KCAL/MOL): 
+ COVALENT ENERGIES:
+                BOND           ANGLE             TOR           TOTAL
+     COV        2.071870        2.506768        5.336295        9.914933
+     SGB       87.703002       55.670100      -60.878560       82.494541
+   TOTAL       89.774871       58.176868      -55.542265       92.409474
+    TIME        0.000s          0.000s          0.000s          0.000s   
+ 
+ NONBONDED (INTRAMOLECULAR) ENERGIES:
+                  14           SHORT            LONG           TOTAL
+      LJ       22.178553       -8.291198        0.000000       13.887355
+    LIPO        0.000000      -10.502473        0.000000      -10.502473
+      EL       45.748959      -19.729563        0.000000       26.019396
+     SGB      -60.878560       11.791077        0.000000      -49.087483
+   TOTAL        7.048952      -26.732157        0.000000      -19.683205
+    TIME        0.000s          0.000s          0.000s          0.000s   
+ 
+ OTHER:
+SGB SELF      -98.226576
+NONPOLAR        0.000000
+PROT COR        0.000000
+   HBOND        0.000000
+ PACKING        0.000000
+SelfCont        0.000000
+ 
+ SUM:
+ SGB TOT       -3.940958
+SOLV TOT       -3.940958
+LIPO TOT      -10.502473
+  TOTALE   35.37825363950    
+ [NOTE: TOTAL ENERGY = COV_TOT + NB_TOT + OTHER - SGB_14|SGB_TOR]
+ TOTAL TIME ELAPSED: Subjob00001--MinimizeLigand_0           1.604s
+ RETURNED LICENSE
+Post-processing output...
+  Processing output structure #1
+Post-processing complete.
+
+

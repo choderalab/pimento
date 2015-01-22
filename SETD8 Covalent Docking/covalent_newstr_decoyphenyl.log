@@ -1,0 +1,39 @@
+--------------------------------------------------------------------------------
+
+    Covalent Docking v1.2
+
+    Schrodinger Installation: /cbio/jclab/share/schrodinger/schrodinger2014-4
+--------------------------------------------------------------------------------
+JobId          : lski1751-0-54bd5226
+Name           : covalent_newstr_decoyphenyl
+Program        : Covalent Docking v1.2
+MMshareExec    : /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Host           : lski1751.mskcc.org
+Dir            : /Users/albaness/Documents/Schrodinger
+HostEntry      : batch
+Queue          : Torque
+JobHost        : gpu-3-8.local
+JobDir         : /scratch/albaness/covalent_newstr_decoyphenyl
+JobMMshareExec : /cbio/jclab/share/schrodinger/schrodinger2014-4/mmshare-v28013/bin/Linux-x86_64
+Commandline    : /opt/schrodinger/suites2014-4/covalent_docking covalent_newstr_decoyphenyl.inp -output_top 1000 -OVERWRITE -PROJ /Users/albaness/Documents/Schrodinger/Projects/SETD8_newproject.prj -DISP append -VIEWNAME CovalentDockingPanel -HOST batch -NJOBS 1
+StartTime      : 2015-01-19-13:51:51
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Creating Workflow...
+Setting up covalent reaction: newstructure_procEssed - decoy_phenyl
+  Connecting 1,"A:311: SG " - 1,"_:900:    "
+  Connecting 1,"A:311: SG " - 2,"_:900:    "
+Created Workflow in   0.024 Minutes
+Running Workflow
+  Final: <decoy_phenyl   (    0) CombinedScore>
+  Final: <decoy_phenyl   (    0) CombinedScore>
+All stages completed
+------------ Top Outputs ---------------
+title                         ,cdock_affinity,Prime_Energy
+decoy_phenyl                  ,        -3.854,   -7185.532
+------------ Averaged Properties -------
+title         ,average  
+cdock_affinity,   -3.854
+Prime_Energy  ,-7185.532
+Total Time Elapsed (hours:minutes:seconds)    0:40:02
+EndTime: 01-19-2015 14:31:55

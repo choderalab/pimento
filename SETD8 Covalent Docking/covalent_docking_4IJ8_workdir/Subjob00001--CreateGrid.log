@@ -1,0 +1,41 @@
+[running at reduced cpu priority]
+%IMPACT-I (openwt): Request to open FORMATTED file Subjob00001--CreateGrid.out on unit   2
+ Entering IMPACT execution environment 
+ Date: Friday, January 09 2015, at 12:32:36 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00001--CreateGrid
+ JobId:    lski1751-0-54b010b3
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ VdW radii of protein atoms scaled by    1.00000000000000     
+ Charge cutoff for polarity  0.250000000000000     
+%IMPACT-I (info): At line  22
+ %IMPACT-I: Glide will write receptor constraints info to file: "
+ Subjob00001--CreateGrid-out.cons"
+%IMPACT-I (xdrwt): File Subjob00001--CreateGrid-out.gsc opened for writing
+  Receptor setup: (nsites, nx, ny, nz, bsize)=(         125 ,           25 , 
+          25 ,           25 ,    1.00000000000000      ).
+ Screening setup finished.
+ DOCKMAIN: getting receptor.
+%IMPACT-I (xdrwt): File Subjob00001--CreateGrid-out.grd opened for writing
+  DOCKMAIN after grid: (nx, ny, nz) = (          64 ,           64 , 
+          64 ).
+%IMPACT-I (xdrwt): File Subjob00001--CreateGrid-out_coul2.fld opened for writing
+%IMPACT-I (xdrwt): File Subjob00001--CreateGrid-out_vdw.fld opened for writing
+ Exiting IMPACT execution environment 
+ Date: Friday, January 09 2015, at 12:32:56 EST
+Creating output grid archive 'Subjob00001--CreateGrid-out.zip'
+%IMPACT-I (timit): Total CPU time =      22.26 seconds (   0.4 minutes)
+Total elapsed time = 23 seconds
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54b010b3

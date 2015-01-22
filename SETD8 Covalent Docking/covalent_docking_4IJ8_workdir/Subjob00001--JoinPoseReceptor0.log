@@ -1,0 +1,608 @@
+Starting Time: 01-09-2015 13:33:51
+Join Receptor: (chain.name "B" AND res.num 311 AND res.inscode " ")
+Join Criterion: {'r_workflow_bond_dist': ('((chain.name "B" AND res.num 311 AND res.inscode " ")) AND atom.ptype  " SG "', 'atom.i_cdock_lig_attach 1', ' < 5.000000')}
+Rotamer: state 0 created
+Rotamer: state 1 created
+Rotamer: state 2 created
+Rotamer: state 3 created
+Rotamer: state 4 created
+Rotamer: state 5 created
+Rotamer: state 6 created
+Pose 0
+  rotamer 0 6.569499 False
+  rotamer 1 4.679155 True
+  rotamer 2 5.281629 False
+  rotamer 3 6.302646 False
+  rotamer 4 4.768859 True
+  rotamer 5 5.195618 False
+  rotamer 6 6.630353 False
+RETAINED    4.68
+Pose 1
+  rotamer 0 6.577534 False
+  rotamer 1 4.686129 True
+  rotamer 2 5.286520 False
+  rotamer 3 6.310901 False
+  rotamer 4 4.773481 True
+  rotamer 5 5.203323 False
+  rotamer 6 6.637747 False
+RETAINED    4.69
+Pose 2
+  rotamer 0 6.598333 False
+  rotamer 1 4.700337 True
+  rotamer 2 5.291254 False
+  rotamer 3 6.332723 False
+  rotamer 4 4.776279 True
+  rotamer 5 5.221777 False
+  rotamer 6 6.655414 False
+RETAINED    4.70
+Pose 3
+  rotamer 0 6.579455 False
+  rotamer 1 4.695784 True
+  rotamer 2 5.276709 False
+  rotamer 3 6.316522 False
+  rotamer 4 4.765886 True
+  rotamer 5 5.213984 False
+  rotamer 6 6.634672 False
+RETAINED    4.70
+Pose 4
+  rotamer 0 7.906956 False
+  rotamer 1 6.152221 False
+  rotamer 2 6.448839 False
+  rotamer 3 7.692822 False
+  rotamer 4 5.990831 False
+  rotamer 5 6.665561 False
+  rotamer 6 7.892058 False
+DISCARDED    5.99
+Pose 5
+  rotamer 0 7.906902 False
+  rotamer 1 6.152746 False
+  rotamer 2 6.445495 False
+  rotamer 3 7.693461 False
+  rotamer 4 5.987725 False
+  rotamer 5 6.666647 False
+  rotamer 6 7.890897 False
+DISCARDED    5.99
+Pose 6
+  rotamer 0 6.847085 False
+  rotamer 1 5.548778 False
+  rotamer 2 5.772759 False
+  rotamer 3 6.684604 False
+  rotamer 4 5.440539 False
+  rotamer 5 5.921258 False
+  rotamer 6 6.838444 False
+DISCARDED    5.44
+Pose 7
+  rotamer 0 7.855073 False
+  rotamer 1 6.091562 False
+  rotamer 2 6.405885 False
+  rotamer 3 7.637508 False
+  rotamer 4 5.944543 False
+  rotamer 5 6.604958 False
+  rotamer 6 7.844782 False
+DISCARDED    5.94
+Pose 8
+  rotamer 0 6.906425 False
+  rotamer 1 5.625525 False
+  rotamer 2 5.831383 False
+  rotamer 3 6.748324 False
+  rotamer 4 5.504930 False
+  rotamer 5 5.995247 False
+  rotamer 6 6.893399 False
+DISCARDED    5.50
+Pose 9
+  rotamer 0 6.718278 False
+  rotamer 1 5.565048 False
+  rotamer 2 5.679486 False
+  rotamer 3 6.587035 False
+  rotamer 4 5.390747 False
+  rotamer 5 5.909702 False
+  rotamer 6 6.684986 False
+DISCARDED    5.39
+Pose 10
+  rotamer 0 8.314959 False
+  rotamer 1 6.535004 False
+  rotamer 2 6.857582 False
+  rotamer 3 8.092985 False
+  rotamer 4 6.394877 False
+  rotamer 5 7.049204 False
+  rotamer 6 8.306658 False
+DISCARDED    6.39
+Pose 11
+  rotamer 0 6.734821 False
+  rotamer 1 5.495249 False
+  rotamer 2 5.649896 False
+  rotamer 3 6.589363 False
+  rotamer 4 5.335752 False
+  rotamer 5 5.861657 False
+  rotamer 6 6.708626 False
+DISCARDED    5.34
+Pose 12
+  rotamer 0 8.337226 False
+  rotamer 1 6.567395 False
+  rotamer 2 6.885754 False
+  rotamer 3 8.116667 False
+  rotamer 4 6.426238 False
+  rotamer 5 7.078656 False
+  rotamer 6 8.328345 False
+DISCARDED    6.43
+Pose 13
+  rotamer 0 6.754995 False
+  rotamer 1 5.514959 False
+  rotamer 2 5.676159 False
+  rotamer 3 6.608326 False
+  rotamer 4 5.361778 False
+  rotamer 5 5.880129 False
+  rotamer 6 6.730778 False
+DISCARDED    5.36
+Pose 14
+  rotamer 0 6.726560 False
+  rotamer 1 4.752257 True
+  rotamer 2 5.483182 False
+  rotamer 3 6.431845 False
+  rotamer 4 4.947511 True
+  rotamer 5 5.272215 False
+  rotamer 6 6.818771 False
+RETAINED    4.75
+Pose 15
+  rotamer 0 8.147816 False
+  rotamer 1 6.345875 False
+  rotamer 2 6.623051 False
+  rotamer 3 7.932402 False
+  rotamer 4 6.153444 False
+  rotamer 5 6.878249 False
+  rotamer 6 8.124446 False
+DISCARDED    6.15
+Pose 16
+  rotamer 0 8.241303 False
+  rotamer 1 6.436706 False
+  rotamer 2 6.798205 False
+  rotamer 3 8.011135 False
+  rotamer 4 6.327001 False
+  rotamer 5 6.952505 False
+  rotamer 6 8.242910 False
+DISCARDED    6.33
+Pose 17
+  rotamer 0 6.700112 False
+  rotamer 1 4.778050 True
+  rotamer 2 5.478974 False
+  rotamer 3 6.413663 False
+  rotamer 4 4.958635 True
+  rotamer 5 5.284231 False
+  rotamer 6 6.787749 False
+RETAINED    4.78
+Pose 18
+  rotamer 0 8.297255 False
+  rotamer 1 6.521214 False
+  rotamer 2 6.867078 False
+  rotamer 3 8.071694 False
+  rotamer 4 6.404880 False
+  rotamer 5 7.029471 False
+  rotamer 6 8.296153 False
+DISCARDED    6.40
+Pose 19
+  rotamer 0 8.321641 False
+  rotamer 1 6.551121 False
+  rotamer 2 6.895021 False
+  rotamer 3 8.096745 False
+  rotamer 4 6.434633 False
+  rotamer 5 7.057620 False
+  rotamer 6 8.320347 False
+DISCARDED    6.43
+Pose 20
+  rotamer 0 7.557006 False
+  rotamer 1 6.462013 False
+  rotamer 2 6.327459 False
+  rotamer 3 7.472543 False
+  rotamer 4 6.070009 False
+  rotamer 5 6.832553 False
+  rotamer 6 7.449636 False
+DISCARDED    6.07
+Pose 21
+  rotamer 0 6.051389 False
+  rotamer 1 4.977467 True
+  rotamer 2 5.023208 False
+  rotamer 3 5.939941 False
+  rotamer 4 4.755423 True
+  rotamer 5 5.311219 False
+  rotamer 6 6.001860 False
+RETAINED    4.76
+Pose 22
+  rotamer 0 7.321473 False
+  rotamer 1 6.236680 False
+  rotamer 2 6.113046 False
+  rotamer 3 7.236250 False
+  rotamer 4 5.856674 False
+  rotamer 5 6.602345 False
+  rotamer 6 7.218332 False
+DISCARDED    5.86
+Pose 23
+  rotamer 0 7.158497 False
+  rotamer 1 5.891527 False
+  rotamer 2 5.911832 False
+  rotamer 3 7.032657 False
+  rotamer 4 5.597246 False
+  rotamer 5 6.291714 False
+  rotamer 6 7.089874 False
+DISCARDED    5.60
+Pose 24
+  rotamer 0 6.437011 False
+  rotamer 1 5.375996 False
+  rotamer 2 5.355556 False
+  rotamer 3 6.337313 False
+  rotamer 4 5.096310 False
+  rotamer 5 5.716621 False
+  rotamer 6 6.367789 False
+DISCARDED    5.10
+Pose 25
+  rotamer 0 6.939732 False
+  rotamer 1 5.878412 False
+  rotamer 2 5.820775 False
+  rotamer 3 6.845784 False
+  rotamer 4 5.565836 False
+  rotamer 5 6.224670 False
+  rotamer 6 6.858564 False
+DISCARDED    5.57
+Pose 26
+  rotamer 0 7.395764 False
+  rotamer 1 6.299252 False
+  rotamer 2 6.171425 False
+  rotamer 3 7.310105 False
+  rotamer 4 5.912393 False
+  rotamer 5 6.669423 False
+  rotamer 6 7.290641 False
+DISCARDED    5.91
+Pose 27
+  rotamer 0 6.541437 False
+  rotamer 1 5.486225 False
+  rotamer 2 5.454285 False
+  rotamer 3 6.444085 False
+  rotamer 4 5.197750 False
+  rotamer 5 5.826739 False
+  rotamer 6 6.468908 False
+DISCARDED    5.20
+Pose 28
+  rotamer 0 6.963500 False
+  rotamer 1 5.897606 False
+  rotamer 2 5.833293 False
+  rotamer 3 6.870245 False
+  rotamer 4 5.577515 False
+  rotamer 5 6.246609 False
+  rotamer 6 6.880015 False
+DISCARDED    5.58
+Pose 29
+  rotamer 0 7.765976 False
+  rotamer 1 6.563412 False
+  rotamer 2 6.426198 False
+  rotamer 3 7.671733 False
+  rotamer 4 6.140040 False
+  rotamer 5 6.969760 False
+  rotamer 6 7.652171 False
+DISCARDED    6.14
+Pose 30
+  rotamer 0 6.913449 False
+  rotamer 1 5.850113 False
+  rotamer 2 5.778956 False
+  rotamer 3 6.821633 False
+  rotamer 4 5.523933 False
+  rotamer 5 6.199718 False
+  rotamer 6 6.828061 False
+DISCARDED    5.52
+Pose 31
+  rotamer 0 8.518160 False
+  rotamer 1 6.866597 False
+  rotamer 2 7.113130 False
+  rotamer 3 8.318605 False
+  rotamer 4 6.690571 False
+  rotamer 5 7.349147 False
+  rotamer 6 8.495334 False
+DISCARDED    6.69
+Pose 32
+  rotamer 0 7.291628 False
+  rotamer 1 6.196876 False
+  rotamer 2 6.131125 False
+  rotamer 3 7.195678 False
+  rotamer 4 5.869125 False
+  rotamer 5 6.554869 False
+  rotamer 6 7.205809 False
+DISCARDED    5.87
+Pose 33
+  rotamer 0 8.536865 False
+  rotamer 1 6.892355 False
+  rotamer 2 7.126144 False
+  rotamer 3 8.340008 False
+  rotamer 4 6.706081 False
+  rotamer 5 7.374862 False
+  rotamer 6 8.510628 False
+DISCARDED    6.71
+Pose 34
+  rotamer 0 7.533567 False
+  rotamer 1 6.551593 False
+  rotamer 2 6.319588 False
+  rotamer 3 7.476490 False
+  rotamer 4 6.098097 False
+  rotamer 5 6.903411 False
+  rotamer 6 7.401565 False
+DISCARDED    6.10
+Pose 35
+  rotamer 0 7.922677 False
+  rotamer 1 6.826378 False
+  rotamer 2 6.543120 False
+  rotamer 3 7.862980 False
+  rotamer 4 6.294675 False
+  rotamer 5 7.224557 False
+  rotamer 6 7.768972 False
+DISCARDED    6.29
+Pose 36
+  rotamer 0 7.523138 False
+  rotamer 1 6.470289 False
+  rotamer 2 6.268120 False
+  rotamer 3 7.454123 False
+  rotamer 4 6.025506 False
+  rotamer 5 6.839771 False
+  rotamer 6 7.397081 False
+DISCARDED    6.03
+Pose 37
+  rotamer 0 7.547387 False
+  rotamer 1 6.509841 False
+  rotamer 2 6.313782 False
+  rotamer 3 7.478818 False
+  rotamer 4 6.075205 False
+  rotamer 5 6.873080 False
+  rotamer 6 7.423874 False
+DISCARDED    6.08
+Pose 38
+  rotamer 0 7.713750 False
+  rotamer 1 6.662361 False
+  rotamer 2 6.465715 False
+  rotamer 3 7.643912 False
+  rotamer 4 6.224167 False
+  rotamer 5 7.029932 False
+  rotamer 6 7.589090 False
+DISCARDED    6.22
+Pose 39
+  rotamer 0 7.564648 False
+  rotamer 1 6.546010 False
+  rotamer 2 6.305296 False
+  rotamer 3 7.505440 False
+  rotamer 4 6.074343 False
+  rotamer 5 6.911410 False
+  rotamer 6 7.428235 False
+DISCARDED    6.07
+Pose 40
+  rotamer 0 7.536071 False
+  rotamer 1 6.461087 False
+  rotamer 2 6.284742 False
+  rotamer 3 7.460577 False
+  rotamer 4 6.034770 False
+  rotamer 5 6.832977 False
+  rotamer 6 7.416871 False
+DISCARDED    6.03
+Try to keep additional poses to reach 10Stage <SGS            (    0) JoinPoseReceptor0> takes 3 seconds
+Join Receptor: (chain.name "B" AND res.num 311 AND res.inscode " ")
+Join Criterion: {'r_workflow_bond_dist': ('((chain.name "B" AND res.num 311 AND res.inscode " ")) AND atom.ptype  " SG "', 'atom.i_cdock_lig_attach 1', ' < 5.000000')}
+Rotamer: state 0 created
+Rotamer: state 1 created
+Rotamer: state 2 created
+Rotamer: state 3 created
+Rotamer: state 4 created
+Rotamer: state 5 created
+Rotamer: state 6 created
+Pose 0
+  rotamer 0 6.051432 False
+  rotamer 1 4.702119 True
+  rotamer 2 5.131236 False
+  rotamer 3 5.852432 False
+  rotamer 4 4.775146 True
+  rotamer 5 5.056123 False
+  rotamer 6 6.100252 False
+RETAINED    4.70
+Pose 1
+  rotamer 0 6.238880 False
+  rotamer 1 4.862022 True
+  rotamer 2 5.358928 False
+  rotamer 3 6.025078 False
+  rotamer 4 4.994686 True
+  rotamer 5 5.210351 False
+  rotamer 6 6.306982 False
+RETAINED    4.86
+Pose 2
+  rotamer 0 6.025727 False
+  rotamer 1 4.532764 True
+  rotamer 2 5.287534 False
+  rotamer 3 5.759379 False
+  rotamer 4 4.886583 True
+  rotamer 5 4.870059 True
+  rotamer 6 6.162592 False
+RETAINED    4.53
+Pose 3
+  rotamer 0 7.011286 False
+  rotamer 1 5.431210 False
+  rotamer 2 5.838547 False
+  rotamer 3 6.795128 False
+  rotamer 4 5.422859 False
+  rotamer 5 5.866028 False
+  rotamer 6 7.039465 False
+DISCARDED    5.42
+Pose 4
+  rotamer 0 6.821781 False
+  rotamer 1 5.272024 False
+  rotamer 2 5.658102 False
+  rotamer 3 6.612330 False
+  rotamer 4 5.250243 False
+  rotamer 5 5.701698 False
+  rotamer 6 6.845256 False
+DISCARDED    5.25
+Pose 5
+  rotamer 0 6.599323 False
+  rotamer 1 5.167919 False
+  rotamer 2 5.813313 False
+  rotamer 3 6.353230 False
+  rotamer 4 5.432171 False
+  rotamer 5 5.501587 False
+  rotamer 6 6.710594 False
+DISCARDED    5.17
+Pose 6
+  rotamer 0 7.233472 False
+  rotamer 1 5.635155 False
+  rotamer 2 6.092426 False
+  rotamer 3 7.006349 False
+  rotamer 4 5.671974 False
+  rotamer 5 6.064566 False
+  rotamer 6 7.275993 False
+DISCARDED    5.64
+Pose 7
+  rotamer 0 6.642065 False
+  rotamer 1 5.445265 False
+  rotamer 2 5.588220 False
+  rotamer 3 6.502393 False
+  rotamer 4 5.285922 False
+  rotamer 5 5.799617 False
+  rotamer 6 6.614877 False
+DISCARDED    5.29
+Pose 8
+  rotamer 0 8.172949 False
+  rotamer 1 6.543991 False
+  rotamer 2 6.701261 False
+  rotamer 3 7.991292 False
+  rotamer 4 6.285353 False
+  rotamer 5 7.038202 False
+  rotamer 6 8.124509 False
+DISCARDED    6.29
+Pose 9
+  rotamer 0 5.958832 False
+  rotamer 1 5.267946 False
+  rotamer 2 5.346766 False
+  rotamer 3 5.875807 False
+  rotamer 4 5.179397 False
+  rotamer 5 5.467138 False
+  rotamer 6 5.942318 False
+DISCARDED    5.18
+Pose 10
+  rotamer 0 8.061148 False
+  rotamer 1 6.457594 False
+  rotamer 2 6.621823 False
+  rotamer 3 7.880702 False
+  rotamer 4 6.212264 False
+  rotamer 5 6.942162 False
+  rotamer 6 8.016277 False
+DISCARDED    6.21
+Pose 11
+  rotamer 0 6.323929 False
+  rotamer 1 4.835258 True
+  rotamer 2 5.466177 False
+  rotamer 3 6.078355 False
+  rotamer 4 5.068991 False
+  rotamer 5 5.195358 False
+  rotamer 6 6.424578 False
+RETAINED    4.84
+Pose 12
+  rotamer 0 7.374007 False
+  rotamer 1 5.884217 False
+  rotamer 2 6.262649 False
+  rotamer 3 7.168034 False
+  rotamer 4 5.875288 False
+  rotamer 5 6.289861 False
+  rotamer 6 7.400556 False
+DISCARDED    5.88
+Pose 13
+  rotamer 0 6.874760 False
+  rotamer 1 5.534583 False
+  rotamer 2 6.020974 False
+  rotamer 3 6.662616 False
+  rotamer 4 5.669257 False
+  rotamer 5 5.867690 False
+  rotamer 6 6.944503 False
+DISCARDED    5.53
+Pose 14
+  rotamer 0 6.421551 False
+  rotamer 1 5.532891 False
+  rotamer 2 5.701872 False
+  rotamer 3 6.303974 False
+  rotamer 4 5.480207 False
+  rotamer 5 5.778141 False
+  rotamer 6 6.421803 False
+DISCARDED    5.48
+Pose 15
+  rotamer 0 7.702500 False
+  rotamer 1 6.139415 False
+  rotamer 2 6.377352 False
+  rotamer 3 7.513910 False
+  rotamer 4 5.974950 False
+  rotamer 5 6.597327 False
+  rotamer 6 7.682028 False
+DISCARDED    5.97
+Pose 16
+  rotamer 0 6.550322 False
+  rotamer 1 5.241461 False
+  rotamer 2 5.720236 False
+  rotamer 3 6.343114 False
+  rotamer 4 5.376110 False
+  rotamer 5 5.566966 False
+  rotamer 6 6.619124 False
+DISCARDED    5.24
+Pose 17
+  rotamer 0 7.338287 False
+  rotamer 1 5.752776 False
+  rotamer 2 6.265646 False
+  rotamer 3 7.101852 False
+  rotamer 4 5.848168 False
+  rotamer 5 6.165198 False
+  rotamer 6 7.399009 False
+DISCARDED    5.75
+Pose 18
+  rotamer 0 7.272523 False
+  rotamer 1 5.648199 False
+  rotamer 2 6.200782 False
+  rotamer 3 7.026693 False
+  rotamer 4 5.771357 False
+  rotamer 5 6.066914 False
+  rotamer 6 7.342238 False
+DISCARDED    5.65
+Pose 19
+  rotamer 0 7.652626 False
+  rotamer 1 6.176545 False
+  rotamer 2 6.321407 False
+  rotamer 3 7.486993 False
+  rotamer 4 5.946250 False
+  rotamer 5 6.622519 False
+  rotamer 6 7.609454 False
+DISCARDED    5.95
+Pose 20
+  rotamer 0 8.204554 False
+  rotamer 1 7.276219 False
+  rotamer 2 7.021035 False
+  rotamer 3 8.156815 False
+  rotamer 4 6.817976 False
+  rotamer 5 7.614072 False
+  rotamer 6 8.066520 False
+DISCARDED    6.82
+Pose 21
+  rotamer 0 8.171225 False
+  rotamer 1 7.067458 False
+  rotamer 2 6.994729 False
+  rotamer 3 8.074990 False
+  rotamer 4 6.734512 False
+  rotamer 5 7.427600 False
+  rotamer 6 8.081817 False
+DISCARDED    6.73
+Pose 22
+  rotamer 0 8.185663 False
+  rotamer 1 7.085438 False
+  rotamer 2 7.008835 False
+  rotamer 3 8.090422 False
+  rotamer 4 6.749825 False
+  rotamer 5 7.445130 False
+  rotamer 6 8.095215 False
+DISCARDED    6.75
+Pose 23
+  rotamer 0 7.964959 False
+  rotamer 1 6.842956 False
+  rotamer 2 6.485367 False
+  rotamer 3 7.914997 False
+  rotamer 4 6.233707 False
+  rotamer 5 7.263243 False
+  rotamer 6 7.787530 False
+DISCARDED    6.23
+Try to keep additional poses to reach 10Stage <SGS            (    1) JoinPoseReceptor0> takes 2 seconds
+
+Ending Time: 01-09-2015 13:33:57

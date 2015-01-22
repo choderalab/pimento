@@ -1,0 +1,40 @@
+write file -
+"Subjob00001--CreateGrid.out" -
+      title -
+"Subjob00001--CreateGrid" *
+
+SET FFIELD OPLS_2005
+
+CREATE
+  build primary name recep type auto -
+    read maestro file -
+"Subjob00001--CreateGrid-in.maegz"
+  build types name recep
+QUIT
+
+DOCK
+  smooth anneal 2
+  receptor rdiel name recep -
+   constraints loosegrid 2 ncons 1 -
+ nposit 1  xpos -21.724844 ypos 31.792441 zpos 3.934618 rpos 8.000000 constitle "pos1" -
+   writezip -
+"Subjob00001--CreateGrid-out" -
+   writerdiel -
+   protvdwscale factor 1.000000 ccut 0.250000 -
+   box center read xcent -22.647012 ycent 34.061199 zcent 9.010828 -
+   boxxrange 24.019748 boxyrange 24.019748 boxzrange 24.019748 -
+   actxrange 24.019748 actyrange 24.019748 actzrange 24.019748
+  screen  greedy -
+   box center read xcent -22.647012 ycent 34.061199 zcent 9.010828 -
+   ligxrange 10.000000 ligyrange 10.000000 ligzrange 10.000000 -
+   writescreen -
+"Subjob00001--CreateGrid-out.save" -
+   writegreed -
+"Subjob00001--CreateGrid-out_greedy.save" -
+   maxkeep 5000 scorecut 100.000000 
+  parameter clean
+  final glidescore
+  run
+QUIT
+
+END

@@ -1,0 +1,9 @@
+Starting Time: 01-12-2015 14:16:30
+Filter criterion: ({1:r_i_sample_glide_gscore} -  {2:r_i_sample_glide_gscore}) < 2.500000
+Max output: 200
+Stage <SGS            (    0) SelectPoses0> takes 0 seconds
+Filter criterion: ({1:r_i_sample_glide_gscore} -  {2:r_i_sample_glide_gscore}) < 2.500000
+Max output: 200
+Stage <SGS            (    1) SelectPoses0> takes 0 seconds
+
+Ending Time: 01-12-2015 14:16:31

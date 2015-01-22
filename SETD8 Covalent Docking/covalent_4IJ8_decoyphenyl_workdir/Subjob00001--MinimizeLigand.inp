@@ -1,0 +1,5 @@
+STRUCT_FILE          Subjob00001--MinimizeLigand-in.maegz
+JOB_TYPE             REFINE
+PRIME_TYPE           REAL_MIN
+MINIM_NITER          5
+SELECT               all

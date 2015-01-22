@@ -1,0 +1,1923 @@
+--------------------------------------------------------------------------------
+
+    Covalent Docking v1.2
+
+    Schrodinger Installation: /opt/schrodinger/suites2014-4
+[running at reduced cpu priority]
+--------------------------------------------------------------------------------
+JobId          : lski1751-0-54aef1d1
+Name           : covalent_docking_fastrun
+Program        : Covalent Docking v1.2
+MMshareExec    : /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Host           : lski1751.mskcc.org
+Dir            : /Users/albaness/Documents/Schrodinger
+HostEntry      : localhost
+JobHost        : lski1751.mskcc.org
+JobDir         : /Users/albaness/.schrodinger/tmp/covalent_docking_fastrun
+JobMMshareExec : /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Commandline    : /opt/schrodinger/suites2014-4/covalent_docking covalent_docking_fastrun.inp -output_top 1000 -mode enrichment -OVERWRITE -PROJ "/Users/albaness/Documents/Schrodinger/setD8 covalent binding.prj" -DISP append -VIEWNAME CovalentDockingPanel -HOST localhost -NJOBS 1
+StartTime      : 2015-01-08-16:08:33
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Creating Workflow...
+Setting up covalent reaction: SETD8_processed xxxx_ligand1_fixed - SGS
+  Connecting 1,"A:311: SG " - 1,"_:900:    "
+  Connecting 1,"A:311: SG " - 2,"_:900:    "
+Setting up covalent reaction: SETD8_processed xxxx_ligand1_fixed - SGS
+  Connecting 1,"A:311: SG " - 1,"_:900:    "
+  Connecting 1,"A:311: SG " - 2,"_:900:    "
+Created Workflow in   0.006 Minutes
+Running Workflow
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00001--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:38 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00001--CreateGrid
+ JobId:    lski1751-0-54aef1d5
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1d5
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00001--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00001--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:38 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00001--CreateGrid
+ JobId:    lski1751-0-54aef1d5
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1d5
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00001--CreateGrid-out.zip
+*********************************************
+
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00001--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:38 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00001--CreateGrid
+ JobId:    lski1751-0-54aef1d5
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1d5
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00001--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00001--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:38 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00001--CreateGrid
+ JobId:    lski1751-0-54aef1d5
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1d5
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00001--CreateGrid-out.zip
+*********************************************
+
+Complete    18/   75 Stages (    5 this cycle)
+Running Workflow
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00002--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:43 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00002--CreateGrid
+ JobId:    lski1751-0-54aef1da
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1da
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00002--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00002--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:43 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00002--CreateGrid
+ JobId:    lski1751-0-54aef1da
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1da
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00002--CreateGrid-out.zip
+*********************************************
+
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00002--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:43 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00002--CreateGrid
+ JobId:    lski1751-0-54aef1da
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1da
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00002--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00002--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:43 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00002--CreateGrid
+ JobId:    lski1751-0-54aef1da
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1da
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00002--CreateGrid-out.zip
+*********************************************
+
+Complete    18/   75 Stages (    0 this cycle)
+Running Workflow
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00003--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:48 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00003--CreateGrid
+ JobId:    lski1751-0-54aef1df
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1df
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00003--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00003--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:48 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00003--CreateGrid
+ JobId:    lski1751-0-54aef1df
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1df
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00003--CreateGrid-out.zip
+*********************************************
+
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00003--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:48 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00003--CreateGrid
+ JobId:    lski1751-0-54aef1df
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1df
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00003--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00003--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:48 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00003--CreateGrid
+ JobId:    lski1751-0-54aef1df
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1df
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00003--CreateGrid-out.zip
+*********************************************
+
+Complete    18/   75 Stages (    0 this cycle)
+Running Workflow
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00004--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:52 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00004--CreateGrid
+ JobId:    lski1751-0-54aef1e3
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1e3
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00004--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00004--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:52 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00004--CreateGrid
+ JobId:    lski1751-0-54aef1e3
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1e3
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00004--CreateGrid-out.zip
+*********************************************
+
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00004--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:52 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00004--CreateGrid
+ JobId:    lski1751-0-54aef1e3
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1e3
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00004--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00004--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:52 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00004--CreateGrid
+ JobId:    lski1751-0-54aef1e3
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1e3
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00004--CreateGrid-out.zip
+*********************************************
+
+Complete    18/   75 Stages (    0 this cycle)
+Running Workflow
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00005--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:56 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00005--CreateGrid
+ JobId:    lski1751-0-54aef1e7
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1e7
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00005--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00005--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:56 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00005--CreateGrid
+ JobId:    lski1751-0-54aef1e7
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1e7
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00005--CreateGrid-out.zip
+*********************************************
+
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00005--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:56 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00005--CreateGrid
+ JobId:    lski1751-0-54aef1e7
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1e7
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00005--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00005--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:08:56 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00005--CreateGrid
+ JobId:    lski1751-0-54aef1e7
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1e7
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00005--CreateGrid-out.zip
+*********************************************
+
+Complete    18/   75 Stages (    0 this cycle)
+Running Workflow
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00006--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:01 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00006--CreateGrid
+ JobId:    lski1751-0-54aef1ec
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1ec
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00006--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00006--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:01 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00006--CreateGrid
+ JobId:    lski1751-0-54aef1ec
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1ec
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00006--CreateGrid-out.zip
+*********************************************
+
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00006--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:01 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00006--CreateGrid
+ JobId:    lski1751-0-54aef1ec
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1ec
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00006--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00006--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:01 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00006--CreateGrid
+ JobId:    lski1751-0-54aef1ec
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1ec
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00006--CreateGrid-out.zip
+*********************************************
+
+Complete    18/   75 Stages (    0 this cycle)
+Running Workflow
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00007--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:05 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00007--CreateGrid
+ JobId:    lski1751-0-54aef1f0
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1f0
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00007--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00007--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:05 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00007--CreateGrid
+ JobId:    lski1751-0-54aef1f0
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1f0
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00007--CreateGrid-out.zip
+*********************************************
+
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00007--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:05 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00007--CreateGrid
+ JobId:    lski1751-0-54aef1f0
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1f0
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00007--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00007--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:05 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00007--CreateGrid
+ JobId:    lski1751-0-54aef1f0
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1f0
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00007--CreateGrid-out.zip
+*********************************************
+
+Complete    18/   75 Stages (    0 this cycle)
+Running Workflow
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00008--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:10 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00008--CreateGrid
+ JobId:    lski1751-0-54aef1f5
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1f5
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00008--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00008--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:10 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00008--CreateGrid
+ JobId:    lski1751-0-54aef1f5
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1f5
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00008--CreateGrid-out.zip
+*********************************************
+
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00008--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:10 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00008--CreateGrid
+ JobId:    lski1751-0-54aef1f5
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1f5
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00008--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00008--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:10 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00008--CreateGrid
+ JobId:    lski1751-0-54aef1f5
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1f5
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00008--CreateGrid-out.zip
+*********************************************
+
+Complete    18/   75 Stages (    0 this cycle)
+Running Workflow
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00009--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:14 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00009--CreateGrid
+ JobId:    lski1751-0-54aef1f9
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1f9
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00009--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00009--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:14 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00009--CreateGrid
+ JobId:    lski1751-0-54aef1f9
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1f9
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00009--CreateGrid-out.zip
+*********************************************
+
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00009--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:14 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00009--CreateGrid
+ JobId:    lski1751-0-54aef1f9
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1f9
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00009--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00009--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:14 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00009--CreateGrid
+ JobId:    lski1751-0-54aef1f9
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1f9
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00009--CreateGrid-out.zip
+*********************************************
+
+Complete    18/   75 Stages (    0 this cycle)
+Running Workflow
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00010--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:18 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00010--CreateGrid
+ JobId:    lski1751-0-54aef1fd
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1fd
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00010--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00010--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:18 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00010--CreateGrid
+ JobId:    lski1751-0-54aef1fd
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1fd
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00010--CreateGrid-out.zip
+*********************************************
+
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00010--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:18 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00010--CreateGrid
+ JobId:    lski1751-0-54aef1fd
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1fd
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00010--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00010--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:18 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00010--CreateGrid
+ JobId:    lski1751-0-54aef1fd
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef1fd
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00010--CreateGrid-out.zip
+*********************************************
+
+Complete    18/   75 Stages (    0 this cycle)
+Running Workflow
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00011--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:23 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00011--CreateGrid
+ JobId:    lski1751-0-54aef202
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef202
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00011--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00011--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:23 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00011--CreateGrid
+ JobId:    lski1751-0-54aef202
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef202
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00011--CreateGrid-out.zip
+*********************************************
+
+***FAIL***  <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid>      
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00011--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:23 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00011--CreateGrid
+ JobId:    lski1751-0-54aef202
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef202
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00011--CreateGrid-out.zip
+---- Last 40 Lines of <SETD8_processed xxxx_ligand1_fixed(   -1) CreateGrid> Logfile (Subjob00011--CreateGrid.log)
+ Date: Thursday, January 08 2015, at 16:09:23 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00011--CreateGrid
+ JobId:    lski1751-0-54aef202
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Impact: WARNING mmlewis warning: Wrong Lewis structure in structure input file
+mmlewis warning: with title: SETD8_processed xxxx_ligand1_fixed
+mmlewis warning: Problems were identified with the following atoms:
+mmlewis warning:  3 4 5 6 7 8 11 12 14 15 17 18 19 
+mmlewis warning: Now attempting to fix the lewis structure.
+Impact: FATAL mmlewis error: Problems remain with the following atoms:
+mmlewis error:  17
+Impact: FATAL mmlewis_apply(): Unable to handle mol 1
+Impact: FATAL mmlewis_apply(): Error in handling of full CT
+run_mmlewis: Failed to generate a valid lewis structure.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+atomtype_parms_w(): warning: Structure does not appear to have a valid lewis structure
+%IMPACT-I(foldmain): parameter assignment not performed
+%IMPACT-I (info): At line  10
+ %IMPACT-I: Any atom number reported in atomtyping error messages above
+  is  Impact's internal index, which may not correspond to the atom 
+ index in your file.
+%IMPACT-E (die): At line  10
+ %IMPACT-E: CREATE: Molecule unsuitable for current force field.  To 
+ process this molecule, you must first fix the structure.
+----- Output (stdout) -----
+[lski1751.mskcc.org]
+[lski1751.mskcc.org]
+JobId: lski1751-0-54aef202
+ERROR The job died (exit code 1)
+----- Errors (stderr) -----
+Error: jlaunch failed.
+Missing Required Output File: Subjob00011--CreateGrid-out.zip
+*********************************************
+
+Complete    18/   75 Stages (    0 this cycle)
+Already excededed 10 retries.  Aborting
+Error: Job has failed

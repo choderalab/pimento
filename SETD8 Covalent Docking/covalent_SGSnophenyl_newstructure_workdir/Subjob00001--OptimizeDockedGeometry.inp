@@ -1,0 +1,6 @@
+STRUCT_FILE          Subjob00001--OptimizeDockedGeometry-in.maegz
+JOB_TYPE             REFINE
+ADD_MISSING_SIDE_CHAINS no
+PRIME_TYPE           REAL_MIN
+MINIM_NITER          5
+SELECT               asl=fillres within 0.000000 (fillres (atom.i_cdock_lig_attach 1-1000 OR (chain.name "B" AND res.num 311 AND res.inscode " ")))

@@ -1,0 +1,958 @@
+ 
+ JobID: gpu-1-15-0-54b68978
+ BatchMin V10.6    Build  106013  Starting Time 14-Jan-2015 10:21:29
+ MacroModel. Copyright Schrodinger, LLC.
+ All rights reserved.
+ ConfGen V3.0     Build   30013
+
+ Input filename:  confgenstd.mae
+ Output filename: confgenstd_1-out.maegz
+ Atom-type file: /cbio/jclab/share/schrodinger/schrodinger2014-4/mmshare-v28013/bin/Linux-x86_64/../../data/atom.typ
+ Force field: /cbio/jclab/share/schrodinger/schrodinger2014-4/macromodel-v106013/bin/Linux-x86_64/../../data/OPLS_2005.fld
+ Read    30 atoms. Structure name, if any, appears on next line: 
+ Ro 08-2750.cdx
+ CGEN: Using ring conformation library.
+ CGEN: Number of ring Conformations set to:           16
+ CGEN: Number of conformations per ring set to:            8
+ CGEN: Maximum Internal Energy set to:    41.8400001525879     
+ CGEN: Atom distance gradient scaling factor set to:   1.00000000000000     
+  CGEN: flat torsional potential symmetry set to            6
+ CGEN: using OPLS2005 for the internal mmconf parameters
+ CGEN: flat potential threshold set to      12.00
+ CGEN: Using flat potential maximum original energy of:      -1.00
+  The flat torsional potential maximum original energy is negative.
+   No filtering by original torsional potential energy will be done
+ CGEN: flat potential torsional force constant set to    1000.00
+ CGEN: flat torsional potential half width set to      10.00
+ CGEN: fractional formal charge charge-charge sigma set to:       5.00
+ CGEN: fractional formal charge charge-charge prefactor set to:       2.50
+ CGEN: fractional formal charge charge-charge cutoff set to:       0.75
+ CGEN: Not favoring intra-molecular hydrogen bonds. 
+ CGEN: fractional formal charge charge-hydrogen bond sigma set to:       5.00
+ CGEN: fractional formal charge charge-hydrogen bond prefactor set to:       1.00
+ CGEN: fractional formal charge charge-hydrogen bond cutoff set to:       0.25
+ CGEN: Using aromatic..cat-H cutoff of:       1.00
+ CGEN: vdW elimination sigma set to:       2.50
+ CGEN: vdw elimination prefactor set to:       0.10
+ CGEN: vdw elimination cutoff set to:       1.00
+ Non-conformer Serial Search requested
+ Number of steps set to :         100
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   32    0    0
+   Numbers of high, medium and low quality bend parameters    =   52    1    0
+   Numbers of high, medium and low quality torsion parameters =   66    6    0
+   Interactions examined:        157 of        157 total, including unused params.
+      Stretch total=       32   constrained=        0
+         Bend total=       53   constrained=        0        linear=        0
+      Torsion total=       85   constrained=        0  out-of-plane=       13
+    Nonbonded total=      342      H-bonded=        0      ordinary=      342
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+ Starting truncated Newton minimization.
+ Seed Structure for ConfGen: E =    85.85 (  0.027)
+** Entering Conformation Generator **
+
+               Number of rotatable bonds       1
+                    Total ring and/or
+               N inversion conformations       1
+           Core rotatable bonds, maxkeep       0    1000
+                Maximum excitation level      11
+                           Energy cutoff      10.000
+                Total core conformations       1
+           Total conformations minimized       2
+
+ 
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   32    0    0
+   Numbers of high, medium and low quality bend parameters    =   52    1    0
+   Numbers of high, medium and low quality torsion parameters =   66    6    0
+   Interactions examined:        157 of        157 total, including unused params.
+      Stretch total=       32   constrained=        0
+         Bend total=       53   constrained=        0        linear=        0
+      Torsion total=       85   constrained=        0  out-of-plane=       13
+    Nonbonded total=      342      H-bonded=        0      ordinary=      342
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+          Step     1 New global minimum.  E (kJ/mol) =       85.85
+ Conf     1 E =    85.85 (  0.001) replaces structure     1
+ Conf     2 E =    90.41 (  0.008) rejected by structure     1
+ 
+Final report; processing .tmp file:
+    1 unique conformations found so far
+    1 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Global minimum E =     85.85 found     2 times.
+    1 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00
+  No.:     2
+ 
+Input structure with title on the next line is given SerNo:        1
+Ro 08-2750.cdx
+Auto summary for input structure      1:
+CGEN summary for input structure      1:
+ Total number of structures processed =           3
+ Conformations with poor convergence marked with a *
+ Conformation       1 (    85.84693     kJ/mol) was found     2 times
+           *** MC Statistics ***
+ Percent of minimized structures within energetic window:   66.66666    
+ Average number of duplicates:     2.000000    
+ Duplication standard deviation:  0.0000000E+00
+           2  structures generated
+           0  rejected by ring closure
+           0  rejected by van der Waals
+           2  duplicate minimised structures
+ Removing all fixed-atom constraints
+ Removed all frozen-atom constraints
+ Removing all distance constraints
+ Removing all bond-angle constraints
+ Removing all torsional restraints
+ Number of steps set to :         300
+ Read    29 atoms. Structure name, if any, appears on next line: 
+ Ro 08-2750.cdx
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   31    0    0
+   Numbers of high, medium and low quality bend parameters    =   51    0    0
+   Numbers of high, medium and low quality torsion parameters =   61    7    0
+   Interactions examined:        150 of        150 total, including unused params.
+      Stretch total=       31   constrained=        0
+         Bend total=       51   constrained=        0        linear=        0
+      Torsion total=       80   constrained=        0  out-of-plane=       12
+    Nonbonded total=      318      H-bonded=        0      ordinary=      318
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+ Starting truncated Newton minimization.
+ Seed Structure for ConfGen: E =   164.31 (  0.003)
+** Entering Conformation Generator **
+
+               Number of rotatable bonds       1
+                    Total ring and/or
+               N inversion conformations       1
+           Core rotatable bonds, maxkeep       0    1000
+                Maximum excitation level      11
+                           Energy cutoff      10.000
+                Total core conformations       1
+           Total conformations minimized       2
+
+ 
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   31    0    0
+   Numbers of high, medium and low quality bend parameters    =   51    0    0
+   Numbers of high, medium and low quality torsion parameters =   61    7    0
+   Interactions examined:        150 of        150 total, including unused params.
+      Stretch total=       31   constrained=        0
+         Bend total=       51   constrained=        0        linear=        0
+      Torsion total=       80   constrained=        0  out-of-plane=       12
+    Nonbonded total=      318      H-bonded=        0      ordinary=      318
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+          Step     1 New global minimum.  E (kJ/mol) =      164.31
+ Conf     1 E =   164.31 (  0.001) replaces structure     1
+ Conf     2 E =   168.67 (  0.015) rejected by structure     1
+ 
+Final report; processing .tmp file:
+    1 unique conformations found so far
+    1 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Global minimum E =    164.31 found     2 times.
+    1 steps performed so far, out of   300
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00
+  No.:     2
+ 
+Input structure with title on the next line is given SerNo:        2
+Ro 08-2750.cdx
+Auto summary for input structure      3:
+CGEN summary for input structure      2:
+ Total number of structures processed =           3
+ Conformations with poor convergence marked with a *
+ Conformation       1 (    164.3106     kJ/mol) was found     2 times
+           *** MC Statistics ***
+ Percent of minimized structures within energetic window:   66.66666    
+ Average number of duplicates:     2.000000    
+ Duplication standard deviation:  0.0000000E+00
+           2  structures generated
+           0  rejected by ring closure
+           0  rejected by van der Waals
+           2  duplicate minimised structures
+ Removing all fixed-atom constraints
+ Removed all frozen-atom constraints
+ Removing all distance constraints
+ Removing all bond-angle constraints
+ Removing all torsional restraints
+ Number of steps set to :         200
+ Read    24 atoms. Structure name, if any, appears on next line: 
+ Ro 08-2750.sdf
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   26    0    0
+   Numbers of high, medium and low quality bend parameters    =   42    0    0
+   Numbers of high, medium and low quality torsion parameters =   53    5    0
+   Interactions examined:        126 of        126 total, including unused params.
+      Stretch total=       26   constrained=        0
+         Bend total=       42   constrained=        0        linear=        0
+      Torsion total=       69   constrained=        0  out-of-plane=       11
+    Nonbonded total=      208      H-bonded=        0      ordinary=      208
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+ Starting truncated Newton minimization.
+ Seed Structure for ConfGen: E =    91.41 (  0.002)
+** Entering Conformation Generator **
+
+               Number of rotatable bonds       0
+                    Total ring and/or
+               N inversion conformations       1
+           Core rotatable bonds, maxkeep       0    1000
+                Maximum excitation level      11
+                           Energy cutoff      10.000
+                Total core conformations       1
+           Total conformations minimized       1
+
+ 
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   26    0    0
+   Numbers of high, medium and low quality bend parameters    =   42    0    0
+   Numbers of high, medium and low quality torsion parameters =   53    5    0
+   Interactions examined:        126 of        126 total, including unused params.
+      Stretch total=       26   constrained=        0
+         Bend total=       42   constrained=        0        linear=        0
+      Torsion total=       69   constrained=        0  out-of-plane=       11
+    Nonbonded total=      208      H-bonded=        0      ordinary=      208
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+          Step     1 New global minimum.  E (kJ/mol) =       91.41
+ Conf     1 E =    91.41 (  0.001) replaces structure     1
+ 
+Final report; processing .tmp file:
+    1 unique conformations found so far
+    1 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Global minimum E =     91.41 found     1 times.
+    0 steps performed so far, out of   200
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00
+  No.:     1
+ 
+Input structure with title on the next line is given SerNo:        3
+Ro 08-2750.sdf
+Auto summary for input structure      5:
+CGEN summary for input structure      3:
+ Total number of structures processed =           2
+ Conformations with poor convergence marked with a *
+ Conformation       1 (    91.41343     kJ/mol) was found     1 times
+           *** MC Statistics ***
+ Percent of minimized structures within energetic window:   50.00000    
+ Average number of duplicates:     1.000000    
+ Duplication standard deviation:  0.0000000E+00
+           1  structures generated
+           0  rejected by ring closure
+           0  rejected by van der Waals
+           1  duplicate minimised structures
+ Removing all fixed-atom constraints
+ Removed all frozen-atom constraints
+ Removing all distance constraints
+ Removing all bond-angle constraints
+ Removing all torsional restraints
+ Number of steps set to :         200
+ Read    27 atoms. Structure name, if any, appears on next line: 
+ Ro Analog2.cdx
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   29    0    0
+   Numbers of high, medium and low quality bend parameters    =   48    0    0
+   Numbers of high, medium and low quality torsion parameters =   58    6    0
+   Interactions examined:        141 of        141 total, including unused params.
+      Stretch total=       29   constrained=        0
+         Bend total=       48   constrained=        0        linear=        0
+      Torsion total=       75   constrained=        0  out-of-plane=       11
+    Nonbonded total=      274      H-bonded=        0      ordinary=      274
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+ Starting truncated Newton minimization.
+ Seed Structure for ConfGen: E =    93.01 (  0.001)
+** Entering Conformation Generator **
+
+               Number of rotatable bonds       0
+                    Total ring and/or
+               N inversion conformations       1
+           Core rotatable bonds, maxkeep       0    1000
+                Maximum excitation level      11
+                           Energy cutoff      10.000
+                Total core conformations       1
+           Total conformations minimized       1
+
+ 
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   29    0    0
+   Numbers of high, medium and low quality bend parameters    =   48    0    0
+   Numbers of high, medium and low quality torsion parameters =   58    6    0
+   Interactions examined:        141 of        141 total, including unused params.
+      Stretch total=       29   constrained=        0
+         Bend total=       48   constrained=        0        linear=        0
+      Torsion total=       75   constrained=        0  out-of-plane=       11
+    Nonbonded total=      274      H-bonded=        0      ordinary=      274
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+          Step     1 New global minimum.  E (kJ/mol) =       93.01
+ Conf     1 E =    93.01 (  0.001) replaces structure     1
+ 
+Final report; processing .tmp file:
+    1 unique conformations found so far
+    1 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Global minimum E =     93.01 found     1 times.
+    0 steps performed so far, out of   200
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00
+  No.:     1
+ 
+Input structure with title on the next line is given SerNo:        4
+Ro Analog2.cdx
+Auto summary for input structure      7:
+CGEN summary for input structure      4:
+ Total number of structures processed =           2
+ Conformations with poor convergence marked with a *
+ Conformation       1 (    93.00784     kJ/mol) was found     1 times
+           *** MC Statistics ***
+ Percent of minimized structures within energetic window:   50.00000    
+ Average number of duplicates:     1.000000    
+ Duplication standard deviation:  0.0000000E+00
+           1  structures generated
+           0  rejected by ring closure
+           0  rejected by van der Waals
+           1  duplicate minimised structures
+ Removing all fixed-atom constraints
+ Removed all frozen-atom constraints
+ Removing all distance constraints
+ Removing all bond-angle constraints
+ Removing all torsional restraints
+ Number of steps set to :         200
+ Read    30 atoms. Structure name, if any, appears on next line: 
+ Ro Analog2.sdf
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   32    0    0
+   Numbers of high, medium and low quality bend parameters    =   53    1    0
+   Numbers of high, medium and low quality torsion parameters =   64    6    0
+   Interactions examined:        156 of        156 total, including unused params.
+      Stretch total=       32   constrained=        0
+         Bend total=       54   constrained=        0        linear=        0
+      Torsion total=       81   constrained=        0  out-of-plane=       11
+    Nonbonded total=      349      H-bonded=        0      ordinary=      349
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+ Starting truncated Newton minimization.
+ Seed Structure for ConfGen: E =   141.74 (  0.004)
+** Entering Conformation Generator **
+
+               Number of rotatable bonds       0
+                    Total ring and/or
+               N inversion conformations       1
+           Core rotatable bonds, maxkeep       0    1000
+                Maximum excitation level      11
+                           Energy cutoff      10.000
+                Total core conformations       1
+           Total conformations minimized       1
+
+ 
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   32    0    0
+   Numbers of high, medium and low quality bend parameters    =   53    1    0
+   Numbers of high, medium and low quality torsion parameters =   64    6    0
+   Interactions examined:        156 of        156 total, including unused params.
+      Stretch total=       32   constrained=        0
+         Bend total=       54   constrained=        0        linear=        0
+      Torsion total=       81   constrained=        0  out-of-plane=       11
+    Nonbonded total=      349      H-bonded=        0      ordinary=      349
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+          Step     1 New global minimum.  E (kJ/mol) =      141.74
+ Conf     1 E =   141.74 (  0.001) replaces structure     1
+ 
+Final report; processing .tmp file:
+    1 unique conformations found so far
+    1 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Global minimum E =    141.74 found     1 times.
+    0 steps performed so far, out of   200
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00
+  No.:     1
+ 
+Input structure with title on the next line is given SerNo:        5
+Ro Analog2.sdf
+Auto summary for input structure      9:
+CGEN summary for input structure      5:
+ Total number of structures processed =           2
+ Conformations with poor convergence marked with a *
+ Conformation       1 (    141.7430     kJ/mol) was found     1 times
+           *** MC Statistics ***
+ Percent of minimized structures within energetic window:   50.00000    
+ Average number of duplicates:     1.000000    
+ Duplication standard deviation:  0.0000000E+00
+           1  structures generated
+           0  rejected by ring closure
+           0  rejected by van der Waals
+           1  duplicate minimised structures
+ Removing all fixed-atom constraints
+ Removed all frozen-atom constraints
+ Removing all distance constraints
+ Removing all bond-angle constraints
+ Removing all torsional restraints
+ Number of steps set to :           1
+ Read    31 atoms. Structure name, if any, appears on next line: 
+ Ro Analog2.sdf
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   33    0    0
+   Numbers of high, medium and low quality bend parameters    =   55    1    0
+   Numbers of high, medium and low quality torsion parameters =   68    6    0
+   Interactions examined:        163 of        163 total, including unused params.
+      Stretch total=       33   constrained=        0
+         Bend total=       56   constrained=        0        linear=        0
+      Torsion total=       86   constrained=        0  out-of-plane=       12
+    Nonbonded total=      376      H-bonded=        0      ordinary=      376
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+ Starting truncated Newton minimization.
+ Seed Structure for ConfGen: E =   121.35 (  0.002)
+** Entering Conformation Generator **
+
+               Number of rotatable bonds       0
+                    Total ring and/or
+               N inversion conformations       1
+           Core rotatable bonds, maxkeep       0    1000
+                Maximum excitation level      11
+                           Energy cutoff      10.000
+                Total core conformations       1
+           Total conformations minimized       1
+
+ 
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   33    0    0
+   Numbers of high, medium and low quality bend parameters    =   55    1    0
+   Numbers of high, medium and low quality torsion parameters =   68    6    0
+   Interactions examined:        163 of        163 total, including unused params.
+      Stretch total=       33   constrained=        0
+         Bend total=       56   constrained=        0        linear=        0
+      Torsion total=       86   constrained=        0  out-of-plane=       12
+    Nonbonded total=      376      H-bonded=        0      ordinary=      376
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+          Step     1 New global minimum.  E (kJ/mol) =      121.35
+ Conf     1 E =   121.35 (  0.000) replaces structure     1
+ 
+Final report; processing .tmp file:
+    1 unique conformations found so far
+    1 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Global minimum E =    121.35 found     1 times.
+    1 steps performed so far, out of     1
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00
+  No.:     1
+ 
+Input structure with title on the next line is given SerNo:        6
+Ro Analog2.sdf
+Auto summary for input structure     11:
+CGEN summary for input structure      6:
+ Total number of structures processed =           2
+ Conformations with poor convergence marked with a *
+ Conformation       1 (    121.3527     kJ/mol) was found     1 times
+           *** MC Statistics ***
+ Percent of minimized structures within energetic window:   50.00000    
+ Average number of duplicates:     1.000000    
+ Duplication standard deviation:  0.0000000E+00
+           1  structures generated
+           0  rejected by ring closure
+           0  rejected by van der Waals
+           1  duplicate minimised structures
+ Removing all fixed-atom constraints
+ Removed all frozen-atom constraints
+ Removing all distance constraints
+ Removing all bond-angle constraints
+ Removing all torsional restraints
+ Number of steps set to :         200
+ Read    27 atoms. Structure name, if any, appears on next line: 
+ Ro Analog4.cdx
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   29    0    0
+   Numbers of high, medium and low quality bend parameters    =   48    0    0
+   Numbers of high, medium and low quality torsion parameters =   58    6    0
+   Interactions examined:        141 of        141 total, including unused params.
+      Stretch total=       29   constrained=        0
+         Bend total=       48   constrained=        0        linear=        0
+      Torsion total=       75   constrained=        0  out-of-plane=       11
+    Nonbonded total=      274      H-bonded=        0      ordinary=      274
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+ Starting truncated Newton minimization.
+ Seed Structure for ConfGen: E =   127.92 (  0.005)
+** Entering Conformation Generator **
+
+               Number of rotatable bonds       0
+                    Total ring and/or
+               N inversion conformations       1
+           Core rotatable bonds, maxkeep       0    1000
+                Maximum excitation level      11
+                           Energy cutoff      10.000
+                Total core conformations       1
+           Total conformations minimized       1
+
+ 
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   29    0    0
+   Numbers of high, medium and low quality bend parameters    =   48    0    0
+   Numbers of high, medium and low quality torsion parameters =   58    6    0
+   Interactions examined:        141 of        141 total, including unused params.
+      Stretch total=       29   constrained=        0
+         Bend total=       48   constrained=        0        linear=        0
+      Torsion total=       75   constrained=        0  out-of-plane=       11
+    Nonbonded total=      274      H-bonded=        0      ordinary=      274
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+          Step     1 New global minimum.  E (kJ/mol) =      127.92
+ Conf     1 E =   127.92 (  0.001) replaces structure     1
+ 
+Final report; processing .tmp file:
+    1 unique conformations found so far
+    1 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Global minimum E =    127.92 found     1 times.
+    0 steps performed so far, out of   200
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00
+  No.:     1
+ 
+Input structure with title on the next line is given SerNo:        7
+Ro Analog4.cdx
+Auto summary for input structure     13:
+CGEN summary for input structure      7:
+ Total number of structures processed =           2
+ Conformations with poor convergence marked with a *
+ Conformation       1 (    127.9157     kJ/mol) was found     1 times
+           *** MC Statistics ***
+ Percent of minimized structures within energetic window:   50.00000    
+ Average number of duplicates:     1.000000    
+ Duplication standard deviation:  0.0000000E+00
+           1  structures generated
+           0  rejected by ring closure
+           0  rejected by van der Waals
+           1  duplicate minimised structures
+ Removing all fixed-atom constraints
+ Removed all frozen-atom constraints
+ Removing all distance constraints
+ Removing all bond-angle constraints
+ Removing all torsional restraints
+ Number of steps set to :         100
+ Read    30 atoms. Structure name, if any, appears on next line: 
+ Ro Analog4.sdf
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   32    0    0
+   Numbers of high, medium and low quality bend parameters    =   52    1    0
+   Numbers of high, medium and low quality torsion parameters =   66    6    0
+   Interactions examined:        157 of        157 total, including unused params.
+      Stretch total=       32   constrained=        0
+         Bend total=       53   constrained=        0        linear=        0
+      Torsion total=       85   constrained=        0  out-of-plane=       13
+    Nonbonded total=      346      H-bonded=        0      ordinary=      346
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+ Starting truncated Newton minimization.
+ Seed Structure for ConfGen: E =   156.43 (  0.017)
+** Entering Conformation Generator **
+
+               Number of rotatable bonds       0
+                    Total ring and/or
+               N inversion conformations       1
+           Core rotatable bonds, maxkeep       0    1000
+                Maximum excitation level      11
+                           Energy cutoff      10.000
+                Total core conformations       1
+           Total conformations minimized       1
+
+ 
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   32    0    0
+   Numbers of high, medium and low quality bend parameters    =   52    1    0
+   Numbers of high, medium and low quality torsion parameters =   66    6    0
+   Interactions examined:        157 of        157 total, including unused params.
+      Stretch total=       32   constrained=        0
+         Bend total=       53   constrained=        0        linear=        0
+      Torsion total=       85   constrained=        0  out-of-plane=       13
+    Nonbonded total=      346      H-bonded=        0      ordinary=      346
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+          Step     1 New global minimum.  E (kJ/mol) =      156.43
+ Conf     1 E =   156.43 (  0.002) replaces structure     1
+ 
+Final report; processing .tmp file:
+    1 unique conformations found so far
+    1 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Global minimum E =    156.43 found     1 times.
+    0 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00
+  No.:     1
+ 
+Input structure with title on the next line is given SerNo:        8
+Ro Analog4.sdf
+Auto summary for input structure     15:
+CGEN summary for input structure      8:
+ Total number of structures processed =           2
+ Conformations with poor convergence marked with a *
+ Conformation       1 (    156.4265     kJ/mol) was found     1 times
+           *** MC Statistics ***
+ Percent of minimized structures within energetic window:   50.00000    
+ Average number of duplicates:     1.000000    
+ Duplication standard deviation:  0.0000000E+00
+           1  structures generated
+           0  rejected by ring closure
+           0  rejected by van der Waals
+           1  duplicate minimised structures
+ Removing all fixed-atom constraints
+ Removed all frozen-atom constraints
+ Removing all distance constraints
+ Removing all bond-angle constraints
+ Removing all torsional restraints
+ Number of steps set to :         100
+ Read    35 atoms. Structure name, if any, appears on next line: 
+ Ro Analog6.cdx
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   37    0    0
+   Numbers of high, medium and low quality bend parameters    =   59    3    0
+   Numbers of high, medium and low quality torsion parameters =   78    4    0
+   Interactions examined:        181 of        181 total, including unused params.
+      Stretch total=       37   constrained=        0
+         Bend total=       62   constrained=        0        linear=        0
+      Torsion total=       96   constrained=        0  out-of-plane=       14
+    Nonbonded total=      477      H-bonded=        0      ordinary=      477
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+ Starting truncated Newton minimization.
+ Seed Structure for ConfGen: E =   176.79 (  0.003)
+** Entering Conformation Generator **
+
+               Number of rotatable bonds       2
+                    Total ring and/or
+               N inversion conformations       1
+           Core rotatable bonds, maxkeep       1    1000
+                Maximum excitation level      11
+                           Energy cutoff      10.000
+                Total core conformations       3
+           Total conformations minimized       3
+
+ 
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   37    0    0
+   Numbers of high, medium and low quality bend parameters    =   59    3    0
+   Numbers of high, medium and low quality torsion parameters =   78    4    0
+   Interactions examined:        181 of        181 total, including unused params.
+      Stretch total=       37   constrained=        0
+         Bend total=       62   constrained=        0        linear=        0
+      Torsion total=       96   constrained=        0  out-of-plane=       14
+    Nonbonded total=      477      H-bonded=        0      ordinary=      477
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+          Step     1 New global minimum.  E (kJ/mol) =      176.79
+ Conf     1 E =   176.79 (  0.003) replaces structure     1
+ Conf     2 E =   176.99 (  0.006) is unique and stored as structure     2
+ Conf     3 E =   176.99 (  0.004) replaces structure     2
+ 
+Final report; processing .tmp file:
+    2 unique conformations found so far
+    2 minimized with good convergence
+Found     2 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Global minimum E =    176.79 found     1 times.
+    2 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  0.19
+  No.:     1     2
+ 
+Input structure with title on the next line is given SerNo:        9
+Ro Analog6.cdx
+Auto summary for input structure     17:
+CGEN summary for input structure      9:
+ Total number of structures processed =           4
+ Conformations with poor convergence marked with a *
+ Conformation       1 (    176.7936     kJ/mol) was found     1 times
+ Conformation       2 (    176.9859     kJ/mol) was found     2 times
+           *** MC Statistics ***
+ Percent of minimized structures within energetic window:   75.00000    
+ Average number of duplicates:     1.500000    
+ Duplication standard deviation:  0.7071068    
+           3  structures generated
+           0  rejected by ring closure
+           0  rejected by van der Waals
+           2  duplicate minimised structures
+ Removing all fixed-atom constraints
+ Removed all frozen-atom constraints
+ Removing all distance constraints
+ Removing all bond-angle constraints
+ Removing all torsional restraints
+ Number of steps set to :         100
+ Read    33 atoms. Structure name, if any, appears on next line: 
+ Ro Analog7.cdx
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   35    0    0
+   Numbers of high, medium and low quality bend parameters    =   58    1    0
+   Numbers of high, medium and low quality torsion parameters =   72    6    0
+   Interactions examined:        172 of        172 total, including unused params.
+      Stretch total=       35   constrained=        0
+         Bend total=       59   constrained=        0        linear=        0
+      Torsion total=       91   constrained=        0  out-of-plane=       13
+    Nonbonded total=      430      H-bonded=        0      ordinary=      430
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+ Starting truncated Newton minimization.
+ Seed Structure for ConfGen: E =   157.55 (  0.033)
+** Entering Conformation Generator **
+
+               Number of rotatable bonds       0
+                    Total ring and/or
+               N inversion conformations       1
+           Core rotatable bonds, maxkeep       0    1000
+                Maximum excitation level      11
+                           Energy cutoff      10.000
+                Total core conformations       1
+           Total conformations minimized       1
+
+ 
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   35    0    0
+   Numbers of high, medium and low quality bend parameters    =   58    1    0
+   Numbers of high, medium and low quality torsion parameters =   72    6    0
+   Interactions examined:        172 of        172 total, including unused params.
+      Stretch total=       35   constrained=        0
+         Bend total=       59   constrained=        0        linear=        0
+      Torsion total=       91   constrained=        0  out-of-plane=       13
+    Nonbonded total=      430      H-bonded=        0      ordinary=      430
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+          Step     1 New global minimum.  E (kJ/mol) =      157.55
+ Conf     1 E =   157.55 (  0.010) replaces structure     1
+ 
+Final report; processing .tmp file:
+    1 unique conformations found so far
+    1 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Global minimum E =    157.55 found     1 times.
+    0 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00
+  No.:     1
+ 
+Input structure with title on the next line is given SerNo:       10
+Ro Analog7.cdx
+Auto summary for input structure     19:
+CGEN summary for input structure     10:
+ Total number of structures processed =           2
+ Conformations with poor convergence marked with a *
+ Conformation       1 (    157.5524     kJ/mol) was found     1 times
+           *** MC Statistics ***
+ Percent of minimized structures within energetic window:   50.00000    
+ Average number of duplicates:     1.000000    
+ Duplication standard deviation:  0.0000000E+00
+           1  structures generated
+           0  rejected by ring closure
+           0  rejected by van der Waals
+           1  duplicate minimised structures
+ Removing all fixed-atom constraints
+ Removed all frozen-atom constraints
+ Removing all distance constraints
+ Removing all bond-angle constraints
+ Removing all torsional restraints
+ Number of steps set to :         500
+ Read    39 atoms. Structure name, if any, appears on next line: 
+ Ro Analog7.sdf
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   42    0    0
+   Numbers of high, medium and low quality bend parameters    =   66    3    0
+   Numbers of high, medium and low quality torsion parameters =   94    4    0
+   Interactions examined:        209 of        209 total, including unused params.
+      Stretch total=       42   constrained=        0
+         Bend total=       69   constrained=        0        linear=        0
+      Torsion total=      116   constrained=        0  out-of-plane=       18
+    Nonbonded total=      577      H-bonded=        0      ordinary=      577
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+ Starting truncated Newton minimization.
+ Seed Structure for ConfGen: E =   140.12 (  0.039)
+** Entering Conformation Generator **
+
+               Number of rotatable bonds       2
+                    Total ring and/or
+               N inversion conformations       1
+           Core rotatable bonds, maxkeep       2    1000
+                Maximum excitation level      11
+                           Energy cutoff      10.000
+                Total core conformations       6
+           Total conformations minimized       6
+
+ 
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   42    0    0
+   Numbers of high, medium and low quality bend parameters    =   66    3    0
+   Numbers of high, medium and low quality torsion parameters =   94    4    0
+   Interactions examined:        209 of        209 total, including unused params.
+      Stretch total=       42   constrained=        0
+         Bend total=       69   constrained=        0        linear=        0
+      Torsion total=      122   constrained=        6  out-of-plane=       18
+    Nonbonded total=      577      H-bonded=        0      ordinary=      577
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+          Step     1 New global minimum.  E (kJ/mol) =      140.12
+ Conf     1 E =   140.12 (  0.045) replaces structure     1
+ Conf     2 E =   140.15 (  0.004) is unique and stored as structure     2
+ Conf     3 E =   140.63 (  0.027) rejected by structure     1
+ Conf     4 E =   140.97 (  0.047) rejected by structure     1
+ Conf     5 E =   141.07 (  0.002) rejected by structure     2
+ Conf     6 E =   140.39 (  0.028) rejected by structure     2
+ 
+Final report; processing .tmp file:
+    2 unique conformations found so far
+    2 minimized with good convergence
+Found     2 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Global minimum E =    140.12 found     3 times.
+    5 steps performed so far, out of   500
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  0.03
+  No.:     3     3
+ 
+Input structure with title on the next line is given SerNo:       11
+Ro Analog7.sdf
+Auto summary for input structure     21:
+CGEN summary for input structure     11:
+ Total number of structures processed =           7
+ Conformations with poor convergence marked with a *
+ Conformation       1 (    140.1164     kJ/mol) was found     3 times
+ Conformation       2 (    140.1508     kJ/mol) was found     3 times
+           *** MC Statistics ***
+ Percent of minimized structures within energetic window:   85.71429    
+ Average number of duplicates:     3.000000    
+ Duplication standard deviation:  0.0000000E+00
+           6  structures generated
+           0  rejected by ring closure
+           0  rejected by van der Waals
+           5  duplicate minimised structures
+ Removing all fixed-atom constraints
+ Removed all frozen-atom constraints
+ Removing all distance constraints
+ Removing all bond-angle constraints
+ Removing all torsional restraints
+ Number of steps set to :         200
+ Read    24 atoms. Structure name, if any, appears on next line: 
+ Ro Analog9.cdx
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   26    0    0
+   Numbers of high, medium and low quality bend parameters    =   42    0    0
+   Numbers of high, medium and low quality torsion parameters =   53    5    0
+   Interactions examined:        126 of        126 total, including unused params.
+      Stretch total=       26   constrained=        0
+         Bend total=       42   constrained=        0        linear=        0
+      Torsion total=       69   constrained=        0  out-of-plane=       11
+    Nonbonded total=      208      H-bonded=        0      ordinary=      208
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+ Starting truncated Newton minimization.
+ Seed Structure for ConfGen: E =   128.95 (  0.026)
+** Entering Conformation Generator **
+
+               Number of rotatable bonds       0
+                    Total ring and/or
+               N inversion conformations       1
+           Core rotatable bonds, maxkeep       0    1000
+                Maximum excitation level      11
+                           Energy cutoff      10.000
+                Total core conformations       1
+           Total conformations minimized       1
+
+ 
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   26    0    0
+   Numbers of high, medium and low quality bend parameters    =   42    0    0
+   Numbers of high, medium and low quality torsion parameters =   53    5    0
+   Interactions examined:        126 of        126 total, including unused params.
+      Stretch total=       26   constrained=        0
+         Bend total=       42   constrained=        0        linear=        0
+      Torsion total=       69   constrained=        0  out-of-plane=       11
+    Nonbonded total=      208      H-bonded=        0      ordinary=      208
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+          Step     1 New global minimum.  E (kJ/mol) =      128.95
+ Conf     1 E =   128.95 (  0.001) replaces structure     1
+ 
+Final report; processing .tmp file:
+    1 unique conformations found so far
+    1 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Global minimum E =    128.95 found     1 times.
+    0 steps performed so far, out of   200
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00
+  No.:     1
+ 
+Input structure with title on the next line is given SerNo:       12
+Ro Analog9.cdx
+Auto summary for input structure     23:
+CGEN summary for input structure     12:
+ Total number of structures processed =           2
+ Conformations with poor convergence marked with a *
+ Conformation       1 (    128.9545     kJ/mol) was found     1 times
+           *** MC Statistics ***
+ Percent of minimized structures within energetic window:   50.00000    
+ Average number of duplicates:     1.000000    
+ Duplication standard deviation:  0.0000000E+00
+           1  structures generated
+           0  rejected by ring closure
+           0  rejected by van der Waals
+           1  duplicate minimised structures
+ Removing all fixed-atom constraints
+ Removed all frozen-atom constraints
+ Removing all distance constraints
+ Removing all bond-angle constraints
+ Removing all torsional restraints
+ Number of steps set to :         300
+ Read    26 atoms. Structure name, if any, appears on next line: 
+ Ro Analog10.cdx
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   28    0    0
+   Numbers of high, medium and low quality bend parameters    =   45    0    0
+   Numbers of high, medium and low quality torsion parameters =   57    5    0
+   Interactions examined:        135 of        135 total, including unused params.
+      Stretch total=       28   constrained=        0
+         Bend total=       45   constrained=        0        linear=        0
+      Torsion total=       74   constrained=        0  out-of-plane=       12
+    Nonbonded total=      247      H-bonded=        0      ordinary=      247
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+ Starting truncated Newton minimization.
+ Seed Structure for ConfGen: E =    92.59 (  0.037)
+** Entering Conformation Generator **
+
+               Number of rotatable bonds       0
+                    Total ring and/or
+               N inversion conformations       1
+           Core rotatable bonds, maxkeep       0    1000
+                Maximum excitation level      11
+                           Energy cutoff      10.000
+                Total core conformations       1
+           Total conformations minimized       1
+
+ 
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   28    0    0
+   Numbers of high, medium and low quality bend parameters    =   45    0    0
+   Numbers of high, medium and low quality torsion parameters =   57    5    0
+   Interactions examined:        135 of        135 total, including unused params.
+      Stretch total=       28   constrained=        0
+         Bend total=       45   constrained=        0        linear=        0
+      Torsion total=       74   constrained=        0  out-of-plane=       12
+    Nonbonded total=      247      H-bonded=        0      ordinary=      247
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+          Step     1 New global minimum.  E (kJ/mol) =       92.59
+ Conf     1 E =    92.59 (  0.008) replaces structure     1
+ 
+Final report; processing .tmp file:
+    1 unique conformations found so far
+    1 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Global minimum E =     92.59 found     1 times.
+    0 steps performed so far, out of   300
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00
+  No.:     1
+ 
+Input structure with title on the next line is given SerNo:       13
+Ro Analog10.cdx
+Auto summary for input structure     25:
+CGEN summary for input structure     13:
+ Total number of structures processed =           2
+ Conformations with poor convergence marked with a *
+ Conformation       1 (    92.58848     kJ/mol) was found     1 times
+           *** MC Statistics ***
+ Percent of minimized structures within energetic window:   50.00000    
+ Average number of duplicates:     1.000000    
+ Duplication standard deviation:  0.0000000E+00
+           1  structures generated
+           0  rejected by ring closure
+           0  rejected by van der Waals
+           1  duplicate minimised structures
+ 
+BatchMin: normal termination                           14-Jan-2015 10:21:34
+
+real	0m5.617s
+user	0m1.615s
+sys	0m0.226s

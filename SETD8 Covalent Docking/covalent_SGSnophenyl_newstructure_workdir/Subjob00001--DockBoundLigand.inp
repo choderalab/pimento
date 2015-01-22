@@ -1,0 +1,7 @@
+POSE_OUTTYPE         ligandlib
+GRIDFILE             Subjob00001--CreateGrid-out.zip
+DOCKING_METHOD       optandscore
+PRECISION            XP
+LIGANDFILE           Subjob00001--DockBoundLigand-in.maegz
+WRITE_XP_DESC        yes
+USECOMPMAE           yes

@@ -1,0 +1,1419 @@
+----- Output (stdout) -----
+[gpu-1-8.local]
+%IMPACT-I (openwt): Request to open FORMATTED file Subjob00001--DockLigand0.out on unit   2
+ Entering IMPACT execution environment 
+ Date: Friday, January 16 2015, at 11:34:14 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Linux gpu-1-8.local 2.6.32-358.18.1.el6.x86_64 #1 SMP Wed Aug 28 17:19:38 UTC 2013 x86_64
+ Job Name: Subjob00001--DockLigand0.glidetmp27294
+ SCHRODINGER  directory: /cbio/jclab/share/schrodinger/schrodinger2014-4
+ IMPACT_EXEC  directory: /cbio/jclab/share/schrodinger/schrodinger2014-4/impact-v65013/bin/Linux-x86_64
+ MMSHARE_EXEC directory: /cbio/jclab/share/schrodinger/schrodinger2014-4/mmshare-v28013/bin/Linux-x86_64
+ VdW radii of ligand atoms scaled by   0.800000000000000     
+ Charge cutoff for polarity   0.150000000000000     
+
+GLIDE CONSTRAINTS APPLIED
+-------------------------
+  1 out of   1 constraints used from file "grid.27313/Subjob00001--CreateGrid-out.cons"
+Labels and receptor types of constraints used are:
+pos1 (Positional)
+
+All docked poses must satisfy the specified number of
+constraints in ALL of the following  1 groups.
+Group   1: At least  1 of (pos1)
+
+
+ After readscreen, (nx, ny, nz) = (          25 ,           25 ,           25 ).
+  Receptor setup: (nsites, nx, ny, nz, bsize)=(         125 ,           25 , 
+          25 ,           25 ,    1.00000000000000      ).
+ Screening setup finished.
+ DOCKMAIN: getting receptor.
+%IMPACT-I (xdrrd): File grid.27313/Subjob00001--CreateGrid-out.grd opened for reading
+  DOCKMAIN after grid: (nx, ny, nz) = (          64 ,           64 , 
+          64 ).
+%IMPACT-I (xdrrd): File grid.27313/Subjob00001--CreateGrid-out_coul2.fld opened for reading
+%IMPACT-I (xdrrd): File grid.27313/Subjob00001--CreateGrid-out_vdw.fld opened for reading
+%IMPACT-I (xdrrd): File grid.27313/Subjob00001--CreateGrid-out.gsc opened for reading
+ DOCKMAIN: Grid setup finished
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+  
+  Penalizing non-planar amide torsions 
+  
+ Number of rotatable bonds            2
+ Using templates for ring conformations.
+
+GlideScore version SP5.0 will be used
+
+  
+ Buried polar penalty      0.000
+ Coulomb vdW cutoff        0.000
+ H bond cutoff             0.000
+ Metal-ligand cutoff      10.000
+%IMPACT-I (info): At line  78
+ %IMPACT-I: Assigning GlideScore SP5.0 parameters
+ Checked constraints after refinement with max HB dsq =    16.0000000000000     
+ After refinement, constraint filter reduced number of
+ poses from         5000  to         4972 .
+ Total constraint copies over all poses =         4972
+Postdocking minimization:  10 poses; CvdW cutoffs   100.0 kcal/mol for min,     0.0 kcal/mol for report.
+Constraint(s) matched for ligand        1, pose     66
+Score =     -5.935
+Emodel =    -35.725
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.93)+Epik State Penalty(    0.53) =    -5.40 kcal/mol
+Constraint(s) matched for ligand        1, pose   4037
+Score =     -5.876
+Emodel =    -35.093
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.88)+Epik State Penalty(    0.53) =    -5.34 kcal/mol
+Constraint(s) matched for ligand        1, pose    373
+Score =     -6.621
+Emodel =    -34.314
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.62)+Epik State Penalty(    0.53) =    -6.09 kcal/mol
+Constraint(s) matched for ligand        1, pose    208
+Score =     -5.740
+Emodel =    -31.613
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.74)+Epik State Penalty(    0.53) =    -5.21 kcal/mol
+Constraint(s) matched for ligand        1, pose   2381
+Score =     -6.401
+Emodel =    -29.768
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.40)+Epik State Penalty(    0.53) =    -5.87 kcal/mol
+Constraint(s) matched for ligand        1, pose    101
+Score =     -5.843
+Emodel =    -29.377
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.84)+Epik State Penalty(    0.53) =    -5.31 kcal/mol
+Constraint(s) matched for ligand        1, pose   4185
+Score =     -5.041
+Emodel =    -25.529
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.04)+Epik State Penalty(    0.53) =    -4.51 kcal/mol
+Constraint(s) matched for ligand        1, pose   3946
+Score =     -5.454
+Emodel =    -24.922
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.45)+Epik State Penalty(    0.53) =    -4.92 kcal/mol
+Constraint(s) matched for ligand        1, pose    167
+Score =     -2.659
+Emodel =    -11.491
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -2.66)+Epik State Penalty(    0.53) =    -2.13 kcal/mol
+Constraint(s) matched for ligand        1, pose   4843
+Score =     -2.407
+Emodel =    -11.261
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -2.41)+Epik State Penalty(    0.53) =    -1.87 kcal/mol
+DOCKING RESULTS FOR LIGAND        1 (SGS nophenyl)
+   Except for Best Emodel, the poses reported here
+   may not satisfy the user-specified constraints.
+Best Emodel=   -35.72 E=   -28.94 Eint=     0.77 GlideScore=    -5.93
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            2
+ Using templates for ring conformations.
+ Checked constraints after refinement with max HB dsq =    16.0000000000000     
+ After refinement, constraint filter reduced number of
+ poses from         5000  to         4966 .
+ Total constraint copies over all poses =         4966
+Constraint(s) matched for ligand        2, pose   2730
+Score =     -5.951
+Emodel =    -35.900
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.95)+Epik State Penalty(    0.53) =    -5.42 kcal/mol
+Constraint(s) matched for ligand        2, pose    225
+Score =     -6.623
+Emodel =    -34.324
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.62)+Epik State Penalty(    0.53) =    -6.09 kcal/mol
+Constraint(s) matched for ligand        2, pose   3442
+Score =     -5.705
+Emodel =    -33.752
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.70)+Epik State Penalty(    0.53) =    -5.17 kcal/mol
+Constraint(s) matched for ligand        2, pose    615
+Score =     -5.533
+Emodel =    -29.555
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.53)+Epik State Penalty(    0.53) =    -5.00 kcal/mol
+Constraint(s) matched for ligand        2, pose   1519
+Score =     -5.236
+Emodel =    -26.075
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.24)+Epik State Penalty(    0.53) =    -4.70 kcal/mol
+Constraint(s) matched for ligand        2, pose    718
+Score =     -2.487
+Emodel =    -11.909
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -2.49)+Epik State Penalty(    0.53) =    -1.95 kcal/mol
+Constraint(s) matched for ligand        2, pose   1579
+Score =     -2.421
+Emodel =    -10.914
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -2.42)+Epik State Penalty(    0.53) =    -1.89 kcal/mol
+Constraint(s) matched for ligand        2, pose   2805
+Score =     -1.845
+Emodel =     -2.088
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -1.85)+Epik State Penalty(    0.53) =    -1.31 kcal/mol
+DOCKING RESULTS FOR LIGAND        2 (SGS nophenyl)
+   Except for Best Emodel, the poses reported here
+   may not satisfy the user-specified constraints.
+Best Emodel=   -35.90 E=   -29.21 Eint=     0.90 GlideScore=    -5.95
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            2
+ Using templates for ring conformations.
+ Checked constraints after refinement with max HB dsq =    16.0000000000000     
+ After refinement, constraint filter reduced number of
+ poses from         5000  to         4961 .
+ Total constraint copies over all poses =         4961
+Constraint(s) matched for ligand        3, pose   2016
+Score =     -5.967
+Emodel =    -36.959
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.97)+Epik State Penalty(    0.53) =    -5.43 kcal/mol
+Constraint(s) matched for ligand        3, pose    278
+Score =     -6.791
+Emodel =    -36.288
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.79)+Epik State Penalty(    0.53) =    -6.26 kcal/mol
+Constraint(s) matched for ligand        3, pose    547
+Score =     -5.857
+Emodel =    -35.106
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.86)+Epik State Penalty(    0.53) =    -5.32 kcal/mol
+Constraint(s) matched for ligand        3, pose   2974
+Score =     -6.407
+Emodel =    -29.789
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.41)+Epik State Penalty(    0.53) =    -5.87 kcal/mol
+Constraint(s) matched for ligand        3, pose    126
+Score =     -5.841
+Emodel =    -29.111
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.84)+Epik State Penalty(    0.53) =    -5.31 kcal/mol
+Constraint(s) matched for ligand        3, pose   4526
+Score =     -5.224
+Emodel =    -26.562
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.22)+Epik State Penalty(    0.53) =    -4.69 kcal/mol
+Constraint(s) matched for ligand        3, pose    437
+Score =     -5.416
+Emodel =    -22.681
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.42)+Epik State Penalty(    0.53) =    -4.88 kcal/mol
+Constraint(s) matched for ligand        3, pose   4356
+Score =     -2.431
+Emodel =    -11.441
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -2.43)+Epik State Penalty(    0.53) =    -1.90 kcal/mol
+GlideScore(10000.00)+Epik State Penalty(    0.53) = 10000.53 kcal/mol
+DOCKING RESULTS FOR LIGAND        3 (SGS nophenyl)
+   Except for Best Emodel, the poses reported here
+   may not satisfy the user-specified constraints.
+Best Emodel=   -36.96 E=   -30.31 Eint=     0.93 GlideScore=    -5.97
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            2
+ Using templates for ring conformations.
+ Checked constraints after refinement with max HB dsq =    16.0000000000000     
+ After refinement, constraint filter reduced number of
+ poses from         5000  to         4972 .
+ Total constraint copies over all poses =         4972
+Constraint(s) matched for ligand        4, pose   3304
+Score =     -6.809
+Emodel =    -36.333
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.81)+Epik State Penalty(    0.53) =    -6.28 kcal/mol
+Constraint(s) matched for ligand        4, pose   3356
+Score =     -5.884
+Emodel =    -35.249
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.88)+Epik State Penalty(    0.53) =    -5.35 kcal/mol
+Constraint(s) matched for ligand        4, pose   2555
+Score =     -5.721
+Emodel =    -33.134
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.72)+Epik State Penalty(    0.53) =    -5.19 kcal/mol
+Constraint(s) matched for ligand        4, pose   4436
+Score =     -6.364
+Emodel =    -29.510
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.36)+Epik State Penalty(    0.53) =    -5.83 kcal/mol
+Constraint(s) matched for ligand        4, pose    501
+Score =     -5.866
+Emodel =    -29.438
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.87)+Epik State Penalty(    0.53) =    -5.33 kcal/mol
+Constraint(s) matched for ligand        4, pose   1468
+Score =     -5.191
+Emodel =    -26.852
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.19)+Epik State Penalty(    0.53) =    -4.66 kcal/mol
+Constraint(s) matched for ligand        4, pose   3891
+Score =     -5.037
+Emodel =    -25.392
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.04)+Epik State Penalty(    0.53) =    -4.50 kcal/mol
+Constraint(s) matched for ligand        4, pose   3276
+Score =     -2.138
+Emodel =     -5.146
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -2.14)+Epik State Penalty(    0.53) =    -1.61 kcal/mol
+GlideScore(10000.00)+Epik State Penalty(    0.53) = 10000.53 kcal/mol
+DOCKING RESULTS FOR LIGAND        4 (SGS nophenyl)
+   Except for Best Emodel, the poses reported here
+   may not satisfy the user-specified constraints.
+Best Emodel=   -36.33 E=   -28.34 Eint=     0.36 GlideScore=    -6.81
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            2
+ Using templates for ring conformations.
+ Checked constraints after refinement with max HB dsq =    16.0000000000000     
+ After refinement, constraint filter reduced number of
+ poses from         5000  to         4969 .
+ Total constraint copies over all poses =         4969
+Constraint(s) matched for ligand        5, pose    621
+Score =     -5.984
+Emodel =    -34.590
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.98)+Epik State Penalty(    0.53) =    -5.45 kcal/mol
+Constraint(s) matched for ligand        5, pose   2254
+Score =     -6.794
+Emodel =    -33.940
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.79)+Epik State Penalty(    0.53) =    -6.26 kcal/mol
+Constraint(s) matched for ligand        5, pose   2808
+Score =     -5.901
+Emodel =    -33.302
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.90)+Epik State Penalty(    0.53) =    -5.37 kcal/mol
+Constraint(s) matched for ligand        5, pose    393
+Score =     -6.270
+Emodel =    -27.389
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.27)+Epik State Penalty(    0.53) =    -5.74 kcal/mol
+Constraint(s) matched for ligand        5, pose    762
+Score =     -5.412
+Emodel =    -27.009
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.41)+Epik State Penalty(    0.53) =    -4.88 kcal/mol
+Constraint(s) matched for ligand        5, pose   2320
+Score =     -5.804
+Emodel =    -25.707
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.80)+Epik State Penalty(    0.53) =    -5.27 kcal/mol
+Constraint(s) matched for ligand        5, pose   4557
+Score =     -5.025
+Emodel =    -25.632
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.02)+Epik State Penalty(    0.53) =    -4.49 kcal/mol
+Constraint(s) matched for ligand        5, pose   2628
+Score =     -2.375
+Emodel =     -6.702
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -2.37)+Epik State Penalty(    0.53) =    -1.84 kcal/mol
+Constraint(s) matched for ligand        5, pose    515
+Score =     -2.111
+Emodel =     -4.054
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -2.11)+Epik State Penalty(    0.53) =    -1.58 kcal/mol
+DOCKING RESULTS FOR LIGAND        5 (SGS nophenyl)
+   Except for Best Emodel, the poses reported here
+   may not satisfy the user-specified constraints.
+Best Emodel=   -34.59 E=   -29.67 Eint=     1.81 GlideScore=    -5.98
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            2
+ Using templates for ring conformations.
+ Checked constraints after refinement with max HB dsq =    16.0000000000000     
+ After refinement, constraint filter reduced number of
+ poses from         5000  to         4978 .
+ Total constraint copies over all poses =         4978
+Constraint(s) matched for ligand        6, pose    872
+Score =     -5.915
+Emodel =    -34.607
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.91)+Epik State Penalty(    0.53) =    -5.38 kcal/mol
+Constraint(s) matched for ligand        6, pose    320
+Score =     -6.625
+Emodel =    -33.587
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.62)+Epik State Penalty(    0.53) =    -6.09 kcal/mol
+Constraint(s) matched for ligand        6, pose   1096
+Score =     -5.578
+Emodel =    -28.982
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.58)+Epik State Penalty(    0.53) =    -5.05 kcal/mol
+Constraint(s) matched for ligand        6, pose   4554
+Score =     -5.588
+Emodel =    -25.568
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.59)+Epik State Penalty(    0.53) =    -5.06 kcal/mol
+Constraint(s) matched for ligand        6, pose   4862
+Score =     -2.077
+Emodel =     -3.859
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -2.08)+Epik State Penalty(    0.53) =    -1.54 kcal/mol
+Constraint(s) matched for ligand        6, pose   2393
+Score =     -2.056
+Emodel =     -3.723
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -2.06)+Epik State Penalty(    0.53) =    -1.52 kcal/mol
+Constraint(s) matched for ligand        6, pose   3692
+Score =     -1.863
+Emodel =     -3.048
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -1.86)+Epik State Penalty(    0.53) =    -1.33 kcal/mol
+GlideScore(10000.00)+Epik State Penalty(    0.53) = 10000.53 kcal/mol
+DOCKING RESULTS FOR LIGAND        6 (SGS nophenyl)
+   Except for Best Emodel, the poses reported here
+   may not satisfy the user-specified constraints.
+Best Emodel=   -34.61 E=   -28.51 Eint=     0.73 GlideScore=    -5.91
+%IMPACT-W (warning): At line  81
+ %IMPACT-W: The above ligand had one or more atoms outside the grid box
+  during energy evaluation or minimization.
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            2
+ Using templates for ring conformations.
+ Checked constraints after refinement with max HB dsq =    16.0000000000000     
+ After refinement, constraint filter reduced number of
+ poses from         5000  to         4989 .
+ Total constraint copies over all poses =         4989
+Constraint(s) matched for ligand        7, pose   1248
+Score =     -6.077
+Emodel =    -37.236
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.08)+Epik State Penalty(    0.53) =    -5.54 kcal/mol
+Constraint(s) matched for ligand        7, pose   2317
+Score =     -6.759
+Emodel =    -34.920
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.76)+Epik State Penalty(    0.53) =    -6.23 kcal/mol
+Constraint(s) matched for ligand        7, pose    597
+Score =     -6.781
+Emodel =    -32.835
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.78)+Epik State Penalty(    0.53) =    -6.25 kcal/mol
+Constraint(s) matched for ligand        7, pose    508
+Score =     -6.026
+Emodel =    -28.619
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.03)+Epik State Penalty(    0.53) =    -5.49 kcal/mol
+Constraint(s) matched for ligand        7, pose   1009
+Score =     -5.501
+Emodel =    -27.998
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.50)+Epik State Penalty(    0.53) =    -4.97 kcal/mol
+Constraint(s) matched for ligand        7, pose    203
+Score =     -5.029
+Emodel =    -20.444
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.03)+Epik State Penalty(    0.53) =    -4.50 kcal/mol
+Constraint(s) matched for ligand        7, pose   3553
+Score =     -2.423
+Emodel =    -11.273
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -2.42)+Epik State Penalty(    0.53) =    -1.89 kcal/mol
+Constraint(s) matched for ligand        7, pose   4966
+Score =     -2.487
+Emodel =    -10.045
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -2.49)+Epik State Penalty(    0.53) =    -1.95 kcal/mol
+Constraint(s) matched for ligand        7, pose   1889
+Score =     -2.164
+Emodel =     -4.421
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -2.16)+Epik State Penalty(    0.53) =    -1.63 kcal/mol
+DOCKING RESULTS FOR LIGAND        7 (SGS nophenyl)
+   Except for Best Emodel, the poses reported here
+   may not satisfy the user-specified constraints.
+Best Emodel=   -37.24 E=   -31.65 Eint=     1.24 GlideScore=    -6.08
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            2
+ Using templates for ring conformations.
+ Checked constraints after refinement with max HB dsq =    16.0000000000000     
+ After refinement, constraint filter reduced number of
+ poses from         5000  to         4978 .
+ Total constraint copies over all poses =         4978
+Constraint(s) matched for ligand        8, pose   3815
+Score =     -6.134
+Emodel =    -37.258
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.13)+Epik State Penalty(    0.53) =    -5.60 kcal/mol
+Constraint(s) matched for ligand        8, pose   3323
+Score =     -5.902
+Emodel =    -34.333
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.90)+Epik State Penalty(    0.53) =    -5.37 kcal/mol
+Constraint(s) matched for ligand        8, pose    392
+Score =     -6.623
+Emodel =    -33.157
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.62)+Epik State Penalty(    0.53) =    -6.09 kcal/mol
+Constraint(s) matched for ligand        8, pose    490
+Score =     -5.833
+Emodel =    -28.421
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.83)+Epik State Penalty(    0.53) =    -5.30 kcal/mol
+Constraint(s) matched for ligand        8, pose   4493
+Score =     -5.715
+Emodel =    -26.847
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.72)+Epik State Penalty(    0.53) =    -5.18 kcal/mol
+Constraint(s) matched for ligand        8, pose    612
+Score =     -6.432
+Emodel =    -26.776
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.43)+Epik State Penalty(    0.53) =    -5.90 kcal/mol
+Constraint(s) matched for ligand        8, pose    696
+Score =     -5.362
+Emodel =    -26.753
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.36)+Epik State Penalty(    0.53) =    -4.83 kcal/mol
+Constraint(s) matched for ligand        8, pose   2385
+Score =     -5.238
+Emodel =    -25.544
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.24)+Epik State Penalty(    0.53) =    -4.71 kcal/mol
+Constraint(s) matched for ligand        8, pose   2914
+Score =     -2.056
+Emodel =     -3.547
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -2.06)+Epik State Penalty(    0.53) =    -1.52 kcal/mol
+DOCKING RESULTS FOR LIGAND        8 (SGS nophenyl)
+   Except for Best Emodel, the poses reported here
+   may not satisfy the user-specified constraints.
+Best Emodel=   -37.26 E=   -31.47 Eint=     0.99 GlideScore=    -6.13
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            2
+ Using templates for ring conformations.
+ Checked constraints after refinement with max HB dsq =    16.0000000000000     
+ After refinement, constraint filter reduced number of
+ poses from         5000  to         4990 .
+ Total constraint copies over all poses =         4990
+Constraint(s) matched for ligand        9, pose   3245
+Score =     -5.643
+Emodel =    -32.385
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.64)+Epik State Penalty(    0.65) =    -4.99 kcal/mol
+Constraint(s) matched for ligand        9, pose   4677
+Score =     -6.301
+Emodel =    -32.354
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.30)+Epik State Penalty(    0.65) =    -5.65 kcal/mol
+Constraint(s) matched for ligand        9, pose    197
+Score =     -5.360
+Emodel =    -31.988
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.36)+Epik State Penalty(    0.65) =    -4.71 kcal/mol
+Constraint(s) matched for ligand        9, pose    479
+Score =     -5.357
+Emodel =    -24.721
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.36)+Epik State Penalty(    0.65) =    -4.70 kcal/mol
+Constraint(s) matched for ligand        9, pose    261
+Score =     -5.207
+Emodel =    -22.266
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.21)+Epik State Penalty(    0.65) =    -4.55 kcal/mol
+Constraint(s) matched for ligand        9, pose   1091
+Score =     -4.709
+Emodel =    -21.098
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.71)+Epik State Penalty(    0.65) =    -4.06 kcal/mol
+Constraint(s) matched for ligand        9, pose   2201
+Score =     -5.026
+Emodel =    -20.574
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.03)+Epik State Penalty(    0.65) =    -4.37 kcal/mol
+Constraint(s) matched for ligand        9, pose   1075
+Score =     -4.570
+Emodel =    -19.143
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.57)+Epik State Penalty(    0.65) =    -3.92 kcal/mol
+Constraint(s) matched for ligand        9, pose   3497
+Score =     -5.355
+Emodel =    -18.125
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.35)+Epik State Penalty(    0.65) =    -4.70 kcal/mol
+Constraint(s) matched for ligand        9, pose   2548
+Score =     -1.940
+Emodel =     -2.392
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -1.94)+Epik State Penalty(    0.65) =    -1.29 kcal/mol
+DOCKING RESULTS FOR LIGAND        9 (SGS nophenyl)
+   Except for Best Emodel, the poses reported here
+   may not satisfy the user-specified constraints.
+Best Emodel=   -32.39 E=   -28.60 Eint=     0.68 GlideScore=    -5.64
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            2
+ Using templates for ring conformations.
+ Checked constraints after refinement with max HB dsq =    16.0000000000000     
+ After refinement, constraint filter reduced number of
+ poses from         5000  to         4990 .
+ Total constraint copies over all poses =         4990
+Constraint(s) matched for ligand       10, pose   3867
+Score =     -5.587
+Emodel =    -31.646
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.59)+Epik State Penalty(    0.65) =    -4.93 kcal/mol
+Constraint(s) matched for ligand       10, pose   2785
+Score =     -5.194
+Emodel =    -30.010
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.19)+Epik State Penalty(    0.65) =    -4.54 kcal/mol
+Constraint(s) matched for ligand       10, pose   1325
+Score =     -5.756
+Emodel =    -25.148
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.76)+Epik State Penalty(    0.65) =    -5.10 kcal/mol
+Constraint(s) matched for ligand       10, pose   1425
+Score =     -5.357
+Emodel =    -24.617
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.36)+Epik State Penalty(    0.65) =    -4.70 kcal/mol
+Constraint(s) matched for ligand       10, pose   1082
+Score =     -4.976
+Emodel =    -20.040
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.98)+Epik State Penalty(    0.65) =    -4.32 kcal/mol
+Constraint(s) matched for ligand       10, pose   1863
+Score =     -4.565
+Emodel =    -19.118
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.56)+Epik State Penalty(    0.65) =    -3.91 kcal/mol
+Constraint(s) matched for ligand       10, pose   4279
+Score =     -4.610
+Emodel =    -18.098
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.61)+Epik State Penalty(    0.65) =    -3.96 kcal/mol
+Constraint(s) matched for ligand       10, pose   4018
+Score =     -2.094
+Emodel =     -9.305
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -2.09)+Epik State Penalty(    0.65) =    -1.44 kcal/mol
+Constraint(s) matched for ligand       10, pose   4576
+Score =     -1.949
+Emodel =     -2.392
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -1.95)+Epik State Penalty(    0.65) =    -1.30 kcal/mol
+Constraint(s) matched for ligand       10, pose   3761
+Score =  10000.000
+Emodel =   7290.921
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(10000.00)+Epik State Penalty(    0.65) = 10000.65 kcal/mol
+DOCKING RESULTS FOR LIGAND       10 (SGS nophenyl)
+   Except for Best Emodel, the poses reported here
+   may not satisfy the user-specified constraints.
+Best Emodel=   -31.65 E=   -27.91 Eint=     0.67 GlideScore=    -5.59
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            2
+ Using templates for ring conformations.
+ Checked constraints after refinement with max HB dsq =    16.0000000000000     
+ After refinement, constraint filter reduced number of
+ poses from         5000  to         4984 .
+ Total constraint copies over all poses =         4984
+Constraint(s) matched for ligand       11, pose   3732
+Score =     -5.607
+Emodel =    -31.284
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.61)+Epik State Penalty(    0.65) =    -4.95 kcal/mol
+Constraint(s) matched for ligand       11, pose   1905
+Score =     -5.346
+Emodel =    -30.956
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.35)+Epik State Penalty(    0.65) =    -4.69 kcal/mol
+Constraint(s) matched for ligand       11, pose    828
+Score =     -5.557
+Emodel =    -26.462
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.56)+Epik State Penalty(    0.65) =    -4.90 kcal/mol
+Constraint(s) matched for ligand       11, pose    456
+Score =     -5.357
+Emodel =    -24.714
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.36)+Epik State Penalty(    0.65) =    -4.70 kcal/mol
+Constraint(s) matched for ligand       11, pose   3608
+Score =     -4.709
+Emodel =    -21.084
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.71)+Epik State Penalty(    0.65) =    -4.06 kcal/mol
+Constraint(s) matched for ligand       11, pose    315
+Score =     -4.976
+Emodel =    -19.802
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.98)+Epik State Penalty(    0.65) =    -4.32 kcal/mol
+Constraint(s) matched for ligand       11, pose    640
+Score =     -4.539
+Emodel =    -18.342
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.54)+Epik State Penalty(    0.65) =    -3.89 kcal/mol
+Constraint(s) matched for ligand       11, pose   1642
+Score =     -1.947
+Emodel =     -3.222
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -1.95)+Epik State Penalty(    0.65) =    -1.29 kcal/mol
+Constraint(s) matched for ligand       11, pose   3025
+Score =     -1.853
+Emodel =     -2.096
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -1.85)+Epik State Penalty(    0.65) =    -1.20 kcal/mol
+Constraint(s) matched for ligand       11, pose   1464
+Score =  10000.000
+Emodel =   7270.311
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(10000.00)+Epik State Penalty(    0.65) = 10000.65 kcal/mol
+DOCKING RESULTS FOR LIGAND       11 (SGS nophenyl)
+   Except for Best Emodel, the poses reported here
+   may not satisfy the user-specified constraints.
+Best Emodel=   -31.28 E=   -27.55 Eint=     0.67 GlideScore=    -5.61
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            2
+ Using templates for ring conformations.
+ Checked constraints after refinement with max HB dsq =    16.0000000000000     
+ After refinement, constraint filter reduced number of
+ poses from         5000  to         4988 .
+ Total constraint copies over all poses =         4988
+Constraint(s) matched for ligand       12, pose   1804
+Score =     -5.590
+Emodel =    -31.095
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.59)+Epik State Penalty(    0.65) =    -4.94 kcal/mol
+Constraint(s) matched for ligand       12, pose   1403
+Score =     -5.341
+Emodel =    -30.966
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.34)+Epik State Penalty(    0.65) =    -4.69 kcal/mol
+Constraint(s) matched for ligand       12, pose   1053
+Score =     -5.549
+Emodel =    -27.010
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.55)+Epik State Penalty(    0.65) =    -4.90 kcal/mol
+Constraint(s) matched for ligand       12, pose   3099
+Score =     -5.565
+Emodel =    -26.868
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.57)+Epik State Penalty(    0.65) =    -4.91 kcal/mol
+Constraint(s) matched for ligand       12, pose   1372
+Score =     -4.773
+Emodel =    -23.020
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.77)+Epik State Penalty(    0.65) =    -4.12 kcal/mol
+Constraint(s) matched for ligand       12, pose   1172
+Score =     -4.709
+Emodel =    -21.024
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.71)+Epik State Penalty(    0.65) =    -4.06 kcal/mol
+Constraint(s) matched for ligand       12, pose   1526
+Score =     -5.138
+Emodel =    -20.334
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.14)+Epik State Penalty(    0.65) =    -4.49 kcal/mol
+Constraint(s) matched for ligand       12, pose   3951
+Score =     -4.541
+Emodel =    -18.528
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.54)+Epik State Penalty(    0.65) =    -3.89 kcal/mol
+Constraint(s) matched for ligand       12, pose   2139
+Score =     -1.938
+Emodel =     -2.357
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -1.94)+Epik State Penalty(    0.65) =    -1.29 kcal/mol
+DOCKING RESULTS FOR LIGAND       12 (SGS nophenyl)
+   Except for Best Emodel, the poses reported here
+   may not satisfy the user-specified constraints.
+Best Emodel=   -31.10 E=   -27.38 Eint=     0.67 GlideScore=    -5.59
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            2
+ Using templates for ring conformations.
+ Checked constraints after refinement with max HB dsq =    16.0000000000000     
+ After refinement, constraint filter reduced number of
+ poses from         5000  to         4983 .
+ Total constraint copies over all poses =         4983
+Constraint(s) matched for ligand       13, pose     85
+Score =     -5.358
+Emodel =    -31.661
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.36)+Epik State Penalty(    0.65) =    -4.71 kcal/mol
+Constraint(s) matched for ligand       13, pose   3293
+Score =     -5.459
+Emodel =    -30.076
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.46)+Epik State Penalty(    0.65) =    -4.81 kcal/mol
+Constraint(s) matched for ligand       13, pose   2442
+Score =     -5.551
+Emodel =    -27.779
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.55)+Epik State Penalty(    0.65) =    -4.90 kcal/mol
+Constraint(s) matched for ligand       13, pose   3722
+Score =     -5.756
+Emodel =    -26.072
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.76)+Epik State Penalty(    0.65) =    -5.10 kcal/mol
+Constraint(s) matched for ligand       13, pose    970
+Score =     -4.710
+Emodel =    -21.986
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.71)+Epik State Penalty(    0.65) =    -4.06 kcal/mol
+Constraint(s) matched for ligand       13, pose   2176
+Score =     -4.999
+Emodel =    -21.597
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.00)+Epik State Penalty(    0.65) =    -4.35 kcal/mol
+Constraint(s) matched for ligand       13, pose   3532
+Score =     -1.939
+Emodel =     -2.577
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -1.94)+Epik State Penalty(    0.65) =    -1.29 kcal/mol
+Constraint(s) matched for ligand       13, pose   1563
+Score =     -1.980
+Emodel =     -2.528
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -1.98)+Epik State Penalty(    0.65) =    -1.33 kcal/mol
+Constraint(s) matched for ligand       13, pose   1603
+Score =  10000.000
+Emodel =   8904.186
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(10000.00)+Epik State Penalty(    0.65) = 10000.65 kcal/mol
+Constraint(s) matched for ligand       13, pose   4898
+Score =  10000.000
+Emodel =   8904.226
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(10000.00)+Epik State Penalty(    0.65) = 10000.65 kcal/mol
+DOCKING RESULTS FOR LIGAND       13 (SGS nophenyl)
+   Except for Best Emodel, the poses reported here
+   may not satisfy the user-specified constraints.
+Best Emodel=   -31.66 E=   -27.51 Eint=     1.24 GlideScore=    -5.36
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            2
+ Using templates for ring conformations.
+ Checked constraints after refinement with max HB dsq =    16.0000000000000     
+ After refinement, constraint filter reduced number of
+ poses from         5000  to         4963 .
+ Total constraint copies over all poses =         4963
+Constraint(s) matched for ligand       14, pose   3631
+Score =     -5.289
+Emodel =    -27.757
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.29)+Epik State Penalty(    0.65) =    -4.64 kcal/mol
+Constraint(s) matched for ligand       14, pose    589
+Score =     -5.149
+Emodel =    -23.340
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.15)+Epik State Penalty(    0.65) =    -4.50 kcal/mol
+Constraint(s) matched for ligand       14, pose   1062
+Score =     -5.275
+Emodel =    -18.250
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.28)+Epik State Penalty(    0.65) =    -4.62 kcal/mol
+Constraint(s) matched for ligand       14, pose   2743
+Score =     -4.380
+Emodel =    -17.976
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.38)+Epik State Penalty(    0.65) =    -3.73 kcal/mol
+Constraint(s) matched for ligand       14, pose   1617
+Score =     -4.625
+Emodel =    -17.844
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.62)+Epik State Penalty(    0.65) =    -3.97 kcal/mol
+Constraint(s) matched for ligand       14, pose   2678
+Score =     -5.509
+Emodel =    -16.303
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.51)+Epik State Penalty(    0.65) =    -4.86 kcal/mol
+Constraint(s) matched for ligand       14, pose   4759
+Score =     -4.634
+Emodel =    -15.499
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.63)+Epik State Penalty(    0.65) =    -3.98 kcal/mol
+Constraint(s) matched for ligand       14, pose   1192
+Score =     -4.809
+Emodel =    -10.112
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.81)+Epik State Penalty(    0.65) =    -4.16 kcal/mol
+Constraint(s) matched for ligand       14, pose   4935
+Score =  10000.000
+Emodel =   9974.665
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(10000.00)+Epik State Penalty(    0.65) = 10000.65 kcal/mol
+DOCKING RESULTS FOR LIGAND       14 (SGS nophenyl)
+   Except for Best Emodel, the poses reported here
+   may not satisfy the user-specified constraints.
+Best Emodel=   -27.76 E=   -24.51 Eint=     4.05 GlideScore=    -5.29
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            2
+ Using templates for ring conformations.
+ Checked constraints after refinement with max HB dsq =    16.0000000000000     
+ After refinement, constraint filter reduced number of
+ poses from         5000  to         4971 .
+ Total constraint copies over all poses =         4971
+Constraint(s) matched for ligand       15, pose    198
+Score =     -5.586
+Emodel =    -32.618
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.59)+Epik State Penalty(    0.65) =    -4.93 kcal/mol
+Constraint(s) matched for ligand       15, pose   2983
+Score =     -4.973
+Emodel =    -28.139
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.97)+Epik State Penalty(    0.65) =    -4.32 kcal/mol
+Constraint(s) matched for ligand       15, pose   4633
+Score =     -5.559
+Emodel =    -27.225
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.56)+Epik State Penalty(    0.65) =    -4.91 kcal/mol
+Constraint(s) matched for ligand       15, pose   3799
+Score =     -5.357
+Emodel =    -25.684
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.36)+Epik State Penalty(    0.65) =    -4.70 kcal/mol
+Constraint(s) matched for ligand       15, pose    859
+Score =     -4.779
+Emodel =    -21.425
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.78)+Epik State Penalty(    0.65) =    -4.13 kcal/mol
+Constraint(s) matched for ligand       15, pose     93
+Score =     -4.975
+Emodel =    -19.657
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.97)+Epik State Penalty(    0.65) =    -4.32 kcal/mol
+Constraint(s) matched for ligand       15, pose   3871
+Score =     -1.815
+Emodel =     -3.776
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -1.81)+Epik State Penalty(    0.65) =    -1.16 kcal/mol
+Constraint(s) matched for ligand       15, pose    299
+Score =     -1.931
+Emodel =     -1.968
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -1.93)+Epik State Penalty(    0.65) =    -1.28 kcal/mol
+DOCKING RESULTS FOR LIGAND       15 (SGS nophenyl)
+   Except for Best Emodel, the poses reported here
+   may not satisfy the user-specified constraints.
+Best Emodel=   -32.62 E=   -28.37 Eint=     1.70 GlideScore=    -5.59
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            2
+ Using templates for ring conformations.
+ Checked constraints after refinement with max HB dsq =    16.0000000000000     
+ After refinement, constraint filter reduced number of
+ poses from         5000  to         4980 .
+ Total constraint copies over all poses =         4980
+Constraint(s) matched for ligand       16, pose   4399
+Score =     -5.581
+Emodel =    -32.394
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.58)+Epik State Penalty(    0.65) =    -4.93 kcal/mol
+Constraint(s) matched for ligand       16, pose   2463
+Score =     -6.169
+Emodel =    -31.624
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -6.17)+Epik State Penalty(    0.65) =    -5.52 kcal/mol
+Constraint(s) matched for ligand       16, pose    350
+Score =     -5.338
+Emodel =    -31.235
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.34)+Epik State Penalty(    0.65) =    -4.69 kcal/mol
+Constraint(s) matched for ligand       16, pose   3817
+Score =     -5.348
+Emodel =    -24.771
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.35)+Epik State Penalty(    0.65) =    -4.70 kcal/mol
+Constraint(s) matched for ligand       16, pose    194
+Score =     -5.020
+Emodel =    -20.921
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.02)+Epik State Penalty(    0.65) =    -4.37 kcal/mol
+Constraint(s) matched for ligand       16, pose    555
+Score =     -5.228
+Emodel =    -20.613
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.23)+Epik State Penalty(    0.65) =    -4.58 kcal/mol
+Constraint(s) matched for ligand       16, pose   1160
+Score =     -4.543
+Emodel =    -20.000
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.54)+Epik State Penalty(    0.65) =    -3.89 kcal/mol
+Constraint(s) matched for ligand       16, pose   4574
+Score =     -5.354
+Emodel =    -18.103
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -5.35)+Epik State Penalty(    0.65) =    -4.70 kcal/mol
+Constraint(s) matched for ligand       16, pose   2290
+Score =     -4.818
+Emodel =     -9.012
+
+The output pose satisfies at least the following constraint(s).
+pos1 (Type = Positional)
+ 
+GlideScore(   -4.82)+Epik State Penalty(    0.65) =    -4.17 kcal/mol
+DOCKING RESULTS FOR LIGAND       16 (SGS nophenyl)
+   Except for Best Emodel, the poses reported here
+   may not satisfy the user-specified constraints.
+Best Emodel=   -32.39 E=   -28.37 Eint=     0.54 GlideScore=    -5.58
+REPORT OF BEST 138 POSES
+
+The sorted ligand structures were written to the file
+Subjob00001--DockLigand0_lib.maegz
+
+Final rankings based on original docking score
+8 poses were rejected by the energy filters,
+    Coul+vdw Energy <=     0.0    Hbond Interaction <=     0.0    Metal Interaction <=    10.0    GlideScore <=   100.0
+(If any of the above properties is not defined for a given pose,
+the corresponding filter is not applied to that pose.)
+
+ Exiting IMPACT execution environment 
+ Date: Friday, January 16 2015, at 11:38:18 EST
+%IMPACT-I (timit): Total CPU time =     240.29 seconds (   4.0 minutes)
+Total elapsed time = 245 seconds (4 minutes, 5 seconds)
+----- Errors (stderr) -----
+
+Glide is executing the glide_sort command.
+Command-line equivalent is:
+ "/cbio/jclab/share/schrodinger/schrodinger2014-4/utilities/glide_sort" -n 0 -o "Subjob00001--DockLigand0_lib.maegz"   -norecep -hbond_cut 0.00 -cvdw_cut 0.00 -metal_cut 10.00 -gscore_cut 100.00 "Subjob00001--DockLigand0_raw.maegz"
+
+glide_sort command succeeded.  Pose file Subjob00001--DockLigand0_lib.maegz was written.

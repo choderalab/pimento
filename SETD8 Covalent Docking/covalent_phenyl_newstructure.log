@@ -1,0 +1,45 @@
+--------------------------------------------------------------------------------
+
+    Covalent Docking v1.2
+
+    Schrodinger Installation: /cbio/jclab/share/schrodinger/schrodinger2014-4
+--------------------------------------------------------------------------------
+JobId          : lski1751-0-54b98f52
+Name           : covalent_phenyl_newstructure
+Program        : Covalent Docking v1.2
+MMshareExec    : /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Host           : lski1751.mskcc.org
+Dir            : /Users/albaness/Documents/Schrodinger
+HostEntry      : batch
+Queue          : Torque
+JobHost        : gpu-1-11.local
+JobDir         : /scratch/albaness/covalent_phenyl_newstructure
+JobMMshareExec : /cbio/jclab/share/schrodinger/schrodinger2014-4/mmshare-v28013/bin/Linux-x86_64
+Commandline    : /opt/schrodinger/suites2014-4/covalent_docking covalent_phenyl_newstructure.inp -output_top 1000 -mode enrichment -OVERWRITE -PROJ /Users/albaness/Documents/Schrodinger/Projects/SETD8_newproject.prj -DISP append -VIEWNAME CovalentDockingPanel -HOST batch -NJOBS 1
+StartTime      : 2015-01-16-17:24:09
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Creating Workflow...
+Setting up covalent reaction: newstructure_procEssed - SGS phenyl
+  Connecting 1,"A:311: SG " - 1,"_:900:    "
+  Connecting 1,"A:311: SG " - 2,"_:900:    "
+Setting up covalent reaction: newstructure_procEssed - SGS phenyl
+  Connecting 1,"A:311: SG " - 1,"_:900:    "
+  Connecting 1,"A:311: SG " - 2,"_:900:    "
+Created Workflow in   0.026 Minutes
+Running Workflow
+  Final: <SGS phenyl     (    0) CombinedScore>
+  Final: <SGS phenyl     (    1) CombinedScore>
+  Final: <SGS phenyl     (    0) CombinedScore>
+  Final: <SGS phenyl     (    1) CombinedScore>
+All stages completed
+------------ Top Outputs ---------------
+title                         ,cdock_affinity,sample_glide_gscore
+SGS phenyl                    ,        -4.972,             -4.865
+SGS phenyl                    ,        -4.504,             -4.158
+------------ Averaged Properties -------
+title              ,average
+cdock_affinity     , -4.738
+sample_glide_gscore, -4.511
+Total Time Elapsed (hours:minutes:seconds)    0:08:28
+EndTime: 01-16-2015 17:32:46

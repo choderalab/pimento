@@ -1,0 +1,45 @@
+--------------------------------------------------------------------------------
+
+    Covalent Docking v1.2
+
+    Schrodinger Installation: /opt/schrodinger/suites2014-4
+[running at reduced cpu priority]
+--------------------------------------------------------------------------------
+JobId          : lski1751-0-54b010af
+Name           : covalent_docking_4IJ8
+Program        : Covalent Docking v1.2
+MMshareExec    : /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Host           : lski1751.mskcc.org
+Dir            : /Users/albaness/Documents/Schrodinger
+HostEntry      : localhost
+JobHost        : lski1751.mskcc.org
+JobDir         : /Users/albaness/.schrodinger/tmp/covalent_docking_4IJ8
+JobMMshareExec : /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+Commandline    : /opt/schrodinger/suites2014-4/covalent_docking covalent_docking_4IJ8.inp -output_top 1000 -OVERWRITE -PROJ "/Users/albaness/Documents/Schrodinger/setD8 covalent binding.prj" -DISP append -VIEWNAME CovalentDockingPanel -HOST localhost -NJOBS 1
+StartTime      : 2015-01-09-12:32:32
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+Creating Workflow...
+Setting up covalent reaction: 4IJ8_clean_processed - SGS
+  Connecting 1,"B:311: SG " - 1,"_:900:    "
+  Connecting 1,"B:311: SG " - 2,"_:900:    "
+Setting up covalent reaction: 4IJ8_clean_processed - SGS
+  Connecting 1,"B:311: SG " - 1,"_:900:    "
+  Connecting 1,"B:311: SG " - 2,"_:900:    "
+Created Workflow in   0.006 Minutes
+Running Workflow
+  Final: <SGS            (    0) CombinedScore>
+  Final: <SGS            (    1) CombinedScore>
+  Final: <SGS            (    0) CombinedScore>
+  Final: <SGS            (    1) CombinedScore>
+All stages completed
+------------ Top Outputs ---------------
+title                         ,cdock_affinity,Prime_Energy
+SGS                           ,        -5.313,   -6597.942
+SGS                           ,        -5.067,   -6662.932
+------------ Averaged Properties -------
+title         ,average  
+cdock_affinity,   -5.190
+Prime_Energy  ,-6630.437
+Total Time Elapsed (hours:minutes:seconds)    1:22:42
+EndTime: 01-09-2015 13:55:15

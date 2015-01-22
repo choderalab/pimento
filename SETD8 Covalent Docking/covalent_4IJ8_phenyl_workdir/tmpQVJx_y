@@ -1,0 +1,340 @@
+[gpu-1-7.local]
+%IMPACT-I (openwt): Request to open FORMATTED file Subjob00001--DockBoundLigand.out on unit   2
+ Entering IMPACT execution environment 
+ Date: Monday, January 19 2015, at 11:27:15 EST
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ Host: Linux gpu-1-7.local 2.6.32-358.18.1.el6.x86_64 #1 SMP Wed Aug 28 17:19:38 UTC 2013 x86_64
+ Job Name: Subjob00001--DockBoundLigand.glidetmp4073
+ SCHRODINGER  directory: /cbio/jclab/share/schrodinger/schrodinger2014-4
+ IMPACT_EXEC  directory: /cbio/jclab/share/schrodinger/schrodinger2014-4/impact-v65013/bin/Linux-x86_64
+ MMSHARE_EXEC directory: /cbio/jclab/share/schrodinger/schrodinger2014-4/mmshare-v28013/bin/Linux-x86_64
+ VdW radii of ligand atoms scaled by   0.800000000000000     
+ Charge cutoff for polarity   0.150000000000000     
+ After readscreen, (nx, ny, nz) = (          25 ,           25 ,           25 ).
+  Receptor setup: (nsites, nx, ny, nz, bsize)=(         125 ,           25 , 
+          25 ,           25 ,    1.00000000000000      ).
+ Screening setup finished.
+ DOCKMAIN: getting receptor.
+%IMPACT-I (xdrrd): File grid.4108/Subjob00001--CreateGrid-out.grd opened for reading
+  DOCKMAIN after grid: (nx, ny, nz) = (          64 ,           64 , 
+          64 ).
+%IMPACT-I (xdrrd): File grid.4108/Subjob00001--CreateGrid-out_coul2.fld opened for reading
+%IMPACT-I (xdrrd): File grid.4108/Subjob00001--CreateGrid-out_vdw.fld opened for reading
+%IMPACT-I (xdrrd): File grid.4108/Subjob00001--CreateGrid-out.gsc opened for reading
+ DOCKMAIN: Grid setup finished
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+  
+  Amide torsions fixed at input values 
+  
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+
+GlideScore version XP5.0 will be used
+
+  
+ Buried polar penalty      0.000
+ Coulomb vdW cutoff        0.000
+ H bond cutoff             0.000
+ Metal-ligand cutoff      10.000
+%IMPACT-I (info): At line  77
+ %IMPACT-I: Assigning GlideScore XP5.0 parameters
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+Full force-field refinement in receptor field for up to   10 poses
+    1 poses will be postminimized for this ligand
+Reporting postminimized pose   1 GlideScore =     -4.431
+GlideScore(   -4.43)+Epik State Penalty(    0.54) =    -3.89 kcal/mol
+REFINEMENT RESULTS FOR LIGAND        1 (SGS phenyl)
+Best XP pose:     4;  GlideScore =     -4.43 Emodel =    -31.23 E =    -28.28 Eint =     0.89
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    2 poses will be postminimized for this ligand
+Reporting postminimized pose   1 GlideScore =     -3.905
+GlideScore(   -3.90)+Epik State Penalty(    0.54) =    -3.36 kcal/mol
+REFINEMENT RESULTS FOR LIGAND        2 (SGS phenyl)
+Best XP pose:     2;  GlideScore =     -3.90 Emodel =    -13.24 E =    -19.62 Eint =     3.08
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    3 poses will be postminimized for this ligand
+Reporting postminimized pose   1 GlideScore =     -3.828
+GlideScore(   -3.83)+Epik State Penalty(    0.54) =    -3.28 kcal/mol
+REFINEMENT RESULTS FOR LIGAND        3 (SGS phenyl)
+Best XP pose:     1;  GlideScore =     -3.83 Emodel =    -12.89 E =    -24.10 Eint =     4.22
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+The input pose will be used ... GlideScore =      -2.245
+GlideScore(   -2.25)+Epik State Penalty(    0.54) =    -1.70 kcal/mol
+REFINEMENT RESULTS FOR LIGAND        4 (SGS phenyl)
+  Input pose reported as docking did not improve GlideScore
+GlideScore =     -2.25 E =      7.05
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+Reporting postminimized pose   1 GlideScore =     -3.220
+GlideScore(   -3.22)+Epik State Penalty(    0.54) =    -2.68 kcal/mol
+REFINEMENT RESULTS FOR LIGAND        5 (SGS phenyl)
+Best XP pose:     8;  GlideScore =     -3.22 Emodel =    -17.30 E =    -17.79 Eint =     1.44
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    2 poses will be postminimized for this ligand
+Reporting postminimized pose   1 GlideScore =     -3.372
+GlideScore(   -3.37)+Epik State Penalty(    0.54) =    -2.83 kcal/mol
+REFINEMENT RESULTS FOR LIGAND        6 (SGS phenyl)
+Best XP pose:    11;  GlideScore =     -3.37 Emodel =    -17.31 E =    -19.17 Eint =     1.39
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    2 poses will be postminimized for this ligand
+Reporting postminimized pose   1 GlideScore =     -2.943
+GlideScore(   -2.94)+Epik State Penalty(    0.54) =    -2.40 kcal/mol
+REFINEMENT RESULTS FOR LIGAND        7 (SGS phenyl)
+Best XP pose:     5;  GlideScore =     -2.94 Emodel =    -17.25 E =    -16.83 Eint =     1.46
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+Reporting postminimized pose   1 GlideScore =     -3.446
+GlideScore(   -3.45)+Epik State Penalty(    0.54) =    -2.90 kcal/mol
+REFINEMENT RESULTS FOR LIGAND        8 (SGS phenyl)
+Best XP pose:     4;  GlideScore =     -3.45 Emodel =    -18.27 E =    -22.36 Eint =     1.33
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    3 poses will be postminimized for this ligand
+Reporting postminimized pose   1 GlideScore =     -4.564
+GlideScore(   -4.56)+Epik State Penalty(    0.54) =    -4.02 kcal/mol
+REFINEMENT RESULTS FOR LIGAND        9 (SGS phenyl)
+Best XP pose:    16;  GlideScore =     -4.56 Emodel =    -14.81 E =    -30.70 Eint =     1.46
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    2 poses will be postminimized for this ligand
+Reporting postminimized pose   1 GlideScore =     -4.543
+GlideScore(   -4.54)+Epik State Penalty(    0.54) =    -4.00 kcal/mol
+REFINEMENT RESULTS FOR LIGAND       10 (SGS phenyl)
+Best XP pose:    11;  GlideScore =     -4.54 Emodel =    -12.24 E =    -26.56 Eint =     1.43
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    3 poses will be postminimized for this ligand
+Reporting postminimized pose   2 GlideScore =     -4.610
+GlideScore(   -4.61)+Epik State Penalty(    0.54) =    -4.07 kcal/mol
+REFINEMENT RESULTS FOR LIGAND       11 (SGS phenyl)
+Best XP pose:    15;  GlideScore =     -4.61 Emodel =     -3.53 E =    -32.16 Eint =     5.94
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    3 poses will be postminimized for this ligand
+Reporting postminimized pose   3 GlideScore =     -4.524
+GlideScore(   -4.52)+Epik State Penalty(    0.54) =    -3.98 kcal/mol
+REFINEMENT RESULTS FOR LIGAND       12 (SGS phenyl)
+Best XP pose:    15;  GlideScore =     -4.52 Emodel =     38.65 E =    -31.13 Eint =     8.84
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+Reporting postminimized pose   1 GlideScore =     -4.463
+GlideScore(   -4.46)+Epik State Penalty(    0.54) =    -3.92 kcal/mol
+REFINEMENT RESULTS FOR LIGAND       13 (SGS phenyl)
+Best XP pose:    10;  GlideScore =     -4.46 Emodel =    -10.62 E =    -24.86 Eint =     1.71
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+The input pose will be used ... GlideScore =      -1.241
+GlideScore(   -1.24)+Epik State Penalty(    0.54) =    -0.70 kcal/mol
+REFINEMENT RESULTS FOR LIGAND       14 (SGS phenyl)
+  Input pose reported as docking did not improve GlideScore
+GlideScore =     -1.24 E =     31.53
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+The input pose will be used ... GlideScore =      -1.239
+GlideScore(   -1.24)+Epik State Penalty(    0.54) =    -0.70 kcal/mol
+REFINEMENT RESULTS FOR LIGAND       15 (SGS phenyl)
+  Input pose reported as docking did not improve GlideScore
+GlideScore =     -1.24 E =     31.57
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    2 poses will be postminimized for this ligand
+Reporting postminimized pose   2 GlideScore =     -2.677
+GlideScore(   -2.68)+Epik State Penalty(    0.54) =    -2.13 kcal/mol
+REFINEMENT RESULTS FOR LIGAND       16 (SGS phenyl)
+Best XP pose:    12;  GlideScore =     -2.68 Emodel =     14.61 E =    -24.22 Eint =     7.76
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    2 poses will be postminimized for this ligand
+Reporting postminimized pose   1 GlideScore =     -4.328
+GlideScore(   -4.33)+Epik State Penalty(    0.54) =    -3.79 kcal/mol
+REFINEMENT RESULTS FOR LIGAND       17 (SGS phenyl)
+Best XP pose:     1;  GlideScore =     -4.33 Emodel =    -11.35 E =    -18.60 Eint =     3.61
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+Reporting postminimized pose   1 GlideScore =     -4.254
+GlideScore(   -4.25)+Epik State Penalty(    0.54) =    -3.71 kcal/mol
+REFINEMENT RESULTS FOR LIGAND       18 (SGS phenyl)
+Best XP pose:     3;  GlideScore =     -4.25 Emodel =    -30.73 E =    -26.73 Eint =     2.89
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+Reporting postminimized pose   1 GlideScore =     -4.062
+GlideScore(   -4.06)+Epik State Penalty(    0.54) =    -3.52 kcal/mol
+REFINEMENT RESULTS FOR LIGAND       19 (SGS phenyl)
+Best XP pose:     3;  GlideScore =     -4.06 Emodel =    -17.10 E =    -26.53 Eint =     4.42
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+Reporting postminimized pose   1 GlideScore =     -4.335
+GlideScore(   -4.33)+Epik State Penalty(    0.54) =    -3.79 kcal/mol
+REFINEMENT RESULTS FOR LIGAND       20 (SGS phenyl)
+Best XP pose:     3;  GlideScore =     -4.33 Emodel =    -13.97 E =    -26.36 Eint =     4.72
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+Reporting postminimized pose   1 GlideScore =     -5.208
+GlideScore(   -5.21)+Epik State Penalty(    0.55) =    -4.66 kcal/mol
+REFINEMENT RESULTS FOR LIGAND       21 (SGS phenyl)
+Best XP pose:     2;  GlideScore =     -5.21 Emodel =    -26.81 E =    -34.60 Eint =     5.48
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+Reporting postminimized pose   1 GlideScore =     -4.348
+GlideScore(   -4.35)+Epik State Penalty(    0.55) =    -3.80 kcal/mol
+REFINEMENT RESULTS FOR LIGAND       22 (SGS phenyl)
+Best XP pose:     3;  GlideScore =     -4.35 Emodel =    -35.41 E =    -31.78 Eint =     1.90
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+Reporting postminimized pose   1 GlideScore =     -4.064
+GlideScore(   -4.06)+Epik State Penalty(    0.55) =    -3.52 kcal/mol
+REFINEMENT RESULTS FOR LIGAND       23 (SGS phenyl)
+Best XP pose:     2;  GlideScore =     -4.06 Emodel =    -16.74 E =    -24.63 Eint =     1.10
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800
+    1 poses will be postminimized for this ligand
+Reporting original pose   1 GlideScore =     -3.569
+GlideScore(   -3.57)+Epik State Penalty(    0.55) =    -3.02 kcal/mol
+REFINEMENT RESULTS FOR LIGAND       24 (SGS phenyl)
+Best XP pose:     1;  GlideScore =     -3.57 Emodel =    -14.90 E =     -8.44 Eint =     1.38
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Number of rotatable bonds            3
+%IMPACT-I (info): At line  76
+ %IMPACT-I: Glide Extra Precision Mode active.
+%IMPACT-I (info): At line  80
+ %IMPACT-I: For Glide Extra Precision mode, will use maxref =   800

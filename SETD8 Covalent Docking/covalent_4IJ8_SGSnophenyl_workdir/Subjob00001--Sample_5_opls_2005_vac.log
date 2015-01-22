@@ -1,0 +1,401 @@
+----- Output (stdout) -----
+ 
+ Environmental variable BMIN_NO_JOBCONTROL is set.
+ Jobcontrol will not be used.
+ BatchMin V10.6    Build  106013  Starting Time 16-Jan-2015 11:32:55
+ MacroModel. Copyright Schrodinger, LLC.
+ All rights reserved.
+ set_stacksize: stacksize limit raised to 4294967295l kb for F90 auto. array allocation.
+
+ Input filename:  Subjob00001--Sample_5_opls_2005_vac-in.maegz
+ Output filename: Subjob00001--Sample_5_opls_2005_vac-out.mae
+ Seed used: 658461
+ Atom-type file: /cbio/jclab/share/schrodinger/schrodinger2014-4/mmshare-v28013/bin/Linux-x86_64/../../data/atom.typ
+ Force field: /cbio/jclab/share/schrodinger/schrodinger2014-4/macromodel-v106013/bin/Linux-x86_64/../../data/OPLS_2005.fld
+ Read    40 atoms. Structure name, if any, appears on next line: 
+ SGS nophenyl
+ Monte Carlo Multiple Minimum Search requested
+MCNV specified 0 in arg1 or arg2;  default values will be assigned later
+ Setting the maximum number of structures  to save (MAXMCM_SAVE) to            1
+ Non-conformer Serial Search requested
+ Number of steps set to :         100
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   42    0    0
+   Numbers of high, medium and low quality bend parameters    =   76    0    0
+   Numbers of high, medium and low quality torsion parameters =  104    6    0
+   Interactions examined:        228 of        228 total, including unused params.
+      Stretch total=       42   constrained=        0
+         Bend total=       76   constrained=        0        linear=        0
+      Torsion total=      121   constrained=        0  out-of-plane=       11
+    Nonbonded total=      662      H-bonded=        0      ordinary=      662
+  Nonbonded cutoffs: CutVdw=   8.00    ;  CutEs=   20.0    
+ Starting truncated Newton minimization.
+          Step     1 New global minimum.  E (kJ/mol) =      355.75
+          Step     2 New global minimum.  E (kJ/mol) =      342.90
+          Step     8 New global minimum.  E (kJ/mol) =      333.11
+ 
+Interim report; processing .tmp file:
+    7 unique conformations found so far
+    7 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     2 confs within  3.00 kcal/mol (12.55 kJ/mol) of glob. min.
+Found     3 confs within  5.00 kcal/mol (20.92 kJ/mol) of glob. min.
+Found     7 confs within 10.00 kcal/mol (41.84 kJ/mol) of glob. min.
+Global minimum E =    333.11 found     1 times.
+   10 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  9.79 19.10 22.65 30.64 32.40 41.62
+  No.:     1     1     1     2     1     1     2
+ 
+ 
+Interim report; processing .tmp file:
+    8 unique conformations found so far
+    8 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     2 confs within  3.00 kcal/mol (12.55 kJ/mol) of glob. min.
+Found     3 confs within  5.00 kcal/mol (20.92 kJ/mol) of glob. min.
+Found     8 confs within 10.00 kcal/mol (41.84 kJ/mol) of glob. min.
+Global minimum E =    333.11 found     2 times.
+   20 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  9.79 19.10 22.65 30.64 32.40 40.26 41.62
+  No.:     2     1     1     2     2     2     2     4
+ 
+ 
+Interim report; processing .tmp file:
+    8 unique conformations found so far
+    8 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     2 confs within  3.00 kcal/mol (12.55 kJ/mol) of glob. min.
+Found     3 confs within  5.00 kcal/mol (20.92 kJ/mol) of glob. min.
+Found     8 confs within 10.00 kcal/mol (41.84 kJ/mol) of glob. min.
+Global minimum E =    333.11 found     4 times.
+   30 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  9.79 19.10 22.65 30.64 32.40 40.26 41.62
+  No.:     4     1     1     3     5     2     3     6
+ 
+ 
+Interim report; processing .tmp file:
+    8 unique conformations found so far
+    8 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     2 confs within  3.00 kcal/mol (12.55 kJ/mol) of glob. min.
+Found     3 confs within  5.00 kcal/mol (20.92 kJ/mol) of glob. min.
+Found     8 confs within 10.00 kcal/mol (41.84 kJ/mol) of glob. min.
+Global minimum E =    333.11 found     6 times.
+   40 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  9.79 19.10 22.65 30.64 32.40 40.26 41.62
+  No.:     6     4     3     3     5     2     4     8
+ 
+ 
+Interim report; processing .tmp file:
+    8 unique conformations found so far
+    8 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     2 confs within  3.00 kcal/mol (12.55 kJ/mol) of glob. min.
+Found     3 confs within  5.00 kcal/mol (20.92 kJ/mol) of glob. min.
+Found     8 confs within 10.00 kcal/mol (41.84 kJ/mol) of glob. min.
+Global minimum E =    333.11 found     6 times.
+   50 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  9.79 19.10 22.65 30.64 32.40 40.26 41.62
+  No.:     6     8     4     3     6     4     4     9
+ 
+ 
+Interim report; processing .tmp file:
+    8 unique conformations found so far
+    8 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     2 confs within  3.00 kcal/mol (12.55 kJ/mol) of glob. min.
+Found     3 confs within  5.00 kcal/mol (20.92 kJ/mol) of glob. min.
+Found     8 confs within 10.00 kcal/mol (41.84 kJ/mol) of glob. min.
+Global minimum E =    333.11 found     6 times.
+   60 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  9.79 19.10 22.65 30.64 32.40 40.26 41.62
+  No.:     6     9     5     4    10     5     4    10
+ 
+ 
+Interim report; processing .tmp file:
+    8 unique conformations found so far
+    8 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     2 confs within  3.00 kcal/mol (12.55 kJ/mol) of glob. min.
+Found     3 confs within  5.00 kcal/mol (20.92 kJ/mol) of glob. min.
+Found     8 confs within 10.00 kcal/mol (41.84 kJ/mol) of glob. min.
+Global minimum E =    333.11 found     7 times.
+   70 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  9.79 19.10 22.65 30.64 32.40 40.26 41.62
+  No.:     7    10     6     4    10     5     5    14
+ 
+ 
+Interim report; processing .tmp file:
+    9 unique conformations found so far
+    9 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     2 confs within  3.00 kcal/mol (12.55 kJ/mol) of glob. min.
+Found     3 confs within  5.00 kcal/mol (20.92 kJ/mol) of glob. min.
+Found     9 confs within 10.00 kcal/mol (41.84 kJ/mol) of glob. min.
+Global minimum E =    333.11 found     7 times.
+   80 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  9.79 19.10 22.65 30.64 31.81 32.40 40.26 41.62
+  No.:     7    11     8     4    11     4     5     5    15
+ 
+ 
+Interim report; processing .tmp file:
+    9 unique conformations found so far
+    9 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     2 confs within  3.00 kcal/mol (12.55 kJ/mol) of glob. min.
+Found     3 confs within  5.00 kcal/mol (20.92 kJ/mol) of glob. min.
+Found     9 confs within 10.00 kcal/mol (41.84 kJ/mol) of glob. min.
+Global minimum E =    333.11 found     9 times.
+   90 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  9.79 19.10 22.65 30.64 31.81 32.40 40.26 41.62
+  No.:     9    13     9     5    13     4     6     5    16
+ 
+         100  structures minimised
+           9  unique structures stored
+           9  structures with good convergence
+             Global Minimum   333.10730     kJ/mol
+ 
+ 
+Final report; processing .tmp file:
+    9 unique conformations found so far
+    9 minimized with good convergence
+Found     1 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     2 confs within  3.00 kcal/mol (12.55 kJ/mol) of glob. min.
+Found     3 confs within  5.00 kcal/mol (20.92 kJ/mol) of glob. min.
+Found     9 confs within 10.00 kcal/mol (41.84 kJ/mol) of glob. min.
+Global minimum E =    333.11 found    12 times.
+  100 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  9.79 19.10 22.65 30.64 31.81 32.40 40.26 41.62
+  No.:    12    13     9     6    13     6     7     5    18
+ 
+Input structure with title on the next line is given SerNo:        1
+SGS nophenyl
+Auto summary for input structure      1:
+ Total number of structures processed =         100
+ Conformations with poor convergence marked with a *
+ Conformation       1 (    333.1073     kJ/mol) was found    12 times
+ Conformation       2 (    342.8982     kJ/mol) was found    13 times
+ Conformation       3 (    352.2111     kJ/mol) was found     9 times
+ Conformation       4 (    355.7528     kJ/mol) was found     6 times
+ Conformation       5 (    363.7466     kJ/mol) was found    13 times
+ Conformation       6 (    364.9154     kJ/mol) was found     6 times
+ Conformation       7 (    365.5026     kJ/mol) was found     7 times
+ Conformation       8 (    373.3713     kJ/mol) was found     5 times
+ Conformation       9 (    374.7306     kJ/mol) was found    18 times
+ *** Note only            1 (MAXMCM_SAVE) structures 
+     written to the output structure file.  As requested.
+           *** MC Statistics ***
+ Percent of minimized structures within energetic window:   89.00000    
+ Average number of duplicates:     9.888889    
+ Duplication standard deviation:   4.371625    
+         898  structures generated
+         733  rejected by ring closure
+          66  rejected by van der Waals
+          80  duplicate minimised structures
+ Number of steps set to :         100
+ Read    39 atoms. Structure name, if any, appears on next line: 
+ SGS nophenyl
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   41    0    0
+   Numbers of high, medium and low quality bend parameters    =   73    0    0
+   Numbers of high, medium and low quality torsion parameters =   95    6    0
+   Interactions examined:        215 of        215 total, including unused params.
+      Stretch total=       41   constrained=        0
+         Bend total=       73   constrained=        0        linear=        0
+      Torsion total=      112   constrained=        0  out-of-plane=       11
+    Nonbonded total=      627      H-bonded=        0      ordinary=      627
+  Nonbonded cutoffs: CutVdw=   8.00    ;  CutEs=   20.0    
+ Starting truncated Newton minimization.
+          Step     1 New global minimum.  E (kJ/mol) =      362.94
+          Step     2 New global minimum.  E (kJ/mol) =      359.32
+          Step     8 New global minimum.  E (kJ/mol) =      358.78
+ 
+Interim report; processing .tmp file:
+    6 unique conformations found so far
+    6 minimized with good convergence
+Found     3 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     4 confs within  2.00 kcal/mol ( 8.37 kJ/mol) of glob. min.
+Global minimum E =    358.78 found     1 times.
+   10 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  0.54  4.16  4.38 45.04 46.04
+  No.:     1     2     2     2     1     2
+ 
+ 
+Interim report; processing .tmp file:
+    8 unique conformations found so far
+    8 minimized with good convergence
+Found     3 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     4 confs within  2.00 kcal/mol ( 8.37 kJ/mol) of glob. min.
+Global minimum E =    358.78 found     1 times.
+   20 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  0.54  4.16  4.38 44.41 45.04 46.04 46.10
+  No.:     1     3     5     2     1     3     3     2
+ 
+ 
+Interim report; processing .tmp file:
+   11 unique conformations found so far
+   11 minimized with good convergence
+Found     3 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     4 confs within  2.00 kcal/mol ( 8.37 kJ/mol) of glob. min.
+Found     6 confs within  5.00 kcal/mol (20.92 kJ/mol) of glob. min.
+Global minimum E =    358.78 found     1 times.
+   30 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  0.54  4.16  4.38 19.85 20.79 44.41 45.04 46.04 46.10 49.40
+  No.:     1     3     5     2     1     1     2     3     5     4     3
+ 
+ 
+Interim report; processing .tmp file:
+   12 unique conformations found so far
+   12 minimized with good convergence
+Found     4 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     5 confs within  2.00 kcal/mol ( 8.37 kJ/mol) of glob. min.
+Found     7 confs within  5.00 kcal/mol (20.92 kJ/mol) of glob. min.
+Global minimum E =    358.78 found     1 times.
+   40 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  0.54  1.47  4.16  4.38 19.85 20.79 44.41 45.04 46.04 46.10 49.40
+  No.:     1     3     2     6     2     1     1     2     4     6     7     5
+ 
+ 
+Interim report; processing .tmp file:
+   14 unique conformations found so far
+   14 minimized with good convergence
+Found     4 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     5 confs within  2.00 kcal/mol ( 8.37 kJ/mol) of glob. min.
+Found     8 confs within  5.00 kcal/mol (20.92 kJ/mol) of glob. min.
+Found     9 confs within 10.00 kcal/mol (41.84 kJ/mol) of glob. min.
+Global minimum E =    358.78 found     2 times.
+   50 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  0.54  1.47  4.16  4.38 19.85 20.17 20.79 21.48 44.41 45.04 46.04
+  No.:     2     3     2     6     3     1     1     1     5     2     5     6
+ 
+ 
+Interim report; processing .tmp file:
+   14 unique conformations found so far
+   14 minimized with good convergence
+Found     4 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     5 confs within  2.00 kcal/mol ( 8.37 kJ/mol) of glob. min.
+Found     8 confs within  5.00 kcal/mol (20.92 kJ/mol) of glob. min.
+Found     9 confs within 10.00 kcal/mol (41.84 kJ/mol) of glob. min.
+Global minimum E =    358.78 found     2 times.
+   60 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  0.54  1.47  4.16  4.38 19.85 20.17 20.79 21.48 44.41 45.04 46.04
+  No.:     2     4     2     7     3     1     1     2     5     4     7     6
+ 
+ 
+Interim report; processing .tmp file:
+   15 unique conformations found so far
+   15 minimized with good convergence
+Found     4 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     5 confs within  2.00 kcal/mol ( 8.37 kJ/mol) of glob. min.
+Found     8 confs within  5.00 kcal/mol (20.92 kJ/mol) of glob. min.
+Found     9 confs within 10.00 kcal/mol (41.84 kJ/mol) of glob. min.
+Global minimum E =    358.78 found     2 times.
+   70 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  0.54  1.47  4.16  4.38 19.85 20.17 20.79 21.48 44.41 45.04 46.04
+  No.:     2     4     2     8     3     1     2     3     5     4     8     7
+ 
+ 
+Interim report; processing .tmp file:
+   16 unique conformations found so far
+   16 minimized with good convergence
+Found     4 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     5 confs within  2.00 kcal/mol ( 8.37 kJ/mol) of glob. min.
+Found     8 confs within  5.00 kcal/mol (20.92 kJ/mol) of glob. min.
+Found    10 confs within 10.00 kcal/mol (41.84 kJ/mol) of glob. min.
+Global minimum E =    358.78 found     2 times.
+   80 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  0.54  1.47  4.16  4.38 19.85 20.17 20.79 21.48 22.16 44.41 45.04
+  No.:     2     5     2     8     3     1     3     3     5     2     4    10
+ 
+ 
+Interim report; processing .tmp file:
+   16 unique conformations found so far
+   16 minimized with good convergence
+Found     4 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     5 confs within  2.00 kcal/mol ( 8.37 kJ/mol) of glob. min.
+Found     8 confs within  5.00 kcal/mol (20.92 kJ/mol) of glob. min.
+Found    10 confs within 10.00 kcal/mol (41.84 kJ/mol) of glob. min.
+Global minimum E =    358.78 found     4 times.
+   90 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  0.54  1.47  4.16  4.38 19.85 20.17 20.79 21.48 22.16 44.41 45.04
+  No.:     4     5     2     8     3     1     4     3     5     2     5    10
+ 
+         100  structures minimised
+          16  unique structures stored
+          16  structures with good convergence
+             Global Minimum   358.78217     kJ/mol
+ 
+ 
+Final report; processing .tmp file:
+   16 unique conformations found so far
+   16 minimized with good convergence
+Found     4 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     5 confs within  2.00 kcal/mol ( 8.37 kJ/mol) of glob. min.
+Found     8 confs within  5.00 kcal/mol (20.92 kJ/mol) of glob. min.
+Found    10 confs within 10.00 kcal/mol (41.84 kJ/mol) of glob. min.
+Global minimum E =    358.78 found     4 times.
+  100 steps performed so far, out of   100
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  0.54  1.47  4.16  4.38 19.85 20.17 20.79 21.48 22.16 44.41 45.04
+  No.:     4     6     4     8     4     1     4     3     5     2     6    10
+ 
+Input structure with title on the next line is given SerNo:        2
+SGS nophenyl
+Auto summary for input structure      2:
+ Total number of structures processed =         100
+ Conformations with poor convergence marked with a *
+ Conformation       1 (    358.7822     kJ/mol) was found     4 times
+ Conformation       2 (    359.3205     kJ/mol) was found     6 times
+ Conformation       3 (    360.2555     kJ/mol) was found     4 times
+ Conformation       4 (    362.9382     kJ/mol) was found     8 times
+ Conformation       5 (    363.1611     kJ/mol) was found     4 times
+ Conformation       6 (    378.6281     kJ/mol) was found     1 times
+ Conformation       7 (    378.9485     kJ/mol) was found     4 times
+ Conformation       8 (    379.5757     kJ/mol) was found     3 times
+ Conformation       9 (    380.2643     kJ/mol) was found     5 times
+ Conformation      10 (    380.9377     kJ/mol) was found     2 times
+ Conformation      11 (    403.1945     kJ/mol) was found     6 times
+ Conformation      12 (    403.8231     kJ/mol) was found    10 times
+ Conformation      13 (    404.8202     kJ/mol) was found    11 times
+ Conformation      14 (    404.8857     kJ/mol) was found    14 times
+ Conformation      15 (    406.3705     kJ/mol) was found     4 times
+ Conformation      16 (    408.1791     kJ/mol) was found    14 times
+ *** Note only            1 (MAXMCM_SAVE) structures 
+     written to the output structure file.  As requested.
+           *** MC Statistics ***
+ Percent of minimized structures within energetic window:   100.0000    
+ Average number of duplicates:     6.250000    
+ Duplication standard deviation:   4.024922    
+         928  structures generated
+         764  rejected by ring closure
+          65  rejected by van der Waals
+          84  duplicate minimised structures
+ 
+BatchMin: normal termination                           16-Jan-2015 11:33:08
+STARTUP COMMAND:
+/cbio/jclab/share/schrodinger/schrodinger2014-4/macromodel-v106013/bin/Linux-x86_64/bmin
+MMSHARE_EXEC:/cbio/jclab/share/schrodinger/schrodinger2014-4/mmshare-v28013/bin/Linux-x86_64
+
+real	0.0m12.8999999985s
+user	0.0m0.0s
+sys	0.0m0.0s
+RUNNING: python "/cbio/jclab/share/schrodinger/schrodinger2014-4/macromodel-v106013/bin/Linux-x86_64/bmin_startup.py" -NO_REDIRECT Subjob00001--Sample_5_opls_2005_vac

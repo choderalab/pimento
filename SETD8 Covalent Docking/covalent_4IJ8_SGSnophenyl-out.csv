@@ -1,0 +1,3 @@
+title,r_cdock_cdock_affinity,r_psp_Prime_Energy,r_i_glide_ecoul,r_i_glide_eff_state_penalty,r_i_glide_einternal,r_i_glide_emodel,r_i_glide_energy,r_i_glide_evdw,r_i_glide_gscore,r_i_glide_ligand_efficiency,r_i_glide_ligand_efficiency_ln,r_i_glide_ligand_efficiency_sa
+SGS nophenyl,-4.73619945755,-7211.41234211735,-4.17200422287,0.6527,1.80169904232,-19.0559026639,-26.9546675682,-22.7826633453,-4.90782988916,-0.223954204693,-1.07876681871,-0.597599768454
+SGS nophenyl,-4.413914067595,-7249.39910919727,-4.74834442139,0.5325,1.3931081295,-24.1115044859,-22.4573135376,-17.7089691162,-3.7865198922,-0.171264204853,-0.824963932613,-0.457001686148

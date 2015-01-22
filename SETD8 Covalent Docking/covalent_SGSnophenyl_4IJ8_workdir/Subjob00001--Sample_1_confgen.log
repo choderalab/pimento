@@ -1,0 +1,565 @@
+----- Output (stdout) -----
+ 
+ Environmental variable BMIN_NO_JOBCONTROL is set.
+ Jobcontrol will not be used.
+ BatchMin V10.6    Build  106013  Starting Time 13-Jan-2015 14:17:51
+ MacroModel. Copyright Schrodinger, LLC.
+ All rights reserved.
+ set_stacksize: stacksize limit raised to 4294967295l kb for F90 auto. array allocation.
+ ConfGen V3.0     Build   30013
+
+ Input filename:  Subjob00001--Sample_1_confgen-in.maegz
+ Output filename: Subjob00001--Sample_1_confgen-out.mae
+ Atom-type file: /cbio/jclab/share/schrodinger/schrodinger2014-4/mmshare-v28013/bin/Linux-x86_64/../../data/atom.typ
+ Force field: /cbio/jclab/share/schrodinger/schrodinger2014-4/macromodel-v106013/bin/Linux-x86_64/../../data/OPLS_2005.fld
+ Read    40 atoms. Structure name, if any, appears on next line: 
+ SGS nophenyl
+ CGEN: Using ring conformation library.
+ Skipping Minimization of generated structures.
+ CGEN: Number of ring Conformations set to:           16
+ CGEN: Number of conformations per ring set to:            8
+ CGEN: Maximum Internal Energy set to:    100.000000000000     
+ CGEN: Atom distance gradient scaling factor set to:   1.00000000000000     
+ CGEN: Minimum Atom radius set to:   1.00000000000000     
+  CGEN: flat torsional potential symmetry set to            6
+ CGEN: using OPLS2005 for the internal mmconf parameters
+ CGEN: flat potential threshold set to      12.00
+ CGEN: Using flat potential maximum original energy of:      -1.00
+  The flat torsional potential maximum original energy is negative.
+   No filtering by original torsional potential energy will be done
+ CGEN: flat potential torsional force constant set to    1000.00
+ CGEN: flat torsional potential half width set to      10.00
+ CGEN: fractional formal charge charge-charge sigma set to:       5.00
+ CGEN: fractional formal charge charge-charge prefactor set to:       2.50
+ CGEN: fractional formal charge charge-charge cutoff set to:       0.75
+ CGEN: Not favoring intra-molecular hydrogen bonds. 
+ CGEN: fractional formal charge charge-hydrogen bond sigma set to:       5.00
+ CGEN: fractional formal charge charge-hydrogen bond prefactor set to:       1.00
+ CGEN: fractional formal charge charge-hydrogen bond cutoff set to:       0.25
+ CGEN: Using aromatic..cat-H cutoff of:       1.00
+ CGEN: vdW elimination sigma set to:       2.50
+ CGEN: vdw elimination prefactor set to:       0.10
+ CGEN: vdw elimination cutoff set to:       1.00
+ Non-conformer Serial Search requested
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   42    0    0
+   Numbers of high, medium and low quality bend parameters    =   76    0    0
+   Numbers of high, medium and low quality torsion parameters =  104    6    0
+   Interactions examined:        228 of        228 total, including unused params.
+      Stretch total=       42   constrained=        0
+         Bend total=       76   constrained=        0        linear=        0
+      Torsion total=      121   constrained=        0  out-of-plane=       11
+    Nonbonded total=      658      H-bonded=        0      ordinary=      658
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+ Starting truncated Newton minimization.
+ Seed Structure for ConfGen: E =   267.94 (  0.005)
+** Entering Conformation Generator **
+
+               Number of rotatable bonds       2
+                    Total ring and/or
+               N inversion conformations       1
+           Core rotatable bonds, maxkeep       1    1000
+                Maximum excitation level      11
+                           Energy cutoff      23.901
+                Total core conformations       4
+           Total conformations minimized      10
+
+ 
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   42    0    0
+   Numbers of high, medium and low quality bend parameters    =   76    0    0
+   Numbers of high, medium and low quality torsion parameters =  104    6    0
+   Interactions examined:        228 of        228 total, including unused params.
+      Stretch total=       42   constrained=        0
+         Bend total=       76   constrained=        0        linear=        0
+      Torsion total=      121   constrained=        0  out-of-plane=       11
+    Nonbonded total=      658      H-bonded=        0      ordinary=      658
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+                   Total Energy =      297.9781 kJ/mol
+                        Stretch =       15.6469 kJ/mol
+                           Bend =       45.3994 kJ/mol
+                        Torsion =      154.2338 kJ/mol
+               Improper Torsion =        0.2056 kJ/mol
+                            VDW =       64.3737 kJ/mol
+                  Electrostatic =       18.1187 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       297.9781 kJ/mol
+          Step     1 New global minimum.  E (kJ/mol) =      297.98
+ Conf     1 E =   297.98 ( 99.999) replaces structure     1
+                   Total Energy =      306.5694 kJ/mol
+                        Stretch =       15.6469 kJ/mol
+                           Bend =       45.3993 kJ/mol
+                        Torsion =      160.2797 kJ/mol
+               Improper Torsion =        0.2056 kJ/mol
+                            VDW =       65.4060 kJ/mol
+                  Electrostatic =       19.6318 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       306.5694 kJ/mol
+ Conf     2 E =   306.57 ( 99.999) is unique and stored as structure     2
+                   Total Energy =      321.0493 kJ/mol
+                        Stretch =       15.6469 kJ/mol
+                           Bend =       45.3994 kJ/mol
+                        Torsion =      178.2247 kJ/mol
+               Improper Torsion =        0.2056 kJ/mol
+                            VDW =       61.8386 kJ/mol
+                  Electrostatic =       19.7341 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       321.0493 kJ/mol
+ Conf     3 E =   321.05 ( 99.999) rejected by structure     2
+                   Total Energy =      306.1974 kJ/mol
+                        Stretch =       15.6469 kJ/mol
+                           Bend =       45.3994 kJ/mol
+                        Torsion =      163.2474 kJ/mol
+               Improper Torsion =        0.2056 kJ/mol
+                            VDW =       63.3565 kJ/mol
+                  Electrostatic =       18.3417 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       306.1974 kJ/mol
+ Conf     4 E =   306.20 ( 99.999) rejected by structure     1
+                   Total Energy =      297.9195 kJ/mol
+                        Stretch =       15.6469 kJ/mol
+                           Bend =       45.3994 kJ/mol
+                        Torsion =      155.3013 kJ/mol
+               Improper Torsion =        0.2056 kJ/mol
+                            VDW =       62.7952 kJ/mol
+                  Electrostatic =       18.5711 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       297.9195 kJ/mol
+          Step     5 New global minimum.  E (kJ/mol) =      297.92
+ Conf     5 E =   297.92 ( 99.999) is unique and stored as structure     3
+                   Total Energy =      300.0895 kJ/mol
+                        Stretch =       15.6469 kJ/mol
+                           Bend =       45.3994 kJ/mol
+                        Torsion =      156.2294 kJ/mol
+               Improper Torsion =        0.2056 kJ/mol
+                            VDW =       63.2382 kJ/mol
+                  Electrostatic =       19.3701 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       300.0895 kJ/mol
+ Conf     6 E =   300.09 ( 99.999) rejected by structure     1
+                   Total Energy =      306.5921 kJ/mol
+                        Stretch =       15.6469 kJ/mol
+                           Bend =       45.3993 kJ/mol
+                        Torsion =      161.3472 kJ/mol
+               Improper Torsion =        0.2056 kJ/mol
+                            VDW =       64.2307 kJ/mol
+                  Electrostatic =       19.7623 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       306.5921 kJ/mol
+ Conf     7 E =   306.59 ( 99.999) is unique and stored as structure     4
+                   Total Energy =      321.3636 kJ/mol
+                        Stretch =       15.6469 kJ/mol
+                           Bend =       45.3994 kJ/mol
+                        Torsion =      179.2922 kJ/mol
+               Improper Torsion =        0.2056 kJ/mol
+                            VDW =       60.9652 kJ/mol
+                  Electrostatic =       19.8543 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       321.3636 kJ/mol
+ Conf     8 E =   321.36 ( 99.999) rejected by structure     2
+                   Total Energy =      306.6770 kJ/mol
+                        Stretch =       15.6469 kJ/mol
+                           Bend =       45.3994 kJ/mol
+                        Torsion =      164.3148 kJ/mol
+               Improper Torsion =        0.2056 kJ/mol
+                            VDW =       62.9673 kJ/mol
+                  Electrostatic =       18.1430 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       306.6770 kJ/mol
+ Conf     9 E =   306.68 ( 99.999) rejected by structure     1
+                   Total Energy =      310.0128 kJ/mol
+                        Stretch =       15.6469 kJ/mol
+                           Bend =       45.3994 kJ/mol
+                        Torsion =      164.5439 kJ/mol
+               Improper Torsion =        0.2056 kJ/mol
+                            VDW =       64.7632 kJ/mol
+                  Electrostatic =       19.4538 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       310.0128 kJ/mol
+ Conf    10 E =   310.01 ( 99.999) rejected by structure     3
+ 
+Final report; processing .tmp file:
+    4 unique conformations found so far
+    0 minimized with good convergence
+Found     2 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     4 confs within  3.00 kcal/mol (12.55 kJ/mol) of glob. min.
+Global minimum E =    297.92 found     2 times.
+    9 steps performed so far, out of    50
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  0.06  8.65  8.67
+  No.:     2     4     3     1
+ 
+Input structure with title on the next line is given SerNo:        1
+SGS nophenyl
+Auto summary for input structure      1:
+CGEN summary for input structure      1:
+ Total number of structures processed =          11
+ Conformations with poor convergence marked with a *
+*Conformation       1 (    297.9195     kJ/mol) was found     2 times
+*Conformation       2 (    297.9781     kJ/mol) was found     4 times
+*Conformation       3 (    306.5694     kJ/mol) was found     3 times
+*Conformation       4 (    306.5921     kJ/mol) was found     1 times
+           *** MC Statistics ***
+ Percent of minimized structures within energetic window:   90.90909    
+ Average number of duplicates:     2.500000    
+ Duplication standard deviation:   1.290994    
+          10  structures generated
+           0  rejected by ring closure
+           0  rejected by van der Waals
+           7  duplicate minimised structures
+ Removing all fixed-atom constraints
+ Removed all frozen-atom constraints
+ Removing all distance constraints
+ Removing all bond-angle constraints
+ Removing all torsional restraints
+ Read    39 atoms. Structure name, if any, appears on next line: 
+ SGS nophenyl
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   41    0    0
+   Numbers of high, medium and low quality bend parameters    =   73    0    0
+   Numbers of high, medium and low quality torsion parameters =   95    6    0
+   Interactions examined:        215 of        215 total, including unused params.
+      Stretch total=       41   constrained=        0
+         Bend total=       73   constrained=        0        linear=        0
+      Torsion total=      112   constrained=        0  out-of-plane=       11
+    Nonbonded total=      623      H-bonded=        0      ordinary=      623
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+ Starting truncated Newton minimization.
+ Seed Structure for ConfGen: E =   280.51 (  0.002)
+** Entering Conformation Generator **
+
+               Number of rotatable bonds       2
+                    Total ring and/or
+               N inversion conformations       2
+           Core rotatable bonds, maxkeep       1    1000
+                Maximum excitation level      11
+                           Energy cutoff      23.901
+                Total core conformations       8
+           Total conformations minimized      20
+
+ 
+ Quality of Force Field Parameters in Use:
+   Numbers of high, medium and low quality stretch parameters =   41    0    0
+   Numbers of high, medium and low quality bend parameters    =   73    0    0
+   Numbers of high, medium and low quality torsion parameters =   95    6    0
+   Interactions examined:        215 of        215 total, including unused params.
+      Stretch total=       41   constrained=        0
+         Bend total=       73   constrained=        0        linear=        0
+      Torsion total=      112   constrained=        0  out-of-plane=       11
+    Nonbonded total=      623      H-bonded=        0      ordinary=      623
+  Nonbonded cutoffs: CutVdw=   7.00    ;  CutEs=   12.0    
+                   Total Energy =      305.3378 kJ/mol
+                        Stretch =       16.8263 kJ/mol
+                           Bend =       43.1499 kJ/mol
+                        Torsion =      163.6719 kJ/mol
+               Improper Torsion =        0.2299 kJ/mol
+                            VDW =       63.4656 kJ/mol
+                  Electrostatic =       17.9941 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       305.3378 kJ/mol
+          Step     1 New global minimum.  E (kJ/mol) =      305.34
+ Conf     1 E =   305.34 ( 99.999) replaces structure     1
+                   Total Energy =      310.9295 kJ/mol
+                        Stretch =       16.8263 kJ/mol
+                           Bend =       43.1499 kJ/mol
+                        Torsion =      170.8206 kJ/mol
+               Improper Torsion =        0.2299 kJ/mol
+                            VDW =       61.6076 kJ/mol
+                  Electrostatic =       18.2952 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       310.9295 kJ/mol
+ Conf     2 E =   310.93 ( 99.999) rejected by structure     1
+                   Total Energy =      316.9784 kJ/mol
+                        Stretch =       16.8263 kJ/mol
+                           Bend =       43.1499 kJ/mol
+                        Torsion =      175.5895 kJ/mol
+               Improper Torsion =        0.2299 kJ/mol
+                            VDW =       62.5730 kJ/mol
+                  Electrostatic =       18.6098 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       316.9784 kJ/mol
+ Conf     3 E =   316.98 ( 99.999) is unique and stored as structure     2
+                   Total Energy =      313.3219 kJ/mol
+                        Stretch =       16.8263 kJ/mol
+                           Bend =       43.1499 kJ/mol
+                        Torsion =      170.7792 kJ/mol
+               Improper Torsion =        0.2299 kJ/mol
+                            VDW =       63.8752 kJ/mol
+                  Electrostatic =       18.4613 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       313.3219 kJ/mol
+ Conf     4 E =   313.32 ( 99.999) replaces structure     2
+                   Total Energy =      309.0550 kJ/mol
+                        Stretch =       16.8262 kJ/mol
+                           Bend =       43.1486 kJ/mol
+                        Torsion =      167.4421 kJ/mol
+               Improper Torsion =        0.2294 kJ/mol
+                            VDW =       63.3532 kJ/mol
+                  Electrostatic =       18.0554 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       309.0550 kJ/mol
+ Conf     5 E =   309.05 ( 99.999) rejected by structure     1
+                   Total Energy =      318.7063 kJ/mol
+                        Stretch =       16.8262 kJ/mol
+                           Bend =       43.1486 kJ/mol
+                        Torsion =      177.2492 kJ/mol
+               Improper Torsion =        0.2294 kJ/mol
+                            VDW =       62.5987 kJ/mol
+                  Electrostatic =       18.6541 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       318.7063 kJ/mol
+ Conf     6 E =   318.71 ( 99.999) rejected by structure     2
+                   Total Energy =      316.5547 kJ/mol
+                        Stretch =       16.8262 kJ/mol
+                           Bend =       43.1486 kJ/mol
+                        Torsion =      174.3385 kJ/mol
+               Improper Torsion =        0.2294 kJ/mol
+                            VDW =       63.4976 kJ/mol
+                  Electrostatic =       18.5145 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       316.5547 kJ/mol
+ Conf     7 E =   316.55 ( 99.999) rejected by structure     2
+                   Total Energy =      311.9825 kJ/mol
+                        Stretch =       16.8262 kJ/mol
+                           Bend =       43.1486 kJ/mol
+                        Torsion =      171.5589 kJ/mol
+               Improper Torsion =        0.2294 kJ/mol
+                            VDW =       61.8979 kJ/mol
+                  Electrostatic =       18.3214 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       311.9825 kJ/mol
+ Conf     8 E =   311.98 ( 99.999) rejected by structure     1
+                   Total Energy =      306.4710 kJ/mol
+                        Stretch =       16.8263 kJ/mol
+                           Bend =       43.1499 kJ/mol
+                        Torsion =      164.4695 kJ/mol
+               Improper Torsion =        0.2299 kJ/mol
+                            VDW =       63.5631 kJ/mol
+                  Electrostatic =       18.2323 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       306.4710 kJ/mol
+ Conf     9 E =   306.47 ( 99.999) rejected by structure     1
+                   Total Energy =      305.1168 kJ/mol
+                        Stretch =       16.8263 kJ/mol
+                           Bend =       43.1499 kJ/mol
+                        Torsion =      163.6507 kJ/mol
+               Improper Torsion =        0.2299 kJ/mol
+                            VDW =       63.0515 kJ/mol
+                  Electrostatic =       18.2085 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       305.1168 kJ/mol
+          Step    10 New global minimum.  E (kJ/mol) =      305.12
+ Conf    10 E =   305.12 ( 99.999) is unique and stored as structure     3
+ 
+Interim report; processing .tmp file:
+    3 unique conformations found so far
+    0 minimized with good convergence
+Found     2 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     3 confs within  2.00 kcal/mol ( 8.37 kJ/mol) of glob. min.
+Global minimum E =    305.12 found     1 times.
+   10 steps performed so far, out of    50
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  0.22  8.21
+  No.:     1     5     4
+ 
+                   Total Energy =      313.3218 kJ/mol
+                        Stretch =       16.8263 kJ/mol
+                           Bend =       43.1499 kJ/mol
+                        Torsion =      170.7792 kJ/mol
+               Improper Torsion =        0.2299 kJ/mol
+                            VDW =       63.8752 kJ/mol
+                  Electrostatic =       18.4613 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       313.3218 kJ/mol
+ Conf    11 E =   313.32 ( 99.999) replaces structure     3
+                   Total Energy =      311.3648 kJ/mol
+                        Stretch =       16.8263 kJ/mol
+                           Bend =       43.1499 kJ/mol
+                        Torsion =      170.7993 kJ/mol
+               Improper Torsion =        0.2299 kJ/mol
+                            VDW =       62.3783 kJ/mol
+                  Electrostatic =       17.9811 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       311.3648 kJ/mol
+ Conf    12 E =   311.36 ( 99.999) rejected by structure     1
+                   Total Energy =      316.9379 kJ/mol
+                        Stretch =       16.8263 kJ/mol
+                           Bend =       43.1499 kJ/mol
+                        Torsion =      175.5683 kJ/mol
+               Improper Torsion =        0.2299 kJ/mol
+                            VDW =       62.7516 kJ/mol
+                  Electrostatic =       18.4119 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       316.9379 kJ/mol
+ Conf    13 E =   316.94 ( 99.999) rejected by structure     3
+                   Total Energy =      313.5541 kJ/mol
+                        Stretch =       16.8263 kJ/mol
+                           Bend =       43.1499 kJ/mol
+                        Torsion =      170.7580 kJ/mol
+               Improper Torsion =        0.2299 kJ/mol
+                            VDW =       63.9654 kJ/mol
+                  Electrostatic =       18.6245 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       313.5541 kJ/mol
+ Conf    14 E =   313.55 ( 99.999) is unique and stored as structure     4
+                   Total Energy =      310.2374 kJ/mol
+                        Stretch =       16.8262 kJ/mol
+                           Bend =       43.1486 kJ/mol
+                        Torsion =      168.2396 kJ/mol
+               Improper Torsion =        0.2294 kJ/mol
+                            VDW =       63.4997 kJ/mol
+                  Electrostatic =       18.2938 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       310.2374 kJ/mol
+ Conf    15 E =   310.24 ( 99.999) rejected by structure     2
+                   Total Energy =      308.8189 kJ/mol
+                        Stretch =       16.8262 kJ/mol
+                           Bend =       43.1486 kJ/mol
+                        Torsion =      167.4208 kJ/mol
+               Improper Torsion =        0.2294 kJ/mol
+                            VDW =       62.9338 kJ/mol
+                  Electrostatic =       18.2600 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       308.8189 kJ/mol
+ Conf    16 E =   308.82 ( 99.999) rejected by structure     1
+                   Total Energy =      318.6797 kJ/mol
+                        Stretch =       16.8262 kJ/mol
+                           Bend =       43.1486 kJ/mol
+                        Torsion =      177.2280 kJ/mol
+               Improper Torsion =        0.2294 kJ/mol
+                            VDW =       62.7855 kJ/mol
+                  Electrostatic =       18.4621 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       318.6797 kJ/mol
+ Conf    17 E =   318.68 ( 99.999) rejected by structure     3
+                   Total Energy =      316.7637 kJ/mol
+                        Stretch =       16.8262 kJ/mol
+                           Bend =       43.1486 kJ/mol
+                        Torsion =      174.3172 kJ/mol
+               Improper Torsion =        0.2294 kJ/mol
+                            VDW =       63.5671 kJ/mol
+                  Electrostatic =       18.6752 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       316.7637 kJ/mol
+ Conf    18 E =   316.76 ( 99.999) rejected by structure     4
+                   Total Energy =      313.3160 kJ/mol
+                        Stretch =       16.8262 kJ/mol
+                           Bend =       43.1486 kJ/mol
+                        Torsion =      172.4517 kJ/mol
+               Improper Torsion =        0.2294 kJ/mol
+                            VDW =       62.3931 kJ/mol
+                  Electrostatic =       18.2669 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       313.3160 kJ/mol
+ Conf    19 E =   313.32 ( 99.999) rejected by structure     1
+                   Total Energy =      312.4208 kJ/mol
+                        Stretch =       16.8262 kJ/mol
+                           Bend =       43.1486 kJ/mol
+                        Torsion =      171.5377 kJ/mol
+               Improper Torsion =        0.2294 kJ/mol
+                            VDW =       62.6737 kJ/mol
+                  Electrostatic =       18.0051 kJ/mol
+        Explicit Hydrogen Bonds =        0.0000 kJ/mol
+                    Cross Terms =        0.0000 kJ/mol
+  
+ T.E. for cross-checking:       312.4208 kJ/mol
+ Conf    20 E =   312.42 ( 99.999) rejected by structure     1
+ 
+Final report; processing .tmp file:
+    4 unique conformations found so far
+    0 minimized with good convergence
+Found     2 confs within  1.00 kcal/mol ( 4.18 kJ/mol) of glob. min.
+Found     3 confs within  2.00 kcal/mol ( 8.37 kJ/mol) of glob. min.
+Found     4 confs within  3.00 kcal/mol (12.55 kJ/mol) of glob. min.
+Global minimum E =    305.12 found     5 times.
+   19 steps performed so far, out of    50
+ E of low-energy structures above global min [kJ/mol],  and no. times found:
+    E:  0.00  0.22  8.21  8.44
+  No.:     5     6     7     2
+ 
+Input structure with title on the next line is given SerNo:        2
+SGS nophenyl
+Auto summary for input structure      3:
+CGEN summary for input structure      2:
+ Total number of structures processed =          21
+ Conformations with poor convergence marked with a *
+*Conformation       1 (    305.1168     kJ/mol) was found     5 times
+*Conformation       2 (    305.3378     kJ/mol) was found     6 times
+*Conformation       3 (    313.3218     kJ/mol) was found     7 times
+*Conformation       4 (    313.5541     kJ/mol) was found     2 times
+           *** MC Statistics ***
+ Percent of minimized structures within energetic window:   95.23810    
+ Average number of duplicates:     5.000000    
+ Duplication standard deviation:   2.160247    
+          20  structures generated
+           0  rejected by ring closure
+           0  rejected by van der Waals
+          17  duplicate minimised structures
+ 
+BatchMin: normal termination                           13-Jan-2015 14:17:53
+STARTUP COMMAND:
+/cbio/jclab/share/schrodinger/schrodinger2014-4/macromodel-v106013/bin/Linux-x86_64/bmin
+MMSHARE_EXEC:/cbio/jclab/share/schrodinger/schrodinger2014-4/mmshare-v28013/bin/Linux-x86_64
+
+real	0.0m2.85000000149s
+user	0.0m0.0s
+sys	0.0m0.0s
+RUNNING: python "/cbio/jclab/share/schrodinger/schrodinger2014-4/macromodel-v106013/bin/Linux-x86_64/bmin_startup.py" -NO_REDIRECT Subjob00001--Sample_1_confgen

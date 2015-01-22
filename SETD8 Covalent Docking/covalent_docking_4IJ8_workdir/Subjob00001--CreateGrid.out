@@ -1,0 +1,127 @@
+ Entering IMPACT execution environment 
+ Date: Friday, January 09 2015, at 12:32:36 EST
+ ---------------------------------------------------------------------------
+ Glide version 65013
+ mmshare version        28013
+ Copyright (c) Schrodinger, LLC.
+ All Rights Reserved.
+
+ For hardware platform Darwin-x86_64
+ Compiled on: Fri Nov 7 13:42:06 PST 2014
+ Host: Darwin lski1751 13.4.0 Darwin Kernel Version 13.4.0: Sun Aug 17 19:50:11 PDT 2014; root:xnu-2422.115.4~1/RELEASE_X86_64 x86_64
+ Job Name: Subjob00001--CreateGrid
+ JobId:    lski1751-0-54b010b3
+ SCHRODINGER  directory: /opt/schrodinger/suites2014-4
+ IMPACT_EXEC  directory: /opt/schrodinger/suites2014-4/impact-v65013/bin/Darwin-x86_64
+ MMSHARE_EXEC directory: /opt/schrodinger/suites2014-4/mmshare-v28013/bin/Darwin-x86_64
+
+ This software contains material that is a copyrighted
+ work of, and that is licensed from, Rutgers,
+ the State University of New Jersey.
+
+ This software is provided under license and may be 
+ used, copied, transmitted, and stored only in accordance
+ with the terms and conditions of that license.
+ ---------------------------------------------------------------------------
+
+ Job title:        "Subjob00001--CreateGrid"
+ Main output file: Subjob00001--CreateGrid.out
+
+                             - Input command file -
+ ---------------------------------------------------------------------------
+write file -
+"Subjob00001--CreateGrid.out" -
+  title -
+"Subjob00001--CreateGrid" -
+  *
+SET FFIELD OPLS_2005
+CREATE
+  build primary name recep type auto  read maestro file -
+"Subjob00001--CreateGrid-in.maegz"
+  build types name recep
+QUIT
+DOCK
+  smooth anneal 2
+  receptor rdiel name recep  constraints loosegrid 2 ncons 1  nposit 1   -
+  xpos -30.533458 ypos 25.074898 zpos 6.828978 rpos 8.000000 constitle -
+"pos1" -
+    writezip -
+"Subjob00001--CreateGrid-out" -
+    writerdiel  protvdwscale factor 1.000000 ccut 0.250000  box center read  -
+  xcent -33.594344 ycent 29.658625 zcent 5.595702  boxxrange 24.039217  -
+  boxyrange 24.039217 boxzrange 24.039217  actxrange 24.039217 actyrange  -
+  24.039217 actzrange 24.039217
+  screen  greedy  box center read xcent -33.594344 ycent 29.658625 zcent  -
+  5.595702  ligxrange 10.000000 ligyrange 10.000000 ligzrange 10.000000   -
+  writescreen -
+"Subjob00001--CreateGrid-out.save" -
+    writegreed -
+"Subjob00001--CreateGrid-out_greedy.save" -
+    maxkeep 5000 scorecut 100.000000
+  parameter clean
+  final glidescore
+  run
+QUIT
+END
+ ---------------------------------------------------------------------------
+
+                             - End of input file -
+
+
+ ---------------------------------
+ Beginning IMPACT task: CREA
+ Beginning CREATE subtask BUIL                                                  
+ Beginning CREATE subtask BUIL                                                  
+%IMPACT-I(foldmain): calling OPLS_2005 atomtyping ...
+%IMPACT-I(foldmain): finished parameter assignment
+ Beginning CREATE subtask QUIT                                                  
+
+ ---------------------------------
+ Beginning IMPACT task: DOCK
+ Beginning DOCK subtask SMOO                                                    
+ Beginning DOCK subtask RECE                                                    
+ VdW radii of protein atoms scaled by    1.00000000000000     
+ Charge cutoff for polarity  0.250000000000000     
+%IMPACT-I (info): At line  22
+ %IMPACT-I: Glide will write receptor constraints info to file: "
+ Subjob00001--CreateGrid-out.cons"
+ Beginning DOCK subtask SCRE                                                    
+ Beginning DOCK subtask PARA                                                    
+ Beginning DOCK subtask FINA                                                    
+ Beginning DOCK subtask RUN                                                     
+%IMPACT-I (openwt): Request to open FORMATTED file Subjob00001--CreateGrid-out.csc on unit  40
+%IMPACT-I (xdrwt): File Subjob00001--CreateGrid-out.gsc opened for writing
+ calcdsc time  user:        0.10  system:        0.00  elapse:        0.10
+ calcgreed time  user:        0.01  system:        0.00  elapse:        0.01
+ calcdscb time  user:        0.10  system:        0.00  elapse:        0.10
+ CALCSITES calling blduserlig for CM range.
+ calcsites time  user:        0.07  system:        0.00  elapse:        0.07
+%IMPACT-I (openwt): Request to open FORMATTED file Subjob00001--CreateGrid-out.site on unit  45
+ sitemap time  user:        0.23  system:        0.01  elapse:        0.24
+ calcrecep time  user:        0.51  system:        0.01  elapse:        0.52
+ Set up rough-score grid with dimensions(   25,    25,    25), spacing=    1.0
+  125 acceptable sites for ligand center.
+%IMPACT-I (openwt): Request to open FORMATTED file Subjob00001--CreateGrid-out.save on unit  44
+%IMPACT-I (openwt): Request to open FORMATTED file Subjob00001--CreateGrid-out_greedy.save on unit  46
+%IMPACT-I (openwt): Request to open FORMATTED file Subjob00001--CreateGrid-out.cons on unit  49
+ Finished setting up rough-score screening.
+ Getting receptor data ...
+%IMPACT-I (xdrwt): File Subjob00001--CreateGrid-out.grd opened for writing
+ Energy grid dimensions = (   64,    64,    64).
+ makepot time  user:       11.59  system:        0.02  elapse:       11.63
+%IMPACT-I (openwt): Request to open FORMATTED file Subjob00001--CreateGrid-out.vdwc on unit  88
+%IMPACT-I (xdrwt): File Subjob00001--CreateGrid-out_coul2.fld opened for writing
+%IMPACT-I (xdrwt): File Subjob00001--CreateGrid-out_vdw.fld opened for writing
+ Beginning DOCK subtask QUIT                                                    
+ dock time  user:       18.31  system:        0.37  elapse:       18.75
+
+ ---------------------------------
+ Beginning IMPACT task: END 
+%IMPACT-I (memstat): Temporary storage statistics
+                     real*8:       5984154
+                     integer*4:    5705199
+                     char*4:          2913
+%IMPACT-I (memstat): Total dynamics storage was     70.71 MB
+ Exiting IMPACT execution environment 
+ Date: Friday, January 09 2015, at 12:32:56 EST
+%IMPACT-I (timit): Total CPU time =      22.26 seconds (   0.4 minutes)

@@ -1,0 +1,61 @@
+JobId: gpu-1-7-0-54bd27d6
+ParentJobId: lski1751-0-54bd27a2
+ParentJobPort: 49091
+Name: Subjob00001--CreateGrid
+Program: Glide
+Project: /Users/albaness/Documents/Schrodinger/Projects/SETD8_newproject.prj
+Processors: 1
+ViewName: CovalentDockingPanel
+Host: gpu-1-7.local
+User: albaness
+Dir: /scratch/albaness/covalent_4IJ8_phenyl/covalent_4IJ8_phenyl_workdir
+HostsFile: /scratch/albaness/covalent_4IJ8_phenyl/schrodinger.hosts
+HostEntry: localhost
+Commandline: /cbio/jclab/share/schrodinger/schrodinger2014-4/glide Subjob00001--CreateGrid.inp -WAIT
+MmshareExec: /cbio/jclab/share/schrodinger/schrodinger2014-4/mmshare-v28013/bin/Linux-x86_64
+JobHost: gpu-1-7.local
+JobUser: albaness
+JobDir: :tmpdir:
+TmpDir: /scratch
+JobDB: /cbio/jclab/home/albaness/.schrodinger/.jobdb2
+JobMmshareExec: /cbio/jclab/share/schrodinger/schrodinger2014-4/mmshare-v28013/bin/Linux-x86_64
+JobPort: 42839
+JobPid: 27927
+Status: started
+LastStatus: launched
+Summary: The job directory has been created on gpu-1-7.local.
+Command: BASE64 Ii9jYmlvL2pjbGFiL3NoYXJlL3NjaHJvZGluZ2VyL3NjaHJvZGluZ2VyMjAxNC00L2ltcGFjdC12NjUwMTMvYmluL0xpbnV4LXg4Nl82NC9tYWluMW0iICJncHUtMS03LTAtNTRiZDI3ZDYuVElOLmlucCIgPiAiU3Viam9iMDAwMDEtLUNyZWF0ZUdyaWQubG9nIiAyPiYx
+Home: /cbio/jclab/home/albaness
+Timezone: -0500
+LaunchTime: 2015-01-19-10:50:46
+StatusTime: 2015-01-19-10:50:46
+LogInterval: 60
+SaveJobDir: 0
+TmpLaunchDir: 0
+AutoCleanup: 0
+InputFiles[1]:	Subjob00001--CreateGrid.inp
+InputFiles[2]:	Subjob00001--CreateGrid-in.maegz
+InputFiles[3]:	/cbio/jclab/home/albaness/.schrodinger/.jobdb2/files/gpu-1-7-54bd2/gpu-1-7-0-54bd27d6.TIN.inp
+OutputFiles[1]:	Subjob00001--CreateGrid.out
+LogFiles[1]:	Subjob00001--CreateGrid.log
+Transfers[1]:	'/scratch/albaness/covalent_4IJ8_phenyl/schrodinger.hosts' > 'schrodinger.hosts'
+Transfers[2]:	'/scratch/albaness/covalent_4IJ8_phenyl/lski1751-0-54bd27a2.nodes' > 'lski1751-0-54bd27a2.nodes'
+Licenses[1]:	GLIDE_MAIN:1
+Envs[1]:	HOME_MMSHARE_EXEC=/cbio/jclab/share/schrodinger/schrodinger2014-4/mmshare-v28013/bin/Linux-x86_64
+Envs[2]:	IMPACT_EXEC=/cbio/jclab/share/schrodinger/schrodinger2014-4/impact-v65013/bin/Linux-x86_64
+Envs[3]:	IMPACT_INPUT=gpu-1-7-0-54bd27d6.TIN.inp
+Envs[4]:	MMSHARE_EXEC=/cbio/jclab/share/schrodinger/schrodinger2014-4/mmshare-v28013/bin/Linux-x86_64
+Envs[5]:	SCHRODINGER=/cbio/jclab/share/schrodinger/schrodinger2014-4
+Envs[6]:	SCHRODINGER_APP_EXEC=IMPACT_EXEC
+Envs[7]:	SCHRODINGER_COMMANDLINE="/cbio/jclab/share/schrodinger/schrodinger2014-4/glide Subjob00001--CreateGrid.inp -WAIT"
+Envs[8]:	SCHRODINGER_FEATURE_FLAGS=0
+Envs[9]:	SCHRODINGER_HOSTS=%JOBDIR%/schrodinger.hosts
+Envs[10]:	SCHRODINGER_JOBID=gpu-1-7-0-54bd27d6
+Envs[11]:	SCHRODINGER_JOB_DEBUG=0
+Envs[12]:	SCHRODINGER_NODEFILE=%JOBDIR%/lski1751-0-54bd27a2.nodes
+Envs[13]:	SCHRODINGER_PRODUCT=impact
+Envs[14]:	SCHRODINGER_PROJECT=/Users/albaness/Documents/Schrodinger/Projects/SETD8_newproject.prj
+Envs[15]:	SCHRODINGER_SAVE_JOBDIR=0
+Envs[16]:	SCHRODINGER_TPP=
+Envs[17]:	SCHRODINGER_UMASK=18
+Envs[18]:	SCHRODINGER_VIEWNAME=CovalentDockingPanel
