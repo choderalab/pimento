@@ -3,7 +3,9 @@ pimento
 
 ##Manifest
 * `Custom Chemistry` - contains custom chemistry definition used for covalently docking SGSmethyl inhibitor
-* `SETD8 Crystal Structures` - original X-ray structures of SETD8 **[SETD8-DRG_refmac1 NOT YET PUBLISHED/CONFIDENTIAL]**
+* `SETD8 Crystal Structures` - original X-ray structures of SETD8
+  * `4IJ8.pdb` - Pre-conformational change X ray structure 
+  * `SETd8-DRG_remac1.pdb` - New crystal structure with covalent inihibitor **[NOT YET PUBLISHED/CONFIDENTIAL]**
 * ` SETD8 Crystal Structures` - structures docked in Schrodinger **[FILES LABELED NEW STRUCTURE CONFIDENTIAL]**
 * `SETD8_newproject.prj` - Schrodinger Maestro directory
 * `SETD8ligands_smiles` - positive hits and decoys provided by Luo lab **[NOT YET PUBLISHED/CONFIDENTIAL]**
