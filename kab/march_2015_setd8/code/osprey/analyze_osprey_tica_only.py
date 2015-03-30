@@ -16,3 +16,7 @@ df[["tica__gamma", "mean_test_score"]]
 
 plot(df.tica__gamma, df.mean_test_score, 'o')
 xscale('log')
+xlabel("gamma")
+ylabel("GMRQ")
+title("tICA / GMRQ cross validation (dihedrals)")
+savefig("../figures/tica_cross_validation.png", bbox_inches="tight")

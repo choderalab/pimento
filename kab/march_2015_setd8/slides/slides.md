@@ -62,4 +62,9 @@ title: Analysis: 4IJ8 Trajectories
 title: Future Work?
 
 - Simulations with SAM?
-- 
+
+
+---
+title: tICA cross validation
+
+<img width=600 src=figures/tica_cross_validation.png />
