@@ -5,9 +5,9 @@
 ---
 title: Simulation
 
-- 275 trajectories > 300 ns
-- 125 $\mu$ s, average 450 ns per traj
-- Two structures: 4ij8, 1zkk
+- 310 trajectories > 300 ns
+- 145 $\mu$ s, average 470 ns per traj
+- Two starting structures: 4ij8, 1zkk
 
 ---
 title: N and C termini are unstructured
@@ -15,7 +15,7 @@ title: N and C termini are unstructured
 <img width=875 src=figures/termini_hairball.png />
 
 ---
-title: N and C termini are unstructured
+title: Overall topology: well-structured
 
 <img width=875 src=figures/termini_hairball_cut.png />
 
@@ -38,33 +38,25 @@ title: The two structures are disconnected
 
 
 ---
+title: The two structures are disconnected
+
+<img width=480 src=figures/dihedral_map.png />  <img width=480 src=figures/dihedral_map_byrun.png />
+
+
+---
 title: Alternative terminal conformation?
 
 <img width=900 src=figures/c_terminus_alignment.png />
 
 
 ---
-title: Takeaways
+title: Conclusions
 
-- Need more than 100 $\mu s$ sampling
-- PDB structures correspond to long-lived states?
+- Continue MD simulations (ongoing)
+- 4ij8, 1zkk are long-lived conformational basins
 - N and C termini rearrangements are expected
-- Treat each structure separately for now
+- Docking / free energy calculations: use multiple crystals
+- Docking / free energy calculations: use simulations to capture heterogeneity of termini
+- Can termini be chopped off (faster simulations, easier analysis)
 
 
----
-title: Analysis: 4IJ8 Trajectories
-
-- Most of the protein remains well-structured
-
-
----
-title: Future Work?
-
-- Simulations with SAM?
-
-
----
-title: tICA cross validation
-
-<img width=600 src=figures/tica_cross_validation.png />
