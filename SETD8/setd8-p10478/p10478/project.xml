@@ -1,0 +1,23 @@
+<project type="0x18" id="10478"> <!-- change to your project number -->
+    <runs>2</runs> <!-- depends on your setup -->
+    <clones>500</clones> <!-- depends on your setup -->
+    <gens>1000</gens> <!-- total number of gens -->
+    <steps>5000000000</steps> <!-- total number of steps over all gens -->
+
+
+    <stats-credit>11666</stats-credit>
+    <deadline>9.01</deadline>
+    <timeout>6.95</timeout>
+    <k-factor>0.75</k-factor>
+
+    <natoms>44020</natoms>
+    <xtcFreq>125000</xtcFreq> <!-- how often to write out frames -->
+
+    <min-core-version v="3"/> <!-- yutong will let you know when to change this -->
+    <contact v="kyleb"/>
+
+    <accept_mode v="assign"/>
+
+    <gpu/>
+
+</project>

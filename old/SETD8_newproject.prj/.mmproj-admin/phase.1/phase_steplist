@@ -1,0 +1,33 @@
+{ 
+ s_m_m2io_version
+ :::
+ 2.0.0 
+} 
+
+f_m_table { 
+ i_m_current_step
+ :::
+ 1
+ m_column[1] { 
+  s_m_data_name
+  s_m_column_name
+  i_m_width
+  b_m_visible
+  :::
+  1 i_m_step_type  "step type"  10 1
+  :::
+ } 
+ m_row[1] { 
+  i_m_step_type
+  :::
+  1 10
+  :::
+ } 
+ m_exists[1] { 
+  s_m_exists
+  :::
+  1 1 
+  :::
+ } 
+} 
+
