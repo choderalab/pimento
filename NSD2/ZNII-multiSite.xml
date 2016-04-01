@@ -1,0 +1,116 @@
+<ForceField>
+ <Info>
+  <Source>znb.lib, hin.lib, frcmod.zinc, AmberTools15: parm10.dat</Source>
+  <DateGenerated>2015-12-08</DateGenerated>
+  <Reference>Pang, Y.-P., Novel zinc protein molecular dynamics simulations: Steps toward antiangiogenesis for cancer treatment. J. Mol. Model. 1999, 5, 196-202</Reference>
+  <Reference>http://www.mayo.edu/research/labs/computer-aided-molecular-design/projects/zinc-protein-simulations-using-cationic-dummy-atom-cada-approach</Reference>
+ </Info>
+ <AtomTypes>
+  <Type name="ZN(II)-Zn" class="Zn" element="Zn" mass="53.380"/>
+  <Type name="ZN(II)-DA" class="DA" mass="3.0"/>
+  <Type name="HIN-0" class="N" element="N" mass="14.00672"/>
+  <Type name="HIN-1" class="H" element="H" mass="1.007947"/>
+  <Type name="HIN-2" class="CT" element="C" mass="12.01078"/>
+  <Type name="HIN-3" class="H1" element="H" mass="1.007947"/>
+  <Type name="HIN-4" class="CT" element="C" mass="12.01078"/>
+  <Type name="HIN-5" class="HC" element="H" mass="1.007947"/>
+  <Type name="HIN-6" class="CC" element="C" mass="12.01078"/>
+  <Type name="HIN-7" class="NA" element="N" mass="14.00672"/>
+  <Type name="HIN-8" class="CR" element="C" mass="12.01078"/>
+  <Type name="HIN-9" class="H5" element="H" mass="1.007947"/>
+  <Type name="HIN-10" class="NB" element="N" mass="14.00672"/>
+  <Type name="HIN-11" class="CV" element="C" mass="12.01078"/>
+  <Type name="HIN-12" class="H4" element="H" mass="1.007947"/>
+  <Type name="HIN-13" class="C" element="C" mass="12.01078"/>
+  <Type name="HIN-14" class="O" element="O" mass="15.99943"/>
+ </AtomTypes>
+ <Residues>
+  <Residue name="ZN(II)">
+   <Atom name="Zn" type="ZN(II)-Zn" charge="0.0"/>
+   <Atom name="DA1" type="ZN(II)-DA" charge="0.5"/>
+   <Atom name="DA2" type="ZN(II)-DA" charge="0.5"/>
+   <Atom name="DA3" type="ZN(II)-DA" charge="0.5"/>
+   <Atom name="DA4" type="ZN(II)-DA" charge="0.5"/>
+   <Bond atomName1="Zn" atomName2="DA2"/>
+   <Bond atomName1="Zn" atomName2="DA1"/>
+   <Bond atomName1="Zn" atomName2="DA3"/>
+   <Bond atomName1="Zn" atomName2="DA4"/>
+   <Bond atomName1="DA1" atomName2="DA2"/>
+   <Bond atomName1="DA1" atomName2="DA3"/>
+   <Bond atomName1="DA1" atomName2="DA4"/>
+   <Bond atomName1="DA2" atomName2="DA4"/>
+   <Bond atomName1="DA2" atomName2="DA3"/>
+   <Bond atomName1="DA3" atomName2="DA4"/>
+  </Residue>
+  <Residue name="HIN">
+   <Atom name="N" type="HIN-0" charge="-0.5641"/>
+   <Atom name="H" type="HIN-1" charge="0.2469"/>
+   <Atom name="CA" type="HIN-2" charge="0.3171"/>
+   <Atom name="HA" type="HIN-3" charge="0.0096"/>
+   <Atom name="CB" type="HIN-4" charge="-0.1347"/>
+   <Atom name="HB2" type="HIN-5" charge="0.0083"/>
+   <Atom name="HB3" type="HIN-5" charge="0.0083"/>
+   <Atom name="CG" type="HIN-6" charge="0.1504"/>
+   <Atom name="ND1" type="HIN-7" charge="-0.7626"/>
+   <Atom name="CE1" type="HIN-8" charge="0.4994"/>
+   <Atom name="HE1" type="HIN-9" charge="-0.0295"/>
+   <Atom name="NE2" type="HIN-10" charge="-0.7656"/>
+   <Atom name="CD2" type="HIN-11" charge="0.0405"/>
+   <Atom name="HD2" type="HIN-12" charge="0.0525"/>
+   <Atom name="C" type="HIN-13" charge="0.4588"/>
+   <Atom name="O" type="HIN-14" charge="-0.5653"/>
+   <Bond atomName1="H" atomName2="N"/>
+   <Bond atomName1="CA" atomName2="N"/>
+   <Bond atomName1="HA" atomName2="CA"/>
+   <Bond atomName1="CB" atomName2="CA"/>
+   <Bond atomName1="HB2" atomName2="CB"/>
+   <Bond atomName1="HB3" atomName2="CB"/>
+   <Bond atomName1="CG" atomName2="CB"/>
+   <Bond atomName1="ND1" atomName2="CG"/>
+   <Bond atomName1="CE1" atomName2="ND1"/>
+   <Bond atomName1="HE1" atomName2="CE1"/>
+   <Bond atomName1="NE2" atomName2="CE1"/>
+   <Bond atomName1="CD2" atomName2="NE2"/>
+   <Bond atomName1="CD2" atomName2="CG"/>
+   <Bond atomName1="HD2" atomName2="CD2"/>
+   <Bond atomName1="C" atomName2="CA"/>
+   <Bond atomName1="O" atomName2="C"/>
+   <ExternalBond atomName="N"/>
+   <ExternalBond atomName="C"/>
+  </Residue>
+ </Residues>
+ <HarmonicBondForce>
+  <Bond class1="DA" class2="Zn" length="0.09" k="535552.0"/>
+  <Bond class1="DA" class2="DA" length="0.147" k="535552.0"/>
+ </HarmonicBondForce>
+ <HarmonicAngleForce>
+  <Angle class1="DA" class2="Zn" class3="DA" angle="1.91113553093" k="460.24"/>
+  <Angle class1="DA" class2="DA" class3="DA" angle="1.0471975512" k="460.24"/>
+  <Angle class1="DA" class2="DA" class3="Zn" angle="0.615228561328" k="460.24"/>
+ </HarmonicAngleForce>
+ <PeriodicTorsionForce>
+  <Proper class1="DA" class2="DA" class3="DA" class4="DA" periodicity1="2" phase1="1.23045712266" k1="0.0"/>
+  <Proper class1="DA" class2="Zn" class3="DA" class4="DA" periodicity1="2" phase1="2.09439510239" k1="0.0"/>
+  <Proper class1="Zn" class2="DA" class3="DA" class4="DA" periodicity1="2" phase1="0.616101225954" k1="0.0"/>
+ </PeriodicTorsionForce>
+ <NonbondedForce coulomb14scale="0.833333" lj14scale="0.5">
+  <UseAttributeFromResidue name="charge"/>
+  <Atom type="ZN(II)-Zn" sigma="0.195997717991" epsilon="0.0523"/>
+  <Atom type="ZN(II)-DA" sigma="1" epsilon="0"/>
+  <Atom type="HIN-0" sigma="0.324999852378" epsilon="0.71128"/>
+  <Atom type="HIN-1" sigma="0.106907846177" epsilon="0.0656888"/>
+  <Atom type="HIN-2" sigma="0.339966950842" epsilon="0.4577296"/>
+  <Atom type="HIN-3" sigma="0.247135304412" epsilon="0.0656888"/>
+  <Atom type="HIN-4" sigma="0.339966950842" epsilon="0.4577296"/>
+  <Atom type="HIN-5" sigma="0.264953278775" epsilon="0.0656888"/>
+  <Atom type="HIN-6" sigma="0.339966950842" epsilon="0.359824"/>
+  <Atom type="HIN-7" sigma="0.324999852378" epsilon="0.71128"/>
+  <Atom type="HIN-8" sigma="0.339966950842" epsilon="0.359824"/>
+  <Atom type="HIN-9" sigma="0.242146271591" epsilon="0.06276"/>
+  <Atom type="HIN-10" sigma="0.324999852378" epsilon="0.71128"/>
+  <Atom type="HIN-11" sigma="0.339966950842" epsilon="0.359824"/>
+  <Atom type="HIN-12" sigma="0.251055258772" epsilon="0.06276"/>
+  <Atom type="HIN-13" sigma="0.339966950842" epsilon="0.359824"/>
+  <Atom type="HIN-14" sigma="0.295992190115" epsilon="0.87864"/>
+ </NonbondedForce>
+</ForceField>
