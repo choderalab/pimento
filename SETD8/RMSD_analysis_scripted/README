@@ -1,0 +1,72 @@
+Sequences
+
+Data: RKSKAELQSEERKRIDELIESGKEEGMKIDLIDGKGRGVIATKQFSRGDFVVEYHGDLIEITDAKKREALYAQDPSTGCYMYYFQYLSKTYCVDATRETNRLGRLINHSKCGNCQTKLHDIDGVPHLILIASRDIAAGEELLYDYGDRSKASIEAHPWLKH
+(length: 161)
+
+1ZKK (chain 0): KSKAELQSEERKRIDELIESGKEEGMKIDLIDGKGRGVIATKQFSRGDFVVEYHGDLIEITDAKKREALYAQDPSTGCYMYYFQYLSKTYCVDATRETNRLGRLINHSKCGNCQTKLHDIDGVPHLILIASRDIAAGEELLYDYGDRSKASIEAHPWLKH
+
+4IJ8 (chain 0): RKSKAELQSEERKRIDELIESGKEEGMKIDLIDGKGRGVIATKQFSRGDFVVEYHGDLIEITDAKKREALYAQDPSTGCYMYYFQYLSKTYCVDATRETNRLGRLINHSKSGNCQTKLHDIDGVPHLILIASRDIAAGEELLYDYGDRSKASIEAHPWLKH
+
+Apo (chain 0): GSSRKSKAELQSEERKRIDELIESGKEEGMKIDLIDGKGRGVIATKQFSRGDFVVEYHGDLIEITDAAARAALYAQDPSGCYMYYFQYLSKTYCVDATRETNRLGRLINHSKCGNCQTKLHDIDGVPHLILIASRDIAAGEELLYDYGDRSKASIEAHPWL
+
+Inhibitor (chain 0): KSKAELQSEERKRIDELIESGKEEGMKIDLIDGKGRGVIATKQFSRGDFVVEYHGDLIEITDAKKREALYAQDPSTGCYMYYFQYLSKTYCVDATRETNRLGRLINHSKSGNCQTKLHDIDGVPHLILIASRDIAAGEELLYDYGDRSKASIEAHPWLKH
+
+Trial1: Common sequence for analysis: KSKAELQSEERKRIDELIESGKEEGMKIDLIDGKGRGVIATKQFSRGDFVVEYHGDLIEITDAKKREALYAQDPSTGCYMYYFQYLSKTYCVDATRETNRLGRLINHSKCGNCQTKLHDIDGVPHLILIASRDIAAGEELLYDYGDRSKASIEAHPWL
+(length: 158)
+
+So amino acid ranges for analysis: (0-index - for mdtraj)
+
+Data: 1 - 158
+1ZKK: 0 - 157
+4IJ8: 1 - 158 (1 mutation - 0-index 110: C normally --> S in 4IJ8 - but still include that CA in analysis)
+Apo: 4 - 160 - 3 mutations, one AA missing: mutations to A's at 0-indexes: 67, 68, 70, missing between 0-indexes: 78 (S) and 79 (G) - T is missing
+Inhibitor: 0 - 157 (1 mutation - same as 4IJ8 - 0-index 109: C --> S)
+
+Conclusions: Apo most problematic. All mutations are ok to stay, but need to get out that T that's missing from Apo. 
+
+FINAL: Common sequence for analysis: KSKAELQSEERKRIDELIESGKEEGMKIDLIDGKGRGVIATKQFSRGDFVVEYHGDLIEITDAKKREALYAQDPS - GCYMYYFQYLSKTYCVDATRETNRLGRLINHSKCGNCQTKLHDIDGVPHLILIASRDIAAGEELLYDYGDRSKASIEAHPWL
+                                      KSKAELQSEERKRIDELIESGKEEGMKIDLIDGKGRGVIATKQFSRGDFVVEYHGDLIEITDAKKREALYAQDPSGCYMYYFQYLSKTYCVDATRETNRLGRLINHSKCGNCQTKLHDIDGVPHLILIASRDIAAGEELLYDYGDRSKASIEAHPWL
+(length: 157)
+
+Data: 1 - 158 (without: 76) : not (resid 0 or resid 159 or resid 160 or resid 76)
+1ZKK: 0 - 157 (without: 75) : chainid 0 and not (resid 158 or resid 159 or resid 75)
+4IJ8: 1 - 158 (without: 76) : chainid 0 and not (resid 0 or resid 159 or resid 160 or resid 76)
+Apo: 4 - 160 (all) : chainid 0 and not (resid 0 or resid 1 or resid 2 or resid 3)
+Inhibitor: 0 - 157 (without: 75) : chainid 0 and not (resid 158 or resid 159 or resid 75)
+
+Do the above atom_slices and BLAST confirm sequences:
+Data: OK
+1ZKK: OK
+4IJ8: OK (1 mutation)
+Apo: OK (3 mutations)
+Inhibitor: OK (1 mutation)
+
+All CA present!
+
+
+Step 2: do calculations BY DOMAIN
+
+Domain spans - from Shi - different numbering though, need to translate - Shi's spans:
+
+N-flanking: 192 - 216
+SET(1): 217 - 250
+SET-I: 251 - 286
+SET(2): 287 - 336
+C-flanking: 337 - 352
+
+Now, Ensembler sequence (which starts with SRKSK and ends with PWLKH) is 232 - 393. 
+Uniprot says SET domain is: 257 - 378 - so we're 2 off in length here compared to Shi's numbering. 
+
+Let's just say that Shi's numbering is -40 to the 'Ensembler' numbering, so translated domains into Ensembler numbering:
+N-flanking: 232 - 256
+SET(1): 257 - 290
+SET-I: 291 - 326
+SET(2): 327 - 376
+C-flanking: 378 - 392
+
+Now, our common sequence is AA's: 234 -(without: 309)- 391 (and in our 0-indexing that's 0 -(without 75)- 157), so that gives domains:
+N-flanking: 0 - 22 (2 first missing)
+SET(1): 23 - 56
+SET-I: 57 - 92
+SET(2): 93 - 142
+C-flanking: 143 - 157 (1 last missing)
