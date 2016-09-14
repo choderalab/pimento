@@ -403,4 +403,28 @@ plt.xlabel('Frame (0.25 ns / frame)')
 plt.ylabel('C-alpha RMSD (nm)')
 plt.savefig('CA_rmsds/inhibitor_Cflank_rmsds.pdf')
 
-# now look at the RMSFs
+# try also RMSD of frames in a trajectory vs. the first frame of that trajectory
+# calculate rmsds - save .npy's
+traj_rmsds = []
+
+current_trajectory = 1
+
+for traj in trajs:
+    print('Currently calculating for trajectory: %d' % current_trajectory)
+    current_trajectory += 1
+    traj_ = md.load(traj)
+    traj_ca = traj_.atom_slice(data_selection)
+    rmsd = md.rmsd(traj_ca, traj_ca, frame=0)
+    traj_rmsds.append(rmsd)
+
+# save results
+np.save('CA_rmsds/traj_rmsds.npy)
+
+# make plots
+plt.figure()
+for i in range(len(traj_rmsds)):
+    plt.plot(traj_rmsds[i])
+plt.title('CA RMSDs to 1st frame - 969 trajectories')
+plt.xlabel('Frame (0.25 ns / frame)')
+plt.ylabel('C-alpha RMSD (nm)')
+plt.savefig('CA_rmsds/traj_rmsds.pdf')
