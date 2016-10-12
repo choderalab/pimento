@@ -1,59 +1,59 @@
 <ForceField>
  <Info>
-  <DateGenerated>2016-09-30</DateGenerated>
+  <DateGenerated>2016-10-11</DateGenerated>
  </Info>
  <Residues>
   <Residue name="SAM">
-   <Atom name="N" type="n4" charge="-1.0886"/>
-   <Atom name="HN1" type="hn" charge="0.272467"/>
-   <Atom name="HN2" type="hn" charge="0.272467"/>
-   <Atom name="HN3" type="hn" charge="0.272467"/>
-   <Atom name="CA" type="c3" charge="0.1095"/>
-   <Atom name="HA" type="hx" charge="0.1087"/>
-   <Atom name="C" type="c" charge="1.0126"/>
-   <Atom name="O" type="o" charge="-0.4808"/>
-   <Atom name="OXT" type="o" charge="-0.4808"/>
-   <Atom name="CB" type="c3" charge="-0.0724"/>
-   <Atom name="HB1" type="hc" charge="0.0947"/>
-   <Atom name="HB2" type="hc" charge="0.0947"/>
-   <Atom name="CG" type="c3" charge="-0.0061"/>
-   <Atom name="HG1" type="h1" charge="0.1292"/>
-   <Atom name="HG2" type="h1" charge="0.1292"/>
-   <Atom name="SD" type="s4" charge="0.0431"/>
-   <Atom name="CE" type="c3" charge="-0.0798"/>
-   <Atom name="HE1" type="h1" charge="0.130367"/>
-   <Atom name="HE2" type="h1" charge="0.130367"/>
-   <Atom name="HE3" type="h1" charge="0.130367"/>
-   <Atom name="C5'" type="c3" charge="-0.0791"/>
-   <Atom name="H5'1" type="h1" charge="0.1297"/>
-   <Atom name="H5'2" type="h1" charge="0.1297"/>
-   <Atom name="C4'" type="c3" charge="0.1131"/>
-   <Atom name="H4'" type="h1" charge="0.0927"/>
-   <Atom name="O4'" type="os" charge="-0.4426"/>
-   <Atom name="C3'" type="c3" charge="0.1341"/>
-   <Atom name="H3'" type="h1" charge="0.0967"/>
-   <Atom name="O3'" type="oh" charge="-0.5738"/>
-   <Atom name="HO3'" type="ho" charge="0.441"/>
-   <Atom name="C2'" type="c3" charge="0.0881"/>
-   <Atom name="H2'" type="h1" charge="0.1157"/>
-   <Atom name="O2'" type="oh" charge="-0.5968"/>
-   <Atom name="HO2'" type="ho" charge="0.446"/>
-   <Atom name="C1'" type="c3" charge="0.2448"/>
-   <Atom name="H1'" type="h2" charge="0.1177"/>
-   <Atom name="N9" type="na" charge="-0.308"/>
-   <Atom name="C8" type="cc" charge="0.3867"/>
-   <Atom name="H8" type="h5" charge="0.0558"/>
-   <Atom name="N7" type="nd" charge="-0.5181"/>
-   <Atom name="C5" type="ca" charge="-0.2412"/>
+   <Atom name="N" type="n4" charge="-0.8216"/>
+   <Atom name="HN1" type="hn" charge="0.466467"/>
+   <Atom name="HN2" type="hn" charge="0.466467"/>
+   <Atom name="HN3" type="hn" charge="0.466467"/>
+   <Atom name="CA" type="c3" charge="-0.0495"/>
+   <Atom name="HA" type="hx" charge="0.1577"/>
+   <Atom name="C" type="c" charge="0.9296"/>
+   <Atom name="O" type="o" charge="-0.7108"/>
+   <Atom name="OXT" type="o" charge="-0.7108"/>
+   <Atom name="CB" type="c3" charge="-0.0594"/>
+   <Atom name="HB1" type="hc" charge="0.0752"/>
+   <Atom name="HB2" type="hc" charge="0.0752"/>
+   <Atom name="CG" type="c3" charge="-0.0621"/>
+   <Atom name="HG1" type="h1" charge="0.1162"/>
+   <Atom name="HG2" type="h1" charge="0.1162"/>
+   <Atom name="SD" type="s4" charge="0.2621"/>
+   <Atom name="CE" type="c3" charge="-0.1588"/>
+   <Atom name="HE1" type="h1" charge="0.111033"/>
+   <Atom name="HE2" type="h1" charge="0.111033"/>
+   <Atom name="HE3" type="h1" charge="0.111033"/>
+   <Atom name="C5'" type="c3" charge="-0.1451"/>
+   <Atom name="H5'1" type="h1" charge="0.1062"/>
+   <Atom name="H5'2" type="h1" charge="0.1062"/>
+   <Atom name="C4'" type="c3" charge="0.1311"/>
+   <Atom name="H4'" type="h1" charge="0.0987"/>
+   <Atom name="O4'" type="os" charge="-0.4616"/>
+   <Atom name="C3'" type="c3" charge="0.0951"/>
+   <Atom name="H3'" type="h1" charge="0.1037"/>
+   <Atom name="O3'" type="oh" charge="-0.5698"/>
+   <Atom name="HO3'" type="ho" charge="0.425"/>
+   <Atom name="C2'" type="c3" charge="0.0841"/>
+   <Atom name="H2'" type="h1" charge="0.0777"/>
+   <Atom name="O2'" type="oh" charge="-0.5858"/>
+   <Atom name="HO2'" type="ho" charge="0.438"/>
+   <Atom name="C1'" type="c3" charge="0.2578"/>
+   <Atom name="H1'" type="h2" charge="0.1357"/>
+   <Atom name="N9" type="na" charge="-0.299"/>
+   <Atom name="C8" type="cc" charge="0.4047"/>
+   <Atom name="H8" type="h5" charge="0.0818"/>
+   <Atom name="N7" type="nd" charge="-0.5141"/>
+   <Atom name="C5" type="ca" charge="-0.2362"/>
    <Atom name="C6" type="ca" charge="0.7782"/>
-   <Atom name="N6" type="nh" charge="-0.9435"/>
-   <Atom name="HN61" type="hn" charge="0.4578"/>
-   <Atom name="HN62" type="hn" charge="0.4578"/>
-   <Atom name="N1" type="nb" charge="-0.78"/>
-   <Atom name="C2" type="ca" charge="0.7099"/>
-   <Atom name="H2" type="h5" charge="0.0651"/>
-   <Atom name="N3" type="nb" charge="-0.77"/>
-   <Atom name="C4" type="ca" charge="0.4718"/>
+   <Atom name="N6" type="nh" charge="-0.9295"/>
+   <Atom name="HN61" type="hn" charge="0.4628"/>
+   <Atom name="HN62" type="hn" charge="0.4628"/>
+   <Atom name="N1" type="nb" charge="-0.778"/>
+   <Atom name="C2" type="ca" charge="0.6789"/>
+   <Atom name="H2" type="h5" charge="0.0381"/>
+   <Atom name="N3" type="nb" charge="-0.811"/>
+   <Atom name="C4" type="ca" charge="0.4698"/>
    <Bond atomName1="N" atomName2="HN1"/>
    <Bond atomName1="N" atomName2="HN2"/>
    <Bond atomName1="N" atomName2="HN3"/>
