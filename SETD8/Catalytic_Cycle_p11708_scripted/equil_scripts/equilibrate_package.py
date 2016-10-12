@@ -15,8 +15,8 @@ equil_friction = 20.0 / u.picoseconds
 output_frequency = 1000
 n_steps = 5000000
 
-minimization_timestep = 1.0 * u.femtoseconds
-minimization_temperature = 50.0 * u.kelvin
+minimization_timestep = 0.01 * u.femtoseconds
+minimization_temperature = 10.0 * u.kelvin
 minimization_friction = 91.0 / u.picoseconds
 minimization_nsteps = 100
 minimization_tolerance = 10.0 * u.kilojoules_per_mole
@@ -68,7 +68,7 @@ print("System has %d particles" % system.getNumParticles())
 
 print("Preparing simulation for minimization...")
 integrator = LangevinIntegrator(minimization_temperature, minimization_friction, minimization_timestep)
-simulation = Simulation(topology, system, integrator, platform)
+simulation = Simulation(topology, system, integrator, platform, properties)
 simulation.context.setPositions(positions)
 print("Initial energy is %s" % (simulation.context.getState(getEnergy=True).getPotentialEnergy()))
 simulation.minimizeEnergy(tolerance=minimization_tolerance, maxIterations=minimization_nsteps)
