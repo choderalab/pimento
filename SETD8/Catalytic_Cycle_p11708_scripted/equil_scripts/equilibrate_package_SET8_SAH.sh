@@ -43,4 +43,4 @@
 cd $PBS_O_WORKDIR
 
 # Launch GPU job.
-python -u equilibrate_package_SET8_SAH.py > equilibrate_package_SET8_SAH.log
+python -u equilibrate_package.py SET8_SAH > equilibrate_package_SET8_SAH.log

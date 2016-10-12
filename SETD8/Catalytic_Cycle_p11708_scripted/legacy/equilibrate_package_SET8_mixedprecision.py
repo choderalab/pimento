@@ -3,7 +3,7 @@ from simtk.openmm.app import *
 import simtk.unit as u
 
 ### set structure name for every individual script
-structure_name = 'SET8_P_SAM'
+structure_name = 'SET8'
 
 ### parameters - these made to match Ensembler, except the barostat_frequency
 # we are going with default OpenMM of 25, rather than 50 in Ensembler
@@ -16,7 +16,8 @@ friction = 1.0 / u.picoseconds
 equil_friction = 20.0 / u.picoseconds
 
 output_frequency = 1000
-n_steps = 5000000
+n_steps = 1000
+#n_steps = 5000000
 
 temperature = 300.0 * u.kelvin
 pressure = 1.0 * u.atmospheres
@@ -48,8 +49,6 @@ positions = pdb.positions
 ff = ForceField('amber99sbildn.xml', 'tip3p.xml', '../parameters/gaff.xml', '../parameters/ffptm.xml', '../parameters/SAM.xml', '../parameters/SAH.xml')
 
 platform = Platform.getPlatformByName('CUDA')
-# for minimization do not specify properties - i.e. go with SINGLE precision - it does not minimize enough (i.e. energy decrease is only small - tested for SET8 system)
-# but for equilibration and then production on FAH - MIXED precision
 properties = {'CudaPrecision': 'mixed'}
 
 # need to minimize with CutoffPeriodic (reaction field) to avoid blowing up
@@ -58,11 +57,8 @@ system = ff.createSystem(topology, nonbondedMethod=CutoffPeriodic, nonbondedCuto
 
 print("Preparing simulation for minimization...")
 integrator = VerletIntegrator(verlet_timestep)
-simulation = Simulation(topology, system, integrator, platform)
+simulation = Simulation(topology, system, integrator, platform, properties)
 simulation.context.setPositions(positions)
-print("Initial energy is %s" % (simulation.context.getState(getEnergy=True).getPotentialEnergy()))
-simulation.minimizeEnergy()
-print("Energy after minimization is %s" % (simulation.context.getState(getEnergy=True).getPotentialEnergy()))
 print("Initial energy is %s" % (simulation.context.getState(getEnergy=True).getPotentialEnergy()))
 simulation.minimizeEnergy()
 print("Energy after minimization is %s" % (simulation.context.getState(getEnergy=True).getPotentialEnergy()))
