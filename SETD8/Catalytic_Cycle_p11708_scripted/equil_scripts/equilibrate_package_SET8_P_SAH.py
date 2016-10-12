@@ -4,25 +4,24 @@ import simtk.unit as u
 
 ### set structure name for every individual script
 structure_name = 'SET8_P_SAH'
-ff_type = 'sah'
 
-### parameters
-minimize_timestep = 1.0 * u.femtoseconds
+### parameters - these made to match Ensembler, except the barostat_frequency
+# we are going with default OpenMM of 25, rather than 50 in Ensembler
+verlet_timestep = 1.0 * u.femtoseconds
 timestep = 2.0 * u.femtoseconds
 
-cutoff = 0.95 * u.nanometers
+cutoff = 0.9 * u.nanometers
 
-friction = 0.25 / u.picoseconds
-equil_friction = 2.0 / u.picoseconds
+friction = 1.0 / u.picoseconds
+equil_friction = 20.0 / u.picoseconds
 
 output_frequency = 1000
-# TEST
-n_steps = 1000
-#n_steps = 5000000
+n_steps = 5000000
 
 temperature = 300.0 * u.kelvin
 pressure = 1.0 * u.atmospheres
 barostat_frequency = 25
+###
 
 if not os.path.exists('../equil/'):
     os.mkdir('../equil')
@@ -46,37 +45,34 @@ pdb = PDBFile(pdb_filename)
 topology = pdb.topology
 positions = pdb.positions
 
-if ff_type == 'sam':
-    ff = ForceField('amber99sbildn.xml', 'tip3p.xml', '../parameters/gaff.xml', '../parameters/ffptm.xml', '../parameters/SAM.xml') 
-elif ff_type == 'sah':
-    ff = ForceField('amber99sbildn.xml', 'tip3p.xml', '../parameters/gaff.xml', '../parameters/ffptm.xml', '../parameters/SAH.xml')     
-platform = Platform.getPlatformByName('CUDA')
+ff = ForceField('amber99sbildn.xml', 'tip3p.xml', '../parameters/gaff.xml', '../parameters/ffptm.xml', '../parameters/SAM.xml', '../parameters/SAH.xml')
 
-# need to minimize with CutoffPeriodic nonbondedMethod to avoid blowing up
-print("Preparing minimization system...")        
-system = ff.createSystem(topology, nonbondedMethod=CutoffPeriodic, nonbondedCutoff=cutoff, constraints=HBonds)        
+platform = Platform.getPlatformByName('CUDA')
+# for minimization do not specify properties - i.e. go with SINGLE precision - it does not minimize enough (i.e. energy decrease is only small - tested for SET8 system)
+# but for equilibration and then production on FAH - MIXED precision
+properties = {'CudaPrecision': 'mixed'}
+
+# need to minimize with CutoffPeriodic (reaction field) to avoid blowing up
+print("Preparing CutoffPeriodic minimization system...")
+system = ff.createSystem(topology, nonbondedMethod=CutoffPeriodic, nonbondedCutoff=cutoff, constraints=HBonds)
 
 print("Preparing simulation for minimization...")
-# QUESTION: should the Verlet be thermostated and/or barostated for the minimization
-integrator = VerletIntegrator(minimize_timestep)
+integrator = VerletIntegrator(verlet_timestep)
 simulation = Simulation(topology, system, integrator, platform)
 simulation.context.setPositions(positions)
 print("Initial energy is %s" % (simulation.context.getState(getEnergy=True).getPotentialEnergy()))
 simulation.minimizeEnergy()
 print("Energy after minimization is %s" % (simulation.context.getState(getEnergy=True).getPotentialEnergy()))
 positions = simulation.context.getState(getPositions=True).getPositions()
-vectors = simulation.context.getState().getPeriodicBoxVectors()
 del simulation
 
-print("Preparing new PME system for 10ns run...")
+print("Preparing new PME system for 10ns equilibration run...")
 system = ff.createSystem(topology, nonbondedMethod=PME, nonbondedCutoff=cutoff, constraints=HBonds)
-# QUESTION - so we're doing this here because changing simulation methods? See QUESTION below
-system.setDefaultPeriodicBoxVectors(vectors[0], vectors[1], vectors[2])        
 integrator = LangevinIntegrator(temperature, equil_friction, timestep)
 system.addForce(MonteCarloBarostat(pressure, temperature, barostat_frequency))
 
-print("Preparing simulation for 10ns run...")
-simulation = Simulation(topology, system, integrator, platform)
+print("Preparing simulation for equilibration 10ns run...")
+simulation = Simulation(topology, system, integrator, platform, properties)
 simulation.context.setPositions(positions)
 
 print("Initial energy is: %s" % (simulation.context.getState(getEnergy=True).getPotentialEnergy()))
@@ -90,8 +86,8 @@ simulation.reporters.append(DCDReporter(dcd_filename, output_frequency))
 simulation.reporters.append(PDBReporter(out_pdb_filename, n_steps))
 simulation.reporters.append(StateDataReporter(open(log_filename, 'w'), output_frequency, step=True, time=True, speed=True, potentialEnergy=True, temperature=True, density=True))
 
-print("Running simulation steps...")
-simulation.step(n_steps)   
+print("Running 10ns equilibration simulation steps...")
+simulation.step(n_steps)
 print('Done with the equilibration!')
 print("Final energy is: %s" % (simulation.context.getState(getEnergy=True).getPotentialEnergy()))
 positions = simulation.context.getState(getPositions=True).getPositions()
@@ -103,19 +99,20 @@ print('Initiating packaging...')
 def write_file(filename, contents):
     with open(filename, 'w') as outfile:
         outfile.write(contents)
-        
+
 print('Preparing new integrator and updating system with new PeriodicBoxVectors...')
-# QUESTION - why do this here - we're not changing simulation methods? Do you always need to do vector updates after a simulation and before packaging then?
-# Why did Kyle not do this? Is this analogical to taking an average over frames of unit cell sizes? 
-system.setDefaultPeriodicBoxVectors(vectors[0], vectors[1], vectors[2]) 
+system.setDefaultPeriodicBoxVectors(vectors[0], vectors[1], vectors[2])
 integrator = LangevinIntegrator(temperature, friction, timestep)
 
 print("Preparing new simulation...")
-simulation = Simulation(topology, system, integrator, platform)
+simulation = Simulation(topology, system, integrator, platform, properties)
 simulation.context.setPositions(positions)
 simulation.context.setVelocitiesToTemperature(temperature)
-# QUESTION: is this necessary / good?
+print("Performing 1000 simulation steps...")
 simulation.step(output_frequency)
+print("Updating system with new PeriodicBoxVectors...")
+vectors = simulation.context.getState().getPeriodicBoxVectors()
+system.setDefaultPeriodicBoxVectors(vectors[0], vectors[1], vectors[2])
 
 print("Writing system and integrator...")
 write_file(system_filename, XmlSerializer.serialize(system))
@@ -125,7 +122,3 @@ print("Writing state...")
 state = simulation.context.getState(getPositions=True, getVelocities=True, getForces=True, getEnergy=True, getParameters=True, enforcePeriodicBox=True)
 write_file(state_filename, XmlSerializer.serialize(state))
 print('All done!')
-        
-        
-        
-        
