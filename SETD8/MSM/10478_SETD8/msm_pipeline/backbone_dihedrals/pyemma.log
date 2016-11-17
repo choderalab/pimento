@@ -1,0 +1,8 @@
+06-11-16 07:50:25 pyemma.coordinates.clustering.kmeans.MiniBatchKmeansClustering[2] INFO     Cluster centers converged after 265 steps.
+07-11-16 03:13:24 pyemma.msm.estimators.bayesian_msm.BayesianMSM[3] WARNING  Ignored error during estimation: Stationary distribution contains entries smaller than 1e-15 during iteration
+07-11-16 03:58:05 pyemma.msm.estimators.bayesian_msm.BayesianMSM[4] WARNING  Ignored error during estimation: Stationary distribution contains entries smaller than 1e-15 during iteration
+07-11-16 04:09:54 pyemma.msm.estimators.bayesian_msm.BayesianMSM[5] WARNING  Ignored error during estimation: Stationary distribution contains entries smaller than 1e-15 during iteration
+07-11-16 13:18:38 pyemma.msm.estimators.bayesian_msm.BayesianMSM[6] WARNING  Ignored error during estimation: Stationary distribution contains entries smaller than 1e-15 during iteration
+07-11-16 13:35:20 pyemma.msm.estimators.bayesian_msm.BayesianMSM[7] WARNING  Ignored error during estimation: Stationary distribution contains entries smaller than 1e-15 during iteration
+07-11-16 13:51:46 pyemma.msm.estimators.bayesian_msm.BayesianMSM[8] WARNING  Ignored error during estimation: Stationary distribution contains entries smaller than 1e-15 during iteration
+07-11-16 14:07:53 pyemma.msm.estimators.bayesian_msm.BayesianMSM[9] WARNING  Ignored error during estimation: Stationary distribution contains entries smaller than 1e-15 during iteration
