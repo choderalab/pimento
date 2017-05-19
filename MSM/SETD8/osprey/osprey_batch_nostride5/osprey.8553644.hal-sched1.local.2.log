@@ -1,0 +1,79 @@
+======================================================================
+= osprey is a tool for machine learning hyperparameter optimization. =
+======================================================================
+
+osprey version:      1.1.0
+time:                May 17, 2017  8:27 PM
+hostname:            gpu-1-14.local
+cwd:                 /cbio/jclab/home/rafal.wiewiora/repos/MSM_play/set8_apo_11707_11709_semifinal/osprey_batch_nostride5
+pid:                 15831
+
+Loading config file:     config.yaml...
+
+msmbuilder version:  3.8.0
+mdtraj version:      1.8.0
+
+
+Loading dataset...
+
+Dataset contains 5020 element(s) with out labels
+The elements have shape: [(2050, 1000), (1180, 1000), (1960, 1000), (1960, 1000), (1960, 1000), (1960, 1000), (1150, 1000), (1960, 1000), (1150, 1000), (1960, 1000), (1000, 1000), (1180, 1000), (1960, 1000), (1960, 1000), (1510, 1000), (1960, 1000), (1960, 1000), (1270, 1000), (1210, 1000), (1960, 1000), ...]
+Instantiated estimator:
+  Pipeline(steps=[('tica', tICA(commute_mapping=False, kinetic_mapping=False, lag_time=1,
+   n_components=None, shrinkage=None)), ('cluster', MiniBatchKMeans(batch_size=100, compute_labels=True, init='k-means++',
+        init_size=None, max_iter=100, max_no_improvement=10, n_clusters=8,
+        n_init=3, rando...None,
+         prior_counts=0, reversible_type='mle', sliding_window=True,
+         verbose=False))])
+Hyperparameter search space:
+  cluster__n_clusters      	(int)        500 <= x <= 5000
+  tica__lag_time           	(int)          1 <= x <= 400
+  tica__n_components       	(int)          1 <= x <= 1000
+  tica__kinetic_mapping    	(enum)    choices = (True, False)
+  tica__commute_mapping    	(enum)    choices = (True, False)
+
+----------------------------------------------------------------------
+Beginning iteration                                            1 / 100
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 1 trials
+Choosing next hyperparameters with random...
+  {'cluster__n_clusters': 3298, 'tica__lag_time': 388, 'tica__n_components': 163, 'tica__kinetic_mapping': True, 'tica__commute_mapping': False}
+(random took 0.000 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [7358700, 7377393, 7361974, 7283284, 7303085]
+[CV]   n_test_samples: [1812409, 1793716, 1809135, 1887825, 1868024]
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 380.749695
+(best score so far   = 380.749695)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            2 / 100
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 2 trials
+Choosing next hyperparameters with random...
+  {'cluster__n_clusters': 1013, 'tica__lag_time': 144, 'tica__n_components': 368, 'tica__kinetic_mapping': False, 'tica__commute_mapping': True}
+(random took 0.000 s)
+
+[CV] Using MSMBuilder API n_samples averaging
+[CV]   n_train_samples: [7358700, 7377393, 7361974, 7283284, 7303085]
+[CV]   n_test_samples: [1812409, 1793716, 1809135, 1887825, 1868024]
+Loading trials database: sqlite:///osprey-trials.db...
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Success! Model score = 205.314162
+(best score so far   = 380.749695)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----------------------------------------------------------------------
+Beginning iteration                                            3 / 100
+----------------------------------------------------------------------
+Loading trials database: sqlite:///osprey-trials.db...
+History contains: 3 trials
+Choosing next hyperparameters with random...
+  {'cluster__n_clusters': 3234, 'tica__lag_time': 384, 'tica__n_components': 743, 'tica__kinetic_mapping': False, 'tica__commute_mapping': True}
+(random took 0.000 s)
+
