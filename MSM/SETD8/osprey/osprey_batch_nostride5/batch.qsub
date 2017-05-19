@@ -1,0 +1,12 @@
+#!/bin/bash
+#PBS -S /bin/bash
+#PBS -l nodes=2,tpn=1,mem=200G
+#PBS -l walltime=144:00:00
+#PBS -V
+
+cd $PBS_O_WORKDIR
+NO_OF_CORES=`cat $PBS_NODEFILE | egrep -v '^#'\|'^$' | wc -l | awk '{print $1}'`
+for i in `seq $NO_OF_CORES`; do
+    osprey worker config.yaml -n 100 > osprey.$PBS_JOBID.$i.log 2>&1 &
+done
+wait
